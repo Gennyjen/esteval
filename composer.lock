@@ -2068,16 +2068,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.0.60",
+            "version": "v1.0.63",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "066fe955b1a134841cdcc068a9f843594fdb1adc"
+                "reference": "c409fe47e94c3c3c255e94356718ff15417afb0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/066fe955b1a134841cdcc068a9f843594fdb1adc",
-                "reference": "066fe955b1a134841cdcc068a9f843594fdb1adc",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/c409fe47e94c3c3c255e94356718ff15417afb0e",
+                "reference": "c409fe47e94c3c3c255e94356718ff15417afb0e",
                 "shasum": ""
             },
             "require": {
@@ -2110,7 +2110,7 @@
                     "email": "fabien.potencier@gmail.com"
                 }
             ],
-            "time": "2018-01-10T07:00:13+00:00"
+            "time": "2018-01-17T19:45:47+00:00"
         },
         {
             "name": "symfony/framework-bundle",
