@@ -6,7 +6,7 @@
     use Symfony\Component\Routing\Annotation\Route;
     use Symfony\Component\HttpFoundation\Response;
 
-    class Home extends Controller
+    class HomeController extends Controller
     {
         /**
          * @Route("/home", name="home")
