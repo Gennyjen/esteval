@@ -1,17 +1,9 @@
-@font-face {
-    font-family: 'robotoregular';
-    src: url('font/roboto-regular-webfont.woff2') format('woff2'),
-    url('font/roboto-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /*
 *** Header div h1 h2 du login
  */
 
 h1, h2 {
-    font-family: robotoregular;
+    font-family: roboto;
     font-size: 16px;
     font-weight: 300;
 }
@@ -75,7 +67,7 @@ div#checkbox {
     display: flex;
     flex-direction: column;
     font-size: 10px;
-    font-family: robotoregular;
+    font-family: roboto;
 }
 
 div#phrase {
@@ -83,7 +75,7 @@ div#phrase {
     flex-direction: column;
     font-size: 10px;
     margin-top: -4px;
-    font-family: robotoregular;
+    font-family: roboto;
     margin-bottom: 0;
     margin-right: 10px;
     color: #737472;
@@ -146,6 +138,7 @@ input.form-control {
     height: 30px;
     background-color: #ECE9E8;
     border: none;
+    margin-top: 19px;
     border-radius: 0;
     font-weight: 100;
 }
@@ -174,5 +167,5 @@ a {
 }
 
 .modal-content {
-    border-bottom-right-radius: 3%;
+    border-bottom-right-radius: 40px 40px;;
 }
