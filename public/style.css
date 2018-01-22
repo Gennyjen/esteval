@@ -1,0 +1,627 @@
+/* Reset ******************************************************************************************** */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+.btn-vesteval {
+    background: #779d48;
+    border: 1px solid #658c34;
+    color: white;
+}
+
+
+
+/* Header ********************************************************************************************* */
+
+header .col {
+    display: flex;
+    align-items: center;
+}
+
+header .row.align-item-center {
+    background-color: #779d48;
+    position: relative;
+}
+
+/* Navbar */
+
+header .fa-bars {
+    color: white;
+}
+
+header .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: white;
+}
+
+
+
+header .navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+/* Réseaux sociaux */
+
+header .reseaux-sociaux i.fa {
+    background-color: #779d48;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40PX;
+    text-align: center;
+    line-height: 22px;
+    transition: 0.2s all;
+    color: white;
+   
+}
+
+header .reseaux-sociaux i.fa.fa-facebook:hover {
+    background: #3B5998;
+}
+
+header .reseaux-sociaux i.fa.fa-twitter:hover {
+    background: #00ACED;
+}
+
+header .reseaux-sociaux i.fa.fa-linkedin:hover {
+    background: #007BB6;
+}
+
+/* E-magasines et connection */
+
+header .connect i,
+header .e-magasines i{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+}
+
+header .e-magasines i {
+    left: -35px;
+}
+
+
+header .connect,
+header .e-magasines {
+    line-height: 16px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+header .e-magasinesLink {
+    padding-left: 8px;
+    margin-right: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.2s all;
+    padding: 0px 20px 0px 50px;
+}
+
+header .e-magasinesLink:hover {
+    background-color: #86a362;
+    transition: 0.2s all;
+}
+
+
+header .connectLink {
+    margin-right: 20px;
+    padding: 0 20px 0 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.2s all;
+}
+
+
+header .connectLink:hover {
+    background-color: #86a362;
+    transition: 0.2s all;
+}
+
+
+/* Boutons */
+
+header .btn {
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+header .btn-entreprise {
+    margin-left: 20px;
+    border : 1px solid #698f3a;
+    background-color: #86a362;
+    color: white;
+}
+
+header .btn-entreprise:hover {
+    background-color: #75984b;
+}
+
+header .btn:focus {
+    box-shadow: none;
+}
+
+
+header .btn-abonnement {
+    padding: 10px;
+    font-size: 20px;
+    background-color: #668b38;
+    border: 1px solid #5d822f;
+    color: white;
+    margin-right: 20px;
+}
+
+header .btn-abonnement:hover {
+    background-color:#566b3c;
+}
+
+/* Barre de recherche */
+
+header .fa-search {
+    color: white;
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+header .search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 80px;
+    width: calc(100% - 310px);
+    height: 60px;
+}
+
+/* Deuxieme barre de navigation */
+
+header .row.align-item-center.all_category {
+    background-color: #eeeeee;
+    border-bottom: 4px solid #e3e3e3;
+}
+
+/* Les 3 catégories */
+
+header .category {
+    width: 34%;
+    text-align: center;
+    border-bottom: 4px solid red;
+    height: calc(100% + 4px);
+    position: relative;
+    top: 2px;
+    text-transform: uppercase;
+}
+
+header .category.patrimoine {
+    border-bottom: 4px solid #8eae68;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+header .category.entreprises {
+    border-bottom: 4px solid #2c9696;
+    transition: 0.2s all;
+    cursor: pointer;
+} 
+
+header .category.culture {
+    border-bottom: 4px solid #c5000b;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+header .category.patrimoine:hover {
+    background-color: #8eae68;
+    color: white;
+}
+
+header .category.entreprises:hover {
+    background-color: #2c9696;
+    color: white;
+}
+
+header .category.culture:hover {
+    background-color: #c5000b;
+    color: white;
+}
+
+/* Index ********************************************************************************* */
+
+main.container {
+    margin-top: 20px;
+}
+/* Les images */
+
+main .logo-partenaire {
+    margin-right: 9px;
+}
+
+main .logo-active {
+    max-width: 17%;
+}
+
+main .logo-positive {
+    max-width: 38%;
+}
+
+main .logo-forcemedia {
+    max-width: 28%;
+}
+
+
+/* Nos Partenaires */
+
+main .partenaires {
+    background-color: #f3f3f3;
+    margin-top: 7px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 231, 231);
+}
+
+main .partenaires h6 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+main .partenaires .nos{
+
+    font-weight: 300;
+}
+
+/* Articles */
+
+main .text_article {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background: #1f1f1fa3;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+main article {
+    background-color: #f9f9f9;
+    margin-top: 7px;
+}
+
+main article p {
+    font-size: 13px;
+    margin: 0;
+    padding-top: 7px;
+    padding-bottom: 7px; 
+    line-height: 15px;
+}
+
+main article button {
+    background-color: #779d48;
+    color: white;
+    padding: 1px 14px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+.row.articles {
+    margin: 0;
+}
+
+.articles article {
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid #f3f3f3;
+}
+
+.articles .content_image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.articles .content_image img {
+    max-width: 100%;
+    min-height: 100%;
+}
+
+.suite {
+    display: inline-block;
+}
+.suite button {
+    height: 25px;
+    background: #bfbfbf;
+}
+
+/* page-article ****************************************************************************************************************** */
+
+/* Titre */
+
+main .titre {
+    margin-top: 15px;
+}
+
+main .titre h2 {
+    font-weight: 500;
+}
+
+main .titre p {
+    border: 1px solid #2dacac;
+    display: inline-block;
+    background-color: #2c9696;
+    color: white;
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+
+/* Réseaux sociaux */
+
+main .reseaux-sociaux i.fa {
+    padding: 6px;
+    margin: 5px 5px;
+    /* margin-bottom: 20px; */
+    border-radius: 5px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 15px;
+    transition: 0.2s all;
+    color: white;
+    width: 25px;
+    height: 25px;
+}
+
+main .reseaux-sociaux i.fa-facebook,
+main .reseaux-sociaux i.fa-twitter,
+main .reseaux-sociaux i.fa-linkedin {
+    margin: 2px;
+}
+
+main .reseaux-sociaux i.fa.fa-facebook{
+    background: #3B5998;
+}
+
+main .reseaux-sociaux i.fa.fa-twitter {
+    background: #00ACED;
+}
+
+main .reseaux-sociaux i.fa.fa-linkedin {
+    background: #007BB6;
+}
+
+main .col.reseaux-sociaux {
+    padding-left: 0;
+}
+
+main .reseaux-sociaux i.fa:nth-child(1) {
+    margin-left: 0;
+}
+
+/* Paragraphes */
+
+main .paragraphes p {
+    font-size: 15px;
+    text-align: justify;
+}
+
+main .paragraphes {
+    margin-bottom: 25px;
+}
+
+/* Magasine */
+
+main .magasine p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+main .magasine a {
+    font-size: 14px;
+}
+
+main .magasine {
+    margin-bottom: 25px;
+}
+
+/* Articles similaires */
+
+main .titre-article h3 {
+    font-size: 20px;
+    background-color: #779d48;
+    color: white;
+    padding: 8px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+
+main .articles-similaires {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background: #1f1f1fa3;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+main .section-articles-similaires {
+    margin-bottom: 20px;
+    padding: 2px;
+    background-color: #f0f0f0;
+    border: solid 1px #dadada;
+    border-radius: 4px;
+}
+
+main .articles {
+    margin-top: 10px;
+}
+
+
+/* Sidebar ******************************************************************************************************************************* */
+
+
+  
+#exTab2 h3 {
+    color : white;
+    background-color: #428bca;
+    padding : 5px 15px;
+}
+aside .abonnement img {
+    width: 150px;
+}
+.sidebar {
+    background: #f3f3f3;
+    padding: 10px;
+}
+.abonnement {
+    position: relative;
+}
+.abonnement button {
+    position: absolute;
+    top: 100px;
+    left: 130px;
+}
+.separator {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, black, black, transparent);
+    margin: 20px 0;
+    opacity: 0.2;
+}
+
+.flux-infos .nav-tabs a {
+    background: #dadada;
+    width: 100%;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 10px 10px 0 0;
+}
+.flux-infos .nav-tabs li {
+    width: 50%;
+}
+.flux-infos .nav-tabs a.active {
+    background: #779d48;
+}
+.flux-infos .nav-tabs a.active  {
+    color: white;
+}
+.flux-infos .nav-tabs a {
+    color: #464646;
+}
+.flux-infos .tab-content {
+    background: white;
+    padding: 5px;
+    font-size: 13px;
+    border-radius: 0 0 5px 5px;
+}
+.flux-infos .tab-content li {
+    list-style: none;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+.flux-infos .nav-tabs a.active {
+    background: #779d48;
+    color: white;
+}
+
+.flux-infos .tab-content li:after {
+    content: "";
+    width: 80%;
+    height: 1px;
+    background: black;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    opacity: 0.15;
+    transform: translateX(-50%);
+}
+.flux-infos .tab-content li:nth-last-child(1) {
+    margin: 0;
+}
+.flux-infos .tab-content li:nth-last-child(1):after {
+    display: none;
+}
+.flux-infos .tab-content li a {
+    color: #4e4e4e;
+}
+
+
+
+.flux-infos .tab-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.newsletter input {
+    width: calc(100% - 50px);
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+
+
+
+/* Footer ****************************************************************************************************************************** */
+
+footer {
+    border-top: 2px solid #739f53; 
+    background-color: #ededed;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #000000;
+}
+
+footer .barlateral {
+    margin: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline;
+    list-style: none;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+footer .navigation_footer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+
+
+.block {
+    background-color: red;
+}
