@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef5dc7b4-4242-45d9-9345-bb9af8b39d7f" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="" afterPath="$PROJECT_DIR$/public/font/font.css" />
       <change beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto-black-webfont.woff" />
       <change beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto-black-webfont.woff2" />
@@ -39,6 +40,15 @@
       <change beforePath="$PROJECT_DIR$/templates/backoffice/abonnes.html.twig" afterPath="$PROJECT_DIR$/templates/backoffice/abonnes.html.twig" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
       <change beforePath="$PROJECT_DIR$/templates/home.html.twig" afterPath="" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" afterPath="$PROJECT_DIR$/templates/login.html.twig" />
+      <change beforePath="$PROJECT_DIR$/var/cache/ContainerKI9TR46/getHomeService.php" afterPath="$PROJECT_DIR$/var/cache/ContainerKI9TR46/getHomeService.php" />
+      <change beforePath="$PROJECT_DIR$/var/cache/ContainerWbTBCTF/getHomeControllerService.php" afterPath="$PROJECT_DIR$/var/cache/ContainerWbTBCTF/getHomeControllerService.php" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/Container4x6APvI/getHomeService.php" afterPath="$PROJECT_DIR$/var/cache/dev/Container4x6APvI/getHomeService.php" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerX7vPKE2/getHomeControllerService.php" afterPath="$PROJECT_DIR$/var/cache/dev/ContainerX7vPKE2/getHomeControllerService.php" />
+>>>>>>> origin/master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,18 +68,31 @@
       <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/login.html.twig">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="495">
               <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+=======
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="login.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/login.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
               <caret line="117" column="17" lean-forward="false" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
+=======
+      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -136,6 +159,7 @@
         <option value="$PROJECT_DIR$/templates/backoffice/editorMagazine.html.twig" />
         <option value="$PROJECT_DIR$/templates/backoffice/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/Backoffice/RouteController.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/templates/home.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/LoginController.php" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
@@ -144,6 +168,9 @@
         <option value="$PROJECT_DIR$/templates/backoffice/abonnes.html.twig" />
         <option value="$PROJECT_DIR$/templates/login.html.twig" />
         <option value="$PROJECT_DIR$/public/login.css" />
+=======
+        <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
+>>>>>>> origin/master
       </list>
     </option>
   </component>
@@ -270,8 +297,12 @@
             <path>
               <item name="esteval" type="b2602c69:ProjectViewProjectNode" />
               <item name="esteval" type="2a2b976b:PhpTreeStructureProvider$1" />
+<<<<<<< HEAD
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="backoffice" type="2a2b976b:PhpTreeStructureProvider$1" />
+=======
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+>>>>>>> origin/master
             </path>
           </expand>
           <select />
@@ -340,6 +371,7 @@
       <workItem from="1516271783236" duration="16520000" />
       <workItem from="1516305517208" duration="4386000" />
       <workItem from="1516310781271" duration="1343000" />
+<<<<<<< HEAD
       <workItem from="1516350629477" duration="4757000" />
       <workItem from="1516378871175" duration="13000" />
       <workItem from="1516378921788" duration="4104000" />
@@ -348,11 +380,18 @@
       <workItem from="1516560286708" duration="3892000" />
       <workItem from="1516566225428" duration="1975000" />
       <workItem from="1516608906067" duration="515000" />
+=======
+      <workItem from="1516350629477" duration="4923000" />
+>>>>>>> origin/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="75880000" />
+=======
+    <option name="totallyTimeSpent" value="49536000" />
+>>>>>>> origin/master
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -367,11 +406,20 @@
     <frame x="33" y="23" width="1189" height="685" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15605928" sideWeight="0.48989898" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.49031478" order="6" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19628432" sideWeight="0.48989898" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.49676898" order="6" side_tool="false" content_ui="tabs" />
+>>>>>>> origin/master
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5108959" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> origin/master
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.49676898" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24939467" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -446,6 +494,58 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/public/backoffice/sass/lbd/mixins/_icons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backoffice/sass/lbd/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backoffice/css/pe-icon-7-stroke.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1065">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backoffice/sass/lbd/_typography.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-496">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backoffice/sass/lbd/_tables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backoffice/sass/lbd/_misc.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-537">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backoffice/sass/lbd/_inputs.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1362">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/public/backoffice/sass/lbd/_footers.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-529">
@@ -645,6 +745,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Controller/Backoffice/RouteController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -673,6 +774,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/templates/backoffice/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -723,6 +826,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="117" column="17" lean-forward="false" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding />
         </state>
       </provider>
