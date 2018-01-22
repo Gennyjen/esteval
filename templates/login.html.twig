@@ -1,78 +1,97 @@
 {% extends "base.html.twig" %}
 
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+              integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"
+              xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+        <link href="{{ asset('login.css') }}" rel="stylesheet"/>
 
-{% block stylesheets %}<link rel="icon" type="image/png" href="{{ asset('login.css') }}">{% endblock %}
-
+    {% endblock %}
 
 {% block body %}
 
-    <div class="container">
+    <!-- Button trigger modal -->
+    <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
 
+    <!-- Modal -->
 
-        <div class="omb_login">
-            <h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3>
-            <div class="row omb_row-sm-offset-3 omb_socialButtons">
-                <div class="col-xs-4 col-sm-2">
-                    <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
-                        <i class="fa fa-facebook visible-xs"></i>
-                        <span class="hidden-xs">Facebook</span>
-                    </a>
-                </div>
-                <div class="col-xs-4 col-sm-2">
-                    <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
-                        <i class="fa fa-twitter visible-xs"></i>
-                        <span class="hidden-xs">Twitter</span>
-                    </a>
-                </div>
-                <div class="col-xs-4 col-sm-2">
-                    <a href="#" class="btn btn-lg btn-block omb_btn-google">
-                        <i class="fa fa-google-plus visible-xs"></i>
-                        <span class="hidden-xs">Google+</span>
-                    </a>
-                </div>
-            </div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
 
-            <div class="row omb_row-sm-offset-3 omb_loginOr">
-                <div class="col-xs-12 col-sm-6">
-                    <hr class="omb_hrOr">
-                    <span class="omb_spanOr">or</span>
-                </div>
-            </div>
+                <div class="container">
+                    <div class="row">
 
-            <div class="row omb_row-sm-offset-3">
-                <div class="col-xs-12 col-sm-6">
-                    <form class="omb_loginForm" action="" autocomplete="off" method="POST">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input type="text" class="form-control" name="username" placeholder="email address">
+                        <div class="col-sm-6">
+                            <div id="headerConnexion"  class="modal-header">
+                                <h1 class="leftTop">Vous avez délà un compte?</h1>
+                                <h2 class="leftBottom">Entrez ici votre email et votre mot de passe</h2>
+                            </div>
+                            <div class="modal-body">
+                                <form class="connexion">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="adresse@email.fr">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Votre mot de passe">
+                                    </div>
+                                    <button type="submit" id="connexion" class="btn btn-primary">Me connecter !</button>
+                                    <a href="#">Mot de passe oublié?</a>
+                                    <p class="loginSocials">Ou connectez-vous directement...</p>
+                                </form>
+                            </div>
                         </div>
-                        <span class="help-block"></span>
 
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                            <input  type="password" class="form-control" name="password" placeholder="Password">
+                        <div class="col-sm-6">
+                            <div id="headerInscription" class="modal-header">
+                                <h1 class="rightTop">Vous souhaitez vous inscrire?</h1>
+                                <h2 class="rightBottom">Entrez ici votre email et votre mot de passe</h2>
+                            </div>
+                            <div class="modal-body">
+                                <form class="inscription"c>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nom">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Prénom">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="adresse@email.fr">
+                                    </div>
+                                    <div class="ligne">
+                                        <div id="phrase">
+                                            <p>Je suis</p>
+                                            <p>(un choix possible)</p>
+                                        </div>
+                                        <div id="checkbox">
+                                            <div id="checkEntreprise" class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="entreprise">
+                                                <p>entreprise</p>
+                                            </div>
+                                            <div id="checkParticulier" class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="particulier">
+                                                <p>particulier</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" id="inscription" class="btn btn-primary">M'inscrire !</button>
+                                    <p class="invitation">> Des infos quotidiennes</p>
+                                    <p class="invitation">> Consultez nos offres d'abonnements</p>
+                                </form>
+                            </div>
                         </div>
-                        <span class="help-block">Password error</span>
 
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-                    </form>
+                    </div>
                 </div>
-            </div>
-            <div class="row omb_row-sm-offset-3">
-                <div class="col-xs-12 col-sm-3">
-                    <label class="checkbox">
-                        <input type="checkbox" value="remember-me">Remember Me
-                    </label>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <p class="omb_forgotPwd">
-                        <a href="#">Forgot password?</a>
-                    </p>
-                </div>
+
             </div>
         </div>
-
-
-
     </div>
-{% endblock %}{% endblock %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+{% endblock %}
