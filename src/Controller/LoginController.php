@@ -6,13 +6,13 @@
     use Symfony\Component\Routing\Annotation\Route;
     use Symfony\Component\HttpFoundation\Response;
 
-    class HomeController extends Controller
+    class LoginController extends Controller
     {
         /**
-         * @Route("/home", name="home")
+         * @Route("/login", name="login")
          */
-        public function home()
+        public function login()
         {
-            return $this->render('home.html.twig');
+            return $this->render('login.html.twig');
         }
     }
