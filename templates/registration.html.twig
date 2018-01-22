@@ -1,0 +1,55 @@
+{% extends "base.html.twig" %}
+
+    {% block stylesheets %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+                  integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"
+                  xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+            <link href="{{ asset('registration.css') }}" rel="stylesheet"/>
+    {% endblock %}
+
+{% block body %}
+    <div id="headerConnexion"  class="modal-header">
+        <h1 class="leftTop">Inscrivez-vous pour</h1>
+        <h2 class="leftBottom">bénéficier d'un accès à l'ensemble de nos publications</h2>
+    </div>
+    <div>
+        <h3>Mes informations personnelles</h3>
+    </div>
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" id="inputLastname" aria-describedby="lastnameHelp" placeholder="Nom" required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="inputFirstname" placeholder="Prénom" required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="adresse@email.com" required>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="inputPassword1" placeholder="******" required>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="inputPasswordConf" placeholder="Confirmation du mot de passe *" required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="inputAddress" placeholder="Adresse *" required>
+        </div>
+        <fieldset class="form-group">
+        </fieldset>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                J'ai lu les conditions d'utilisation *
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+{% endblock %}
