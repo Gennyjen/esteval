@@ -2,23 +2,23 @@
 
 namespace App\Repository;
 
-use App\Entity\Post;
+use App\Entity\ContactEntreprise;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
-class PostRepository extends ServiceEntityRepository
+class ContactEntrepriseRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, Post::class);
+        parent::__construct($registry, ContactEntreprise::class);
     }
 
     /*
     public function findBySomething($value)
     {
-        return $this->createQueryBuilder('p')
-            ->where('p.something = :value')->setParameter('value', $value)
-            ->orderBy('p.id', 'ASC')
+        return $this->createQueryBuilder('c')
+            ->where('c.something = :value')->setParameter('value', $value)
+            ->orderBy('c.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()

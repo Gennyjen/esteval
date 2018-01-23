@@ -9,6 +9,7 @@
     class RouteController extends Controller
     {
 
+<<<<<<< HEAD
         /**
          * @Route("/", name="index")
          */
@@ -81,3 +82,28 @@
 
 
     }
+=======
+    }
+    /**
+     * @Route("/footer", name="footer")
+     */
+    public function footer()
+    {
+        return $this->render('footer.html.twig');
+    }
+    /**
+     * @Route("/sidebar", name="sidebar")
+     */
+    public function sidebar()
+    {
+        return $this->render('sidebar.html.twig');
+    }
+    /**
+     * @Route("/confirmation", name="confirmation")
+     */
+    public function confirmation()
+    {
+        return $this->render('confirmation.html.twig');
+    }
+}
+>>>>>>> registration

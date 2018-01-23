@@ -102,11 +102,11 @@ p.header {
 }
 
 button#ongletParticulier, button#ongletEntreprise{
-    font-size: 16px;
+    font-size: 17px;
     font-family: Roboto;
     color: white;
-    border-top-left-radius: 40px 40px;
-    border-top-right-radius: 40px 40px;
+    border-top-left-radius: 25px 24px;
+    border-top-right-radius: 25px 24px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     border: none;
@@ -118,6 +118,18 @@ button#ongletEntreprise {
 
 button#ongletParticulier {
     background-color: #799C37;
+}
+
+button#ongletEntreprise {
+     background-color: #8F908F;
+}
+
+button#ongletParticulier {
+    background-color: #799C37;
+}
+
+span {
+    font-size: x-large;
 }
 
 div.particulierHeader {

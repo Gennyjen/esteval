@@ -4,7 +4,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
               integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"
               xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-        <link href="{{ asset('registration.css') }}" rel="stylesheet"/>
+    <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <link href="{{ asset('registration.css') }}" rel="stylesheet"/>
 {% endblock %}
 
 {% block body %}
@@ -30,10 +31,10 @@
         <form>
             <div class="row">
                 <div class="col-sm-6">
-                        <button id="ongletParticulier"  type="button" class="btn btn-primary btn-block">Je suis  <b>un particulier</b></button>
+                        <button id="ongletParticulier"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un particulier</span></button>
                 </div>
                 <div class="col-sm-6">
-                        <button id="ongletEntreprise"  type="button" class="btn btn-primary btn-block">Je suis  <b>un professionnel</b></button>
+                        <button id="ongletEntreprise"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un professionnel</span></button>
                 </div>
             </div>
             <div class="row">
@@ -54,10 +55,10 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <input type="password" class="form-control" id="inputPasswordConf" placeholder="Confirmation du mot de passe *" required>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="******" required>
                 </div>
                 <div class="col-sm-6">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="******" required>
+                    <input type="password" class="form-control" id="inputPasswordConf" placeholder="Confirmation du mot de passe *" required>
                 </div>
             </div>
             <div class="row">
@@ -122,7 +123,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <button id="submit" type="submit" class="btn btn-primary btn-block">Je m'inscris et je bénéficie <br> d'un accès de l'ensemble des publications</button>
+                    <button id="submit" type="submit" class="btn btn-primary btn-block"><span class="oi oi-arrow-circle-right"></span>Je m'inscris et je bénéficie <br> d'un accès de l'ensemble des publications</button>
                 </div>
             </div>
         </form>

@@ -28,7 +28,7 @@ use Doctrine\ORM\Mapping as ORM;
         /**
          * @ORM\Column(type="string", length=50)
          */
-        private $mail
+        private $mail;
 
         /**
          * @ORM\Column(type="string", length=60)
