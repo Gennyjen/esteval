@@ -15,9 +15,9 @@ class FormController extends Controller
     /**
      * @Route("/registration", name="inscriptionEntreprise_add")
      */
-    public function add(Request $request)
+    public function addCompany(Request $request)
     {
-        $contact = new ContactEntreprise();
+        $contact = new ContactEntrepriseAdd();
 
         $form = $this->createForm(ContactEntrepriseAdd::class, $contact);
 
@@ -39,9 +39,9 @@ class FormController extends Controller
     /**
      * @Route("/registration", name="inscriptionParticulier_add")
      */
-    public function addOther(Request $request)
+    public function addParticulier(Request $request)
     {
-        $contact = new ContactParticulier();
+        $contact = new ContactParticulierAdd();
 
         $form = $this->createForm(ContactParticulierAdd::class, $contact);
 
