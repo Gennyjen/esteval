@@ -9,7 +9,7 @@
     class RouteController extends Controller
     {
     /**
-     * @Route("/index", name="index")
+     * @Route("/", name="index")
      */
     public function index()
     {
@@ -77,5 +77,13 @@
     public function confirmation()
     {
         return $this->render('confirmation.html.twig');
+    }
+
+    /**
+     * @Route("/librairie", name="librairie")
+     */
+    public function librairie()
+    {
+        return $this->render('librairie.html.twig');
     }
 }
