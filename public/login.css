@@ -2,31 +2,31 @@
 *** Header div h1 h2 du login
  */
 
-h1, h2 {
+.modal h1, h2 {
     font-family: roboto;
     font-size: 16px;
     font-weight: 300;
 }
 
-h2.leftBottom {
+.modal h2.leftBottom {
     color: #adadad;
 }
 
-h1.rightTop {
+.modal h1.rightTop {
     color: black;
     margin-bottom: 2px;
 }
 
-h1.leftTop {
+.modal h1.leftTop {
     color: white;
     margin-bottom: 2px;
 }
 
-h2.rightBottom {
+.modal h2.rightBottom {
     color: white;
 }
 
-#headerConnexion {
+.modal #headerConnexion {
     display: flex;
     flex-direction: column;
     background-color: #444441;
@@ -43,7 +43,7 @@ h2.rightBottom {
     align-items: left;
 }
 
-#headerInscription {
+.modal #headerInscription {
     display: flex;
     flex-direction: column;
     background-color: #F7B815;
@@ -63,14 +63,14 @@ h2.rightBottom {
 *** Checkbox
  */
 
-div#checkbox {
+.modal div#checkbox {
     display: flex;
     flex-direction: column;
     font-size: 10px;
     font-family: roboto;
 }
 
-div#phrase {
+.modal div#phrase {
     display: flex;
     flex-direction: column;
     font-size: 10px;
@@ -81,18 +81,18 @@ div#phrase {
     color: #737472;
 }
 
-div.ligne {
+.modal div.ligne {
     display: flex;
     justify-content: space-between;
 }
 
-label#top.form-check-label {
+.modal label#top.form-check-label {
     font-size: 11.5px;
     bottom: 20px;
     font-color: #737472;
 }
 
-label#bottom.form-check-label {
+.modal label#bottom.form-check-label {
     font-size: 11.5px;
     top: 20px;
     font-color: #737472;
@@ -104,7 +104,7 @@ label#bottom.form-check-label {
 *** Buttons
  */
 
-button#inscription.btn.btn-primary {
+.modal button#inscription.btn.btn-primary {
     background-color: #F7B815;
     border: none;
     width: 260px;
@@ -112,7 +112,7 @@ button#inscription.btn.btn-primary {
     height: 50px;
 }
 
-button#connexion.btn.btn-primary {
+.modal button#connexion.btn.btn-primary {
     background-color: #9CCC53;
     border: none;
     width: 260px;
@@ -124,17 +124,17 @@ button#connexion.btn.btn-primary {
 *** Width formulaires
  */
 
-form.connexion {
+.modal form.connexion {
     width: 260px;
     margin: auto;
 }
 
-form.inscription {
+.modal form.inscription {
     width: 260px;
     margin: auto;
 }
 
-input.form-control {
+.modal input.form-control {
     height: 30px;
     background-color: #ECE9E8;
     border: none;
@@ -144,21 +144,21 @@ input.form-control {
 }
 
 
-p.invitation {
+.modal p.invitation {
     font-size: 14.8px;
     text-align: center;
     color: #737472;
     margin-top: 10px;
 }
 
-p.loginSocials {
+.modal p.loginSocials {
     color : black;
     text-align: center;
     font-size: 14.8px;
     margin-top: 50px;
 }
 
-a {
+.modal a {
     display: flex;
     justify-content: flex-end;
     font-size: 12px;
@@ -166,6 +166,6 @@ a {
     margin-top: 10px;
 }
 
-.modal-content {
+.modal .modal-content {
     border-bottom-right-radius: 40px 40px;;
 }
