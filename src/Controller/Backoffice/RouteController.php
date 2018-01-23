@@ -29,6 +29,7 @@
          */
         public function editorNewsletter()
         {
+
             return $this->render('/backoffice/editorNewsletter.html.twig');
         }
 

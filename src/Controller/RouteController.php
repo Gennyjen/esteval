@@ -53,4 +53,11 @@ class RouteController extends Controller
     {
         return $this->render('sidebar.html.twig');
     }
+    /**
+     * @Route("/confirmation", name="confirmation")
+     */
+    public function confirmation()
+    {
+        return $this->render('confirmation.html.twig');
+    }
 }
