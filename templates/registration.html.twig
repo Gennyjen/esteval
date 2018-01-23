@@ -28,7 +28,9 @@
                     </div>
                 </div>
          </div>
-        <form>
+      {# {{ form(formEntrepriseAdd) }} #}
+
+            {{ form_start(formEntrepiseAdd) }}
             <div class="row">
                 <div class="col-sm-6">
                         <button id="ongletParticulier"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un particulier</span></button>
@@ -126,7 +128,7 @@
                     <button id="submit" type="submit" class="btn btn-primary btn-block"><span class="oi oi-arrow-circle-right"></span>Je m'inscris et je bénéficie <br> d'un accès de l'ensemble des publications</button>
                 </div>
             </div>
-        </form>
+        {{ form_end(formAdd) }}
     </div>
 </div>
 {% endblock %}
