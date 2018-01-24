@@ -2,31 +2,31 @@
 *** Header div h1 h2 du login
  */
 
-.modal h1, h2 {
+h1, h2 {
     font-family: roboto;
     font-size: 16px;
     font-weight: 300;
 }
 
-.modal h2.leftBottom {
+h2.leftBottom {
     color: #adadad;
 }
 
-.modal h1.rightTop {
+h1.rightTop {
     color: black;
     margin-bottom: 2px;
 }
 
-.modal h1.leftTop {
+h1.leftTop {
     color: white;
     margin-bottom: 2px;
 }
 
-.modal h2.rightBottom {
+h2.rightBottom {
     color: white;
 }
 
-.modal #headerConnexion {
+#headerConnexion {
     display: flex;
     flex-direction: column;
     background-color: #444441;
@@ -43,7 +43,7 @@
     align-items: left;
 }
 
-.modal #headerInscription {
+#headerInscription {
     display: flex;
     flex-direction: column;
     background-color: #F7B815;
@@ -82,13 +82,13 @@ div#checkbox {
     justify-content: space-between;
 }
 
-.modal label#top.form-check-label {
+label#top.form-check-label {
     font-size: 11.5px;
     bottom: 20px;
     font-color: #737472;
 }
 
-.modal label#bottom.form-check-label {
+label#bottom.form-check-label {
     font-size: 11.5px;
     top: 20px;
     font-color: #737472;
@@ -99,7 +99,7 @@ div#checkbox {
 *** Buttons
  */
 
-.modal button#inscription.btn.btn-primary {
+button#inscription.btn.btn-primary {
     background-color: #F7B815;
     border: none;
     width: 260px;
@@ -107,7 +107,7 @@ div#checkbox {
     height: 50px;
 }
 
-.modal button#connexion.btn.btn-primary {
+button#connexion.btn.btn-primary {
     background-color: #9CCC53;
     border: none;
     width: 260px;
@@ -119,17 +119,17 @@ div#checkbox {
 *** Width formulaires
  */
 
-.modal form.connexion {
+form.connexion {
     width: 260px;
     margin: auto;
 }
 
-.modal form.inscription {
+form.inscription {
     width: 260px;
     margin: auto;
 }
 
-.modal input.form-control {
+input.form-control {
     height: 30px;
     background-color: #ECE9E8;
     border: none;
@@ -142,29 +142,25 @@ div#checkbox {
 *** Phrase d'invitation à la fin de l'inscription
  */
 
-.modal p.invitation {
+p.invitation {
     font-size: 14.8px;
     text-align: center;
     color: #737472;
     margin-top: 10px;
 }
 
-<<<<<<< HEAD
-.modal p.loginSocials {
-=======
 /*
 *** Phrase de connexion avec les réseaux sociaux
  */
 
 p.loginSocials {
->>>>>>> registration
     color : black;
     text-align: center;
     font-size: 14.8px;
     margin-top: 50px;
 }
 
-.modal a {
+a {
     display: flex;
     justify-content: flex-end;
     font-size: 12px;
@@ -172,17 +168,6 @@ p.loginSocials {
     margin-top: 10px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.modal .modal-content {
-    border-bottom-right-radius: 40px 40px;;
-}
-=======
-.modal-content {
-    border-bottom-right-radius: 26px 26px;
-}
->>>>>>> registration
-=======
 /*
 *** Border-radius modal
  */
@@ -224,4 +209,3 @@ img {
     height: 28px;
     width: 28px;
 }
->>>>>>> registration
