@@ -8,13 +8,7 @@
 
     class RouteController extends Controller
     {
-    /**
-     * @Route("/index", name="index")
-     */
-    public function index()
-    {
-        return $this->render('index.html.twig');
-    }
+
     /**
      * @Route("/login", name="login")
      */
@@ -39,31 +33,6 @@
         return $this->render('abonnements.html.twig');
     }
 
-    /**
-     * @Route("/index", name="index")
-     */
-    public function index()
-    {
-<<<<<<< HEAD
-        return $this->render('header.html.twig');
-
-    }
-
-    /**
-     * @Route("/footer", name="footer")
-     */
-    public function footer()
-    {
-        return $this->render('footer.html.twig');
-    }
-
-    /**
-     * @Route("/sidebar", name="sidebar")
-     */
-    public function sidebar()
-    {
-        return $this->render('sidebar.html.twig');
-    }
 
     /**
      * @Route("/company", name="company")
@@ -72,11 +41,15 @@
     {
         return $this->render('company.html.twig');
     }
-=======
-        return $this->render('index.html.twig');
+
+    /**
+     * @Route("/index", name="index")
+     */
+    public function index()
+    {
+    return $this->render('index.html.twig');
     }
 
->>>>>>> registration
     /**
      * @Route("/confirmation", name="confirmation")
      */
