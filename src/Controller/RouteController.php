@@ -40,10 +40,11 @@
     }
 
     /**
-     * @Route("/header", name="header")
+     * @Route("/index", name="index")
      */
-    public function header()
+    public function index()
     {
+<<<<<<< HEAD
         return $this->render('header.html.twig');
 
     }
@@ -71,6 +72,11 @@
     {
         return $this->render('company.html.twig');
     }
+=======
+        return $this->render('index.html.twig');
+    }
+
+>>>>>>> registration
     /**
      * @Route("/confirmation", name="confirmation")
      */

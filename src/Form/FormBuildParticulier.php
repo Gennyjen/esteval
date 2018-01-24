@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\ContactParticulier;
+use App\Entity\Particulier;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -10,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class ContactParticulierAdd extends AbstractType
+class FormBuildParticulier extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -49,6 +49,13 @@ class ContactParticulierAdd extends AbstractType
                 'placeholder' => 'Ville *',
                 'class' => 'form-control',
             ]]);;
+        $builder->add('country', 	TextType::class, [
+            'attr' => [
+                'id' => 'inputCountry',
+                'aria-describedby' => 'country',
+                'placeholder' => 'Pays',
+                'class' => 'form-control',
+            ]]);;
         $builder->add('zip', 	TextType::class, [
             'attr' => [
                 'id' => 'inputZip',
@@ -81,7 +88,7 @@ class ContactParticulierAdd extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => ContactParticulier::class,
+            'data_class' => Particulier::class,
         ]);
     }
 }
