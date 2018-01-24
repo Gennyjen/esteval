@@ -596,9 +596,136 @@ aside .abonnement img {
     top: 2px;
 }
 
+/* Page article *************************************************************************************************** */
+
+/* Titre */
+
+.page-article .titre {
+    margin-top: 15px;
+}
+
+.page-article .titre h2 {
+    font-weight: 500;
+}
+
+.page-article .titre p {
+    border: 1px solid #2dacac;
+    display: inline-block;
+    background-color: #2c9696;
+    color: white;
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+
+/* Réseaux sociaux */
+
+.page-article .reseaux-sociaux i.fa {
+    padding: 6px;
+    margin: 5px 5px;
+    /* margin-bottom: 20px; */
+    border-radius: 5px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 15px;
+    transition: 0.2s all;
+    color: white;
+    width: 25px;
+    height: 25px;
+}
+
+.page-article .reseaux-sociaux i.fa-facebook,
+.page-article .reseaux-sociaux i.fa-twitter,
+.page-article .reseaux-sociaux i.fa-linkedin {
+    margin: 2px;
+}
+
+.page-article .reseaux-sociaux i.fa.fa-facebook{
+    background: #3B5998;
+}
+
+.page-article .reseaux-sociaux i.fa.fa-twitter {
+    background: #00ACED;
+}
+
+.page-article .reseaux-sociaux i.fa.fa-linkedin {
+    background: #007BB6;
+}
+
+.page-article .col.reseaux-sociaux {
+    padding-left: 0;
+}
+
+.page-article .reseaux-sociaux i.fa:nth-child(1) {
+    margin-left: 0;
+}
+
+/* Paragraphes */
+
+.page-article .paragraphes p {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.page-article .paragraphes {
+    margin-bottom: 25px;
+}
+
+/* Magasine */
+
+.page-article .magasine p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.page-article .magasine a {
+    font-size: 14px;
+}
+
+.page-article .magasine {
+    margin-bottom: 25px;
+}
+
+/* Articles similaires */
+
+.page-article .titre-article h3 {
+    font-size: 20px;
+    background-color: #779d48;
+    color: white;
+    padding: 8px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+
+.page-article .articles-similaires {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background: #1f1f1fa3;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+.page-article .section-articles-similaires {
+    margin-bottom: 20px;
+    padding: 2px;
+    background-color: #f0f0f0;
+    border: solid 1px #dadada;
+    border-radius: 4px;
+}
+
+.page-article .articles {
+    margin-top: 10px;
+}
+
 /* Librairie **************************************************************************************************** */
 
-.librairie h2 {
+.librairie h1 {
     text-align: center;
     margin-bottom: 15px;
     margin-top: 5px;

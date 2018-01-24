@@ -41,6 +41,14 @@
         return $this->render('librairie.html.twig');
     }
 
+    /**
+     * @Route("/article", name="article")
+     */
+    public function article()
+    {
+        return $this->render('page-article.html.twig');
+    }
+
 
     /**
      * @Route("/company", name="company")
