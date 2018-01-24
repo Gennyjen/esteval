@@ -1,5 +1,9 @@
 {% extends "base.html.twig" %}
 
+    {% block stylesheets %}
+        <link href="{{ asset('style.css') }}" rel="stylesheet"/>
+    {% endblock %}
+
     {% block body %}
 
         {% include('header.html.twig') %}
