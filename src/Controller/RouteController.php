@@ -32,27 +32,13 @@ class RouteController extends Controller
     }
 
     /**
-     * @Route("/header", name="header")
+     * @Route("/index", name="index")
      */
-    public function header()
+    public function index()
     {
-        return $this->render('header.html.twig');
+        return $this->render('index.html.twig');
+    }
 
-    }
-    /**
-     * @Route("/footer", name="footer")
-     */
-    public function footer()
-    {
-        return $this->render('footer.html.twig');
-    }
-    /**
-     * @Route("/sidebar", name="sidebar")
-     */
-    public function sidebar()
-    {
-        return $this->render('sidebar.html.twig');
-    }
     /**
      * @Route("/confirmation", name="confirmation")
      */

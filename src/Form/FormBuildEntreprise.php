@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\ContactEntreprise;
+use App\Entity\Entreprise;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -10,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class ContactEntrepriseAdd extends AbstractType
+class FormBuildEntreprise extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -71,6 +71,13 @@ class ContactEntrepriseAdd extends AbstractType
                     'placeholder' => 'Code Postal *',
                     'class' => 'form-control',
             ]]);
+        $builder->add('country', 	TextType::class, [
+            'attr' => [
+                'id' => 'inputCountry',
+                'aria-describedby' => 'country',
+                'placeholder' => 'Pays',
+                'class' => 'form-control',
+            ]]);;
         $builder->add('phone', 	TextType::class, [
                 'attr' => [
                     'id' => 'inputPhone',
@@ -79,11 +86,11 @@ class ContactEntrepriseAdd extends AbstractType
                     'class' => 'form-control',
             ]]);
         $builder->add('password', 	TextType::class, [
-            'attr' => [
-                'id' => 'inputPassword',
-                'aria-describedby' => 'password',
-                'placeholder' => '*******',
-                'class' => 'form-control',
+                'attr' => [
+                    'id' => 'inputPassword',
+                    'aria-describedby' => 'password',
+                    'placeholder' => '*******',
+                    'class' => 'form-control',
             ]]);
         $builder->add('save',		SubmitType::class, [
                 'attr' => [
@@ -95,8 +102,9 @@ class ContactEntrepriseAdd extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults([
-            'data_class' => ContactEntreprise::class,
-        ]);
+        $resolver->setDefaults(array(
+            'lastname' => Entreprise::class,
+        ));
     }
+
 }

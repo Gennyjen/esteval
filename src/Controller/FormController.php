@@ -2,10 +2,10 @@
 
 namespace App\Controller;
 
-use App\Entity\ContactEntreprise;
-use App\Entity\ContactParticulier;
-use App\Form\ContactEntrepriseAdd;
-use App\Form\ContactParticulierAdd;
+use App\Entity\Entreprise;
+use App\Entity\Particulier;
+use App\Form\FormBuildEntreprise;
+use App\Form\FormBuildParticulier;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,9 +17,9 @@ class FormController extends Controller
      */
     public function addCompany(Request $request)
     {
-        $contact = new ContactEntrepriseAdd();
+        $contact = new FormBuildEntreprise();
 
-        $form = $this->createForm(ContactEntrepriseAdd::class, $contact);
+        $form = $this->createForm(FormBuildEntreprise::class, $contact);
 
         $form->handleRequest($request);
 
@@ -31,7 +31,7 @@ class FormController extends Controller
         }
 
         return $this->render('registration.html.twig', [
-            'formEntrepriseAdd' => $form->createView(),
+            'formEntreprise' => $form->createView(),
         ]);
     }
 
@@ -41,9 +41,9 @@ class FormController extends Controller
      */
     public function addParticulier(Request $request)
     {
-        $contact = new ContactParticulierAdd();
+        $contact = new FormBuildParticulier();
 
-        $form = $this->createForm(ContactParticulierAdd::class, $contact);
+        $form = $this->createForm(FormBuildParticulier::class, $contact);
 
         $form->handleRequest($request);
 
@@ -55,7 +55,7 @@ class FormController extends Controller
         }
 
         return $this->render('registration.html.twig', [
-            'formParticulierAdd' => $form->createView(),
+            'formParticulier' => $form->createView(),
         ]);
     }
 

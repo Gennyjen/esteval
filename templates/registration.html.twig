@@ -28,9 +28,8 @@
                     </div>
                 </div>
          </div>
-      {# {{ form(formEntrepriseAdd) }} #}
 
-            {{ form_start(formEntrepiseAdd) }}
+            {{ form_start(formEntreprise) }}
             <div class="row">
                 <div class="col-sm-6">
                         <button id="ongletParticulier"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un particulier</span></button>
@@ -41,7 +40,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputLastname" aria-describedby="lastname" placeholder="Nom" required>
+                    {{ form_widget(formEntreprise.lastname) }}
                 </div>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" id="inputFirstname"  aria-describedby="firstname"placeholder="Prénom" required>
@@ -128,7 +127,7 @@
                     <button id="submit" type="submit" class="btn btn-primary btn-block"><span class="oi oi-arrow-circle-right"></span>Je m'inscris et je bénéficie <br> d'un accès de l'ensemble des publications</button>
                 </div>
             </div>
-        {{ form_end(formAdd) }}
+        {{ form_end(formEntreprise) }}
     </div>
 </div>
 {% endblock %}
