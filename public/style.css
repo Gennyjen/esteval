@@ -596,6 +596,288 @@ aside .abonnement img {
     top: 2px;
 }
 
+/* Librairie **************************************************************************************************** */
+
+.librairie h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.librairie .partenaires {
+    margin-bottom: 20px;
+}
+
+.librairie .paragraphe p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6f6b6b;
+}
+
+.librairie select {
+    width: calc(100% - 200px);
+    background-color: #f3f3f3;
+    color: #6f6b6b;
+}
+
+.librairie h4 {
+    text-align: center;
+    color: #789e47;
+    font-weight: 100;
+    font-size: 29px;
+}
+
+.librairie h4 span{
+    color: #6f6b6b;
+}
+
+.librairie form.form-inline {
+    margin-bottom: 30px;
+}
+
+.librairie .titre-derniers-numeros {
+    margin-bottom: 25px;
+}
+
+.librairie .magasines {
+    border: 1px solid #dad7d7;
+    margin-bottom: 35px;
+}
+
+.librairie .magasines img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.librairie h6 {
+    text-align: center;
+}
+
+.librairie h6 span {
+    color: #779d48;
+    font-weight: 100;
+}
+
+
+.librairie .info_mag span {
+    font-size: 13px;
+}
+
+.librairie .magasines .numero {
+    color: white;
+    background-color: #779d48;
+    border: 1px solid #638638;
+    border-radius: 0 0 5px 0;
+    padding: 0px 3px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.librairie .magasines .mois-annee {
+    color: white;
+    background-color: #efa627;
+    border: 1px solid #dea01c;
+    border-radius: 0 0 0 5px;
+    padding: 0px 3px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.librairie .info_mag {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+/* Abonnement ************************************************************************************************************************** */
+
+.abonnements .infos-abo .nav-tabs a {
+    background: #dadada;
+    width: 100%;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 10px 10px 0 0;
+    text-transform: uppercase;
+}
+
+.abonnements .infos-abo .nav-tabs li {
+    width: 50%;
+}
+
+.abonnements .infos-abo .nav-tabs a.active  {
+    color: white;
+    background: #779d48;
+}
+
+.abonnements .infos-abo .nav-tabs a {
+    color: #464646;
+}
+
+.abonnements .infos-abo .tab-content {
+    background: #f3f3f3;
+    padding: 20px;
+    font-size: 13px;
+    border-radius: 0 0 8px 8px;
+}
+
+.abonnements .infos-abo .tab-content li {
+    list-style: none;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+
+
+.abonnements .infos-abo .tab-content li:after {
+    content: "";
+    width: 80%;
+    height: 1px;
+    background: black;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    opacity: 0.15;
+    transform: translateX(-50%);
+}
+
+.abonnements .infos-abo .tab-content li:nth-last-child(1) {
+    margin: 0;
+}
+
+.abonnements .infos-abo .tab-content li:nth-last-child(1):after {
+    display: none;
+}
+
+.abonnements .infos-abo .tab-content li a {
+    color: #4e4e4e;
+}
+
+
+
+.abonnements .infos-abo .tab-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.abonnements h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 35px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.abonnements .partenaires {
+    margin-bottom: 35px;
+}
+
+.abonnements .offre-abo {
+    border: 1px solid #e2e2e2;
+    border-radius: 5px 30px 30px 0px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.abonnements h6 {
+    font-weight: 300;
+    font-size: 24px;
+    padding-right: 67px;
+    text-align: center;
+    margin-top: 8px;
+} 
+
+.abonnements h6 span {
+    color: #779d48;
+}
+
+.abonnements .prix {
+    background-color: #424242;
+    display: inline-block;
+    text-align: center;
+    border: 3px solid #ececec;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    color: white;
+    box-shadow: 0 0 10px #0000004a;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+}
+
+.abonnements .info_price {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.abonnements .info_price > span  {
+    display: block;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.abonnements .info_price > span > span {
+    font-size: 25px;
+    font-weight: 300;
+    position: relative;
+    top: -8px;
+}
+
+.abonnements .offre-abo p {
+    text-align: justify;
+}
+
+.abonnements .prix .info_price span.gratuit {
+    font-size: 26px;
+}
+
+.abonnements img.w-75 {
+    margin: 26px 0px;
+}
+
+.abonnements .offre-abo .mag {
+    box-shadow: 0 0 10px #0000004a;
+}
+
+
+.abonnements button {
+    background-color: #ff9900;
+    color: white;
+    border: 1px solid #ec991a;
+    padding: 5px 17px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.abonnements .offre-groupee {
+    background-color: #6f6f6f;
+}
+
+.abonnements .offre-groupee h6 {
+    color: white;
+    font-size: 31px;
+}
+
+.abonnements .offre-groupee .prix {
+    background-color: #739f53;
+}
 
 
 /* Footer ****************************************************************************************************************************** */
@@ -635,6 +917,3 @@ footer .navigation_footer {
 
 
 
-.block {
-    background-color: red;
-}

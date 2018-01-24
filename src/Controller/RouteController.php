@@ -33,6 +33,14 @@
         return $this->render('abonnements.html.twig');
     }
 
+    /**
+     * @Route("/librairie", name="librairie")
+     */
+    public function librairie()
+    {
+        return $this->render('librairie.html.twig');
+    }
+
 
     /**
      * @Route("/company", name="company")
