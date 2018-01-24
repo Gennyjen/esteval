@@ -17,7 +17,7 @@ class FormController extends Controller
      */
     public function addCompany(Request $request)
     {
-        $contact = new FormBuildEntreprise();
+        $contact = new Entreprise();
 
         $form = $this->createForm(FormBuildEntreprise::class, $contact);
 
