@@ -4,16 +4,186 @@
 
         {% include('header.html.twig') %}
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-
-                        Contenu
-                        
-                    </div>
-
+        <main class="container abonnements">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Nos offres d'abonnements</h1>
                 </div>
             </div>
+            <div class="row partenaires align-items-center">
+                <div class="col-4">
+                    <h6>
+                        <span class="nos">Nos</span> partenaires</h4>
+                </div>
+                <div class="col-8">
+                    <img class="logo-partenaire logo-active" src="images/a.png" alt="Logo Active">
+                    <img class="logo-partenaire logo-positive" src="images/positive.png" alt="Logo Positive">
+                    <img class="logo-partenaire logo-forcemedia" src="images/force_media.png" alt="Logo Force Media">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="exTab2" class="infos-abo">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#1" data-toggle="tab" class="active">Pour les particuliers</a>
+                            </li>
+                            <li>
+                                <a href="#2" data-toggle="tab">Pour les professionnels</a>
+                            </li>
+                        </ul>
+    
+                        <div class="tab-content ">
+                            <div class="tab-pane active" id="1">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="offre-abo">
+                                            <h6>
+                                                <span>Epargnons</span> Responsable</h6>
+                                            <div class="prix">
+                                                <div class="info_price">
+                                                    <span>3<span>€</span></span> par mois
+                                                </div>
+                                            </div>
+                                            <div class="row pt-4">
+                                                <div class="col-12 col-lg-4 text-center mb-3">
+                                                    <img class="mag" src="images/magasine2.jpg" alt="Image de magasine">
+                                                </div>
+                                                <p class="col-12 col-lg-8 d-flex align-items-center m-0">Parce qu'une épargne raisonnée passe d'abord par une bonne information, Epargnons
+                                                    Responsable ! Le Bas de Laine d'Esteval s'adresse à toute personne souhaitant
+                                                    découvrir les grands thèmes d'investissement du moment, exposés par des professionnels
+                                                    des marchés financiers, ainsi que les portefeuilles témoins proposés par
+                                                    Michel Lemosof.</p>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <a href="">
+                                                    <button type="button" class="btn">S'abonner</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="offre-abo">
+                                            <h6>
+                                                <span>Brique</span> par Brique</h6>
+                                            <div class="prix">
+                                                <div class="info_price">
+                                                    <span>1<span>,25€</span></span>par mois 
+                                                </div>
+                                            </div>
+                                            <div class="row pt-4">
+                                                <div class="col-12 col-lg-4 text-center mb-3">
+                                                    <img class="mag" src="images/magasine1.jpg" alt="Image de magasine">
+                                                </div>
+                                                <p class="col-12 col-lg-8 d-flex align-items-center m-0">Brique par Brique, le dernier né des magazines numériques d'Esteval. Consacré à l’immobilier d’investissement sous toutes ses formes et à ses tendances de court, moyen et long terme, il paraît à un rythme trimestriel. Comme les autres magazines d'Esteval, il donne la priorité aux approches durables et responsables.</p>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <a href="">
+                                                    <button type="button" class="btn">S'abonner</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="offre-abo">
+                                            <h6>
+                                                <span>La Bulle</span> des Entrepreneurs</h6>
+                                            <div class="prix">
+                                                <div class="info_price">
+                                                    <span class="gratuit">Gratuit</span>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-4">
+                                                <div class="col-12 col-lg-4 text-center mb-3">
+                                                    <img class="mag" src="images/magasine3.jpg" alt="Image de magasine">
+                                                </div>
+                                                <p class="col-12 col-lg-8 d-flex align-items-center m-0">La Bulle des Entrepreneurs est un magazine numérique dédié aux thèmes du management et de l'entrepreneuriat.</p>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <a href="">
+                                                    <button type="button" class="btn">S'abonner</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="offre-abo offre-groupee">
+                                            <h6>
+                                                <span>Offre</span> groupée</h6>
+                                            <div class="prix">
+                                                <div class="info_price">
+                                                    <span>18<span>€</span></span> par 6 mois
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-center mb-3">
+                                                <img class="w-75" src="images/all_magasines.png" alt="Image de magasines">
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <a href="">
+                                                    <button type="button" class="btn">S'abonner</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="2">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="offre-abo">
+                                                <h6>
+                                                    <span>Epargnons</span> Responsable
+                                                </h6>
+                                                <div class="prix">
+                                                    <div class="info_price">
+                                                        <span>3<span>€</span></span> par mois
+                                                    </div>
+                                                </div>
+                                            <div class="row pt-4">
+                                                <div class="col-12 col-lg-4 text-center mb-3">
+                                                    <img class="mag" src="images/magasine2.jpg" alt="Image de magasine">
+                                                </div>
+                                                <p class="col-12 col-lg-8 d-flex align-items-center m-0">Parce qu'une épargne raisonnée passe d'abord par une bonne information, Epargnons
+                                                    Responsable ! Le Bas de Laine d'Esteval s'adresse à toute personne souhaitant
+                                                    découvrir les grands thèmes d'investissement du moment, exposés par des professionnels
+                                                    des marchés financiers, ainsi que les portefeuilles témoins proposés par
+                                                    Michel Lemosof.</p>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <a href="">
+                                                    <button type="button" class="btn">S'abonner</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="offre-abo">
+                                            <h6><span>Brique</span> par Brique</h6>
+                                                <div class="prix">
+                                                    <div class="info_price">
+                                                        <span>1<span>,25€</span></span>par mois 
+                                                    </div>
+                                                </div>
+                                            <div class="row pt-4">
+                                                <div class="col-12 col-lg-4 text-center mb-3">
+                                                    <img class="mag" src="images/magasine1.jpg" alt="Image de magasine">
+                                                </div>
+                                                <p class="col-12 col-lg-8 d-flex align-items-center m-0">Brique par Brique, le dernier né des magazines numériques d'Esteval. Consacré à l’immobilier d’investissement sous toutes ses formes et à ses tendances de court, moyen et long terme, il paraît à un rythme trimestriel. Comme les autres magazines d'Esteval, il donne la priorité aux approches durables et responsables.</p>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <a href="">
+                                                    <button type="button" class="btn">S'abonner</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
         {% include('footer.html.twig') %}
 
