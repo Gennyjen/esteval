@@ -63,32 +63,21 @@
 *** Checkbox
  */
 
-<<<<<<< HEAD
-.modal div#checkbox {
-=======
 div#topCheckbox {
->>>>>>> registration
     display: flex;
     font-size: 10px;
     font-family: roboto;
 }
 
-<<<<<<< HEAD
-.modal div#phrase {
-=======
 div#bottomCheckbox {
->>>>>>> registration
     display: flex;
     font-size: 10px;
     font-family: roboto;
     color: #737472;
 }
 
-<<<<<<< HEAD
-.modal div.ligne {
-=======
+
 div#checkbox {
->>>>>>> registration
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -161,15 +150,11 @@ div#checkbox {
     margin-top: 10px;
 }
 
-<<<<<<< HEAD
-.modal p.loginSocials {
-=======
 /*
 *** Phrase de connexion avec les réseaux sociaux
  */
 
 p.loginSocials {
->>>>>>> registration
     color : black;
     text-align: center;
     font-size: 14.8px;
@@ -184,17 +169,14 @@ p.loginSocials {
     margin-top: 10px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .modal .modal-content {
     border-bottom-right-radius: 40px 40px;;
 }
-=======
+
 .modal-content {
     border-bottom-right-radius: 26px 26px;
 }
->>>>>>> registration
-=======
+
 /*
 *** Border-radius modal
  */
@@ -236,4 +218,3 @@ img {
     height: 28px;
     width: 28px;
 }
->>>>>>> registration
