@@ -1,15 +1,10 @@
 {% extends "base.html.twig" %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"
-          xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-    <link href="{{ asset('registration.css') }}" rel="stylesheet"/>
-{% endblock %}
+
 
 {% block body %}
 
-    <div class="page">
+<div class="page">
     <div class="containerHeader">
         <div class="row">
             <div class="col-sm-12">
@@ -20,134 +15,129 @@
             </div>
         </div>
     </div>
-    <div class="container">
-         <div class="row">
+        <div class="container">
+            <div class="row">
                 <div class="col-sm-12">
                     <div class="header">
                         <h3>Mes informations personnelles</h3>
                     </div>
                 </div>
-         </div>
-<<<<<<< HEAD
-       <form method="POST" action="#">
-        <div class="row">
-=======
-
-        {{ form_start(formEntreprise) }}
-            <div class="row">
->>>>>>> master
-                <div class="col-sm-6">
-                        <button id="ongletParticulier"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un particulier</span></button>
-                </div>
-                <div class="col-sm-6">
-                        <button id="ongletEntreprise"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un professionnel</span></button>
-                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-<<<<<<< HEAD
-                    {{ form_widget(form.lastname) }}
-                    {{ form_widget(form.entreprise.lastname) }}
-                </div>
-=======
-                    {{ form_widget(formEntreprise, {'attr': {'class': 'task_field'}}) }}                </div>
->>>>>>> master
-                <div class="col-sm-6">
-                    {{ form_widget(form.firstname) }}
-                    {{ form_widget(form.entreprise.firstname) }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    {{ form_widget(form.email) }}
-                    {{ form_widget(form.entreprise.email) }}
-                </div>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputEmailConf" aria-describedby="emailConf" placeholder="adresse@email.com" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    {{ form_widget(form.password) }}
-                    {{ form_widget(form.entreprise.password) }}
-                </div>
-                <div class="col-sm-6">
-                    <input type="password" class="form-control" id="inputPasswordConf" placeholder="Confirmation du mot de passe *" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    {{ form_widget(form.address) }}
-                    {{ form_widget(form.entreprise.address) }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    {{ form_widget(form.zip) }}
-                    {{ form_widget(form.entreprise.zip) }}
-                </div>
-                <div class="col-sm-6">
-                    {{ form_widget(form.city) }}
-                    {{ form_widget(form.entreprise.city) }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    {{ form_widget(form.country) }}
-                    {{ form_widget(form.entreprise.country) }}
-                </div>
-                <div class="col-sm-6">
-                    {{ form_widget(form.phone) }}
-                    {{ form_widget(form.entreprise.phone) }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4>Conditions générales d'utilisations</h4>
-                    <div id="footer">
-                        <p>loremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqerorveomsvmoesovesomvjeos
-                            jvoeovigjovj Contrat d'uilisations du site d'Esteval définissant les droits et
-                            obligations des parties dans le cadre de l'uilisation des informations et servic
-                            es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
-                            veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
-                            sant les droits et obligations des parties dans le cadre de l'uilisation des inf
-                            ormations et services proposés par Estevalj Contrat d'uilisations du site d'Este
-                            val définissant les droits et par Estevalj Contrat d'uilisations du site d'Este
-                            obligations des parties dans le cadre de l'uilisation des informations et servic
-                            es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
-                            veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
-                            sant les droits et obligat</p>
+            <form method="POST" action="#">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                                <div class="col-sm-6">
+                                    <button id="ongletParticulier"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un particulier</span></button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button id="ongletEntreprise"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un professionnel</span></button>
+                                </div>
+                            </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                {{ form_widget(form.lastname) }}
+                                {{ form_widget(form.entreprise.lastname) }}
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form_widget(form.firstname) }}
+                                {{ form_widget(form.entreprise.firstname) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                {{ form_widget(form.email) }}
+                                {{ form_widget(form.entreprise.email) }}
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputEmailConf" aria-describedby="emailConf" placeholder="adresse@email.com" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                {{ form_widget(form.password) }}
+                                {{ form_widget(form.entreprise.password) }}
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="inputPasswordConf" placeholder="Confirmation du mot de passe *" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {{ form_widget(form.address) }}
+                                {{ form_widget(form.entreprise.address) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                {{ form_widget(form.zip) }}
+                                {{ form_widget(form.entreprise.zip) }}
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form_widget(form.city) }}
+                                {{ form_widget(form.entreprise.city) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                {{ form_widget(form.country) }}
+                                {{ form_widget(form.entreprise.country) }}
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form_widget(form.phone) }}
+                                {{ form_widget(form.entreprise.phone) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Conditions générales d'utilisations</h4>
+                                <div id="footer">
+                                    <p>loremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqerorveomsvmoesovesomvjeos
+                                    jvoeovigjovj Contrat d'uilisations du site d'Esteval définissant les droits et
+                                    obligations des parties dans le cadre de l'uilisation des informations et servic
+                                    es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
+                                    veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
+                                    sant les droits et obligations des parties dans le cadre de l'uilisation des inf
+                                    ormations et services proposés par Estevalj Contrat d'uilisations du site d'Este
+                                    val définissant les droits et par Estevalj Contrat d'uilisations du site d'Este
+                                    obligations des parties dans le cadre de l'uilisation des informations et servic
+                                    es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
+                                    veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
+                                    sant les droits et obligat</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    J'ai lu les conditions d'utilisation *
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                        Je m'abonne à la newsletter *
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                    <div class="col-sm-12">
+                        {{ form_widget(form.save) }}
+                        {{ form_widget(form.entreprise.save) }}
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input">
-                            J'ai lu les conditions d'utilisation *
-                        </label>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input">
-                            Je m'abonne à la newsletter *
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    {{ form_widget(form.save) }}
-                    {{ form_widget(form.entreprise.save) }}
-                </div>
-            </div>
-    </form>
+            </form>
     </div>
 </div>
+
 {% endblock %}
 
