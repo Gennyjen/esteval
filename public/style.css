@@ -344,7 +344,7 @@ main article button {
     display: inline-block;
     position: absolute;
     top: 10px;
-    left: -10px;
+    left: -8px;
     padding: 0 10px;
     font-size: 11px;
     border-radius: 0 5px 5px 0;
@@ -1044,3 +1044,212 @@ footer .navigation_footer {
 
 
 
+/* Login inscription connection ******************************************** */
+
+.popupConnect h1, h2 {
+    font-family: roboto;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.popupConnect h2.leftBottom {
+    color: #adadad;
+}
+
+.popupConnect h1.rightTop {
+    color: black;
+    margin-bottom: 2px;
+}
+
+.popupConnect h1.leftTop {
+    color: white;
+    margin-bottom: 2px;
+}
+
+.popupConnect h2.rightBottom {
+    color: white;
+}
+
+.popupConnect #headerConnexion {
+    display: flex;
+    flex-direction: column;
+    background-color: #444441;
+    border-radius: 0;
+    right: -155px;
+    left: -135px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 22px;
+    padding-left: 30px;
+    top: 0;
+    bottom: 0;
+    border-right: solid 1px white;
+    align-items: left;
+}
+
+.popupConnect #headerInscription {
+    display: flex;
+    flex-direction: column;
+    background-color: #F7B815;
+    border-radius: 0;
+    right: -65px;
+    left: -135px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-right: 30px;
+    padding-top: 22px;
+    top: 0;
+    border-left: solid 1px white;
+    align-items: flex-end;
+}
+
+/*
+*** Checkbox
+ */
+
+.popupConnect div#topCheckbox {
+    display: flex;
+    font-size: 10px;
+    font-family: roboto;
+}
+
+.popupConnect div#bottomCheckbox {
+    display: flex;
+    font-size: 10px;
+    font-family: roboto;
+    color: #737472;
+}
+
+.popupConnect div#checkbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popupConnect label#top.form-check-label {
+    font-size: 11.5px;
+    bottom: 20px;
+    font-color: #737472;
+}
+
+.popupConnect label#bottom.form-check-label {
+    font-size: 11.5px;
+    top: 20px;
+    font-color: #737472;
+}
+
+
+/*
+*** Buttons
+ */
+
+.popupConnect button#inscription.btn.btn-primary {
+    background-color: #F7B815;
+    border: none;
+    width: 260px;
+    border-radius: 0;
+    height: 50px;
+}
+
+.popupConnect button#connexion.btn.btn-primary {
+    background-color: #9CCC53;
+    border: none;
+    width: 260px;
+    border-radius: 0;
+    height: 50px;
+}
+
+/*
+*** Width formulaires
+ */
+
+.popupConnect form.connexion {
+    width: 260px;
+    margin: auto;
+}
+
+.popupConnect form.inscription {
+    width: 260px;
+    margin: auto;
+}
+
+.popupConnect input.form-control {
+    height: 30px;
+    background-color: #ECE9E8;
+    border: none;
+    margin-top: 19px;
+    border-radius: 0;
+    font-weight: 100;
+}
+
+/*
+*** Phrase d'invitation à la fin de l'inscription
+ */
+
+.popupConnect p.invitation {
+    font-size: 14.8px;
+    text-align: center;
+    color: #737472;
+    margin-top: 10px;
+}
+
+/*
+*** Phrase de connexion avec les réseaux sociaux
+ */
+
+.popupConnect p.loginSocials {
+    color : black;
+    text-align: center;
+    font-size: 14.8px;
+    margin-top: 50px;
+}
+
+.popupConnect a {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: lightslategrey;
+    margin-top: 10px;
+}
+
+/*
+*** Border-radius modal
+ */
+
+.popupConnect .modal-content {
+    border-bottom-right-radius: 26px 26px;
+}
+
+/*
+*** Séparateur
+ */
+
+.popupConnect .separator {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, black, black, transparent);
+    margin: 20px 0;
+    opacity: 0.2;
+}
+
+/*
+*** Liens réseaux sociaux
+ */
+
+.popupConnect ul {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 70px;
+    margin-left: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.popupConnect li {
+    list-style: none;
+}
+
+.popupConnect img {
+    height: 28px;
+    width: 28px;
+}

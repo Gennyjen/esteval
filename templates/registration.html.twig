@@ -29,7 +29,7 @@
                 </div>
          </div>
 
-            {{ form_start(formEntreprise) }}
+        {{ form_start(formEntreprise) }}
             <div class="row">
                 <div class="col-sm-6">
                         <button id="ongletParticulier"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un particulier</span></button>
@@ -40,8 +40,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    {{ form_widget(formEntreprise.lastname) }}
-                </div>
+                    {{ form_widget(formEntreprise, {'attr': {'class': 'task_field'}}) }}                </div>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" id="inputFirstname"  aria-describedby="firstname"placeholder="Prénom" required>
                 </div>
