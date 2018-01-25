@@ -28,8 +28,14 @@
                     </div>
                 </div>
          </div>
+<<<<<<< HEAD
        <form method="POST" action="#">
         <div class="row">
+=======
+
+        {{ form_start(formEntreprise) }}
+            <div class="row">
+>>>>>>> master
                 <div class="col-sm-6">
                         <button id="ongletParticulier"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un particulier</span></button>
                 </div>
@@ -39,9 +45,13 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
+<<<<<<< HEAD
                     {{ form_widget(form.lastname) }}
                     {{ form_widget(form.entreprise.lastname) }}
                 </div>
+=======
+                    {{ form_widget(formEntreprise, {'attr': {'class': 'task_field'}}) }}                </div>
+>>>>>>> master
                 <div class="col-sm-6">
                     {{ form_widget(form.firstname) }}
                     {{ form_widget(form.entreprise.firstname) }}

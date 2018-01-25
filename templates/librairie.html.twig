@@ -1,5 +1,9 @@
 {% extends "base.html.twig" %}
 
+    {% block stylesheets %}
+        <link href="{{ asset('style.css') }}" rel="stylesheet"/>
+    {% endblock %}
+
     {% block body %}
 
         {% include('header.html.twig') %}
@@ -11,14 +15,16 @@
                         <div class="col-12">
                             <h1>Librairie</h1>
                         </div>
-                        <div class="row partenaires align-items-center">
-                            <div class="col-4">
-                                <h6><span class="nos">Nos</span> partenaires</h4>
-                            </div>
-                            <div class="col-8">
-                                <img class="logo-partenaire logo-active" src="images/a.png" alt="Logo Active">
-                                <img class="logo-partenaire logo-positive" src="images/positive.png" alt="Logo Positive">
-                                <img class="logo-partenaire logo-forcemedia" src="images/force_media.png" alt="Logo Force Media">
+                        <div class="col-12 partenaires align-items-center">
+                            <div class="row">
+                                <div class="col-4 d-flex align-items-center">
+                                    <h6><span class="nos">Nos</span> partenaires</h4>
+                                </div>
+                                <div class="col-8">
+                                    <img class="logo-partenaire logo-active" src="images/a.png" alt="Logo Active">
+                                    <img class="logo-partenaire logo-positive" src="images/positive.png" alt="Logo Positive">
+                                    <img class="logo-partenaire logo-forcemedia" src="images/force_media.png" alt="Logo Force Media">
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 paragraphe">
