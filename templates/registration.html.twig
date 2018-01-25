@@ -1,15 +1,15 @@
 {% extends "base.html.twig" %}
 
 {% block stylesheets %}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-              integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"
-              xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-    <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"
+          xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
     <link href="{{ asset('registration.css') }}" rel="stylesheet"/>
 {% endblock %}
 
 {% block body %}
-<div class="page">
+
+    <div class="page">
     <div class="containerHeader">
         <div class="row">
             <div class="col-sm-12">
@@ -28,9 +28,8 @@
                     </div>
                 </div>
          </div>
-
-            {{ form_start(formEntreprise) }}
-            <div class="row">
+       <form method="POST" action="#">
+        <div class="row">
                 <div class="col-sm-6">
                         <button id="ongletParticulier"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un particulier</span></button>
                 </div>
@@ -40,15 +39,18 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    {{ form_widget(formEntreprise.lastname) }}
+                    {{ form_widget(form.lastname) }}
+                    {{ form_widget(form.entreprise.lastname) }}
                 </div>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputFirstname"  aria-describedby="firstname"placeholder="Prénom" required>
+                    {{ form_widget(form.firstname) }}
+                    {{ form_widget(form.entreprise.firstname) }}
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputEmail" aria-describedby="email" placeholder="adresse@email.com" required>
+                    {{ form_widget(form.email) }}
+                    {{ form_widget(form.entreprise.email) }}
                 </div>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" id="inputEmailConf" aria-describedby="emailConf" placeholder="adresse@email.com" required>
@@ -56,7 +58,8 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="******" required>
+                    {{ form_widget(form.password) }}
+                    {{ form_widget(form.entreprise.password) }}
                 </div>
                 <div class="col-sm-6">
                     <input type="password" class="form-control" id="inputPasswordConf" placeholder="Confirmation du mot de passe *" required>
@@ -64,23 +67,28 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Adresse *" required>
+                    {{ form_widget(form.address) }}
+                    {{ form_widget(form.entreprise.address) }}
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <input type="number" class="form-control" id="inputZip" placeholder="Code Postal *" required>
+                    {{ form_widget(form.zip) }}
+                    {{ form_widget(form.entreprise.zip) }}
                 </div>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputCity" placeholder="Ville *" required>
+                    {{ form_widget(form.city) }}
+                    {{ form_widget(form.entreprise.city) }}
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputCountry" placeholder="France" required>
+                    {{ form_widget(form.country) }}
+                    {{ form_widget(form.entreprise.country) }}
                 </div>
                 <div class="col-sm-6">
-                    <input type="number" class="form-control" id="inputPhone" placeholder="Téléphone" required>
+                    {{ form_widget(form.phone) }}
+                    {{ form_widget(form.entreprise.phone) }}
                 </div>
             </div>
             <div class="row">
@@ -124,16 +132,12 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <button id="submit" type="submit" class="btn btn-primary btn-block"><span class="oi oi-arrow-circle-right"></span>Je m'inscris et je bénéficie <br> d'un accès de l'ensemble des publications</button>
+                    {{ form_widget(form.save) }}
+                    {{ form_widget(form.entreprise.save) }}
                 </div>
             </div>
-        {{ form_end(formEntreprise) }}
+    </form>
     </div>
 </div>
 {% endblock %}
 
-{% block javascripts %}
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-{% endblock %}

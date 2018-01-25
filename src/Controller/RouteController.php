@@ -18,7 +18,7 @@
     }
 
     /**
-     * @Route("/registration", name="registration")
+     * @Route("/registration", name="registration2")
      */
     public function registration()
     {
