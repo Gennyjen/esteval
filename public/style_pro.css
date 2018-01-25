@@ -1,0 +1,22 @@
+header .row.align-item-center {
+    background-color: #424244 !important;
+    position: relative;
+}
+
+header .row.align-item-center.all_category {
+    background-color: #eeeeee !important;
+    border-bottom: 4px solid #e3e3e3;
+}
+
+header .reseaux-sociaux i.fa {
+    background-color: #424244;
+}
+
+header .btn-entreprise, header .btn-abonnement {
+    border: 1px solid #333333;
+    background-color: #565656;
+}
+
+header .btn-entreprise:hover, header .btn-abonnement:hover {
+    background-color: #2f2f2f;
+}

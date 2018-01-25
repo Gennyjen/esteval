@@ -73,4 +73,12 @@
     {
         return $this->render('confirmation.html.twig');
     }
+
+    /**
+     * @Route("/pro", name="pro")
+     */
+    public function pro()
+    {
+        return $this->render('professionnel/professionnel.html.twig');
+    }
 }
