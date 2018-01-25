@@ -1129,13 +1129,13 @@ footer .navigation_footer {
 .popupConnect label#top.form-check-label {
     font-size: 11.5px;
     bottom: 20px;
-    font-color: #737472;
+    color: #737472;
 }
 
 .popupConnect label#bottom.form-check-label {
     font-size: 11.5px;
     top: 20px;
-    font-color: #737472;
+    color: #737472;
 }
 
 
