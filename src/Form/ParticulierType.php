@@ -22,56 +22,56 @@ class ParticulierType extends AbstractType
         $builder
                 ->add('lastname', TextType::class, [
                 'attr' => [
-                    'id' => 'inputLastname',
+                    'id' => 'inputParticulier',
                     'aria-describedby' => 'lastname',
                     'placeholder' => 'Nom',
                     'class' => 'form-control',
                     ]])
                 ->add('firstname', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputFirstname',
+                        'id' => 'inputParticulier',
                         'aria-describedby' => 'firstname',
                         'placeholder' => 'Prénom',
                         'class' => 'form-control',
                     ]])
                 ->add('email', 		EmailType::class, [
                     'attr' => [
-                        'id' => 'inputEmail',
+                        'id' => 'inpuParticulier',
                         'aria-describedby' => 'email',
                         'placeholder' => 'adresse@mail.com',
                         'class' => 'form-control',
                     ]])
                 ->add('address', 		TextType::class, [
                     'attr' => [
-                        'id' => 'inputEmail',
+                        'id' => 'inpuParticulier',
                         'aria-describedby' => 'address',
                         'placeholder' => 'Adresse *',
                         'class' => 'form-control',
                     ]])
                 ->add('city', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputCity',
+                        'id' => 'inputParticulier',
                         'aria-describedby' => 'city',
                         'placeholder' => 'Ville *',
                         'class' => 'form-control',
                     ]])
                 ->add('country', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputCountry',
+                        'id' => 'inputParticulier',
                         'aria-describedby' => 'country',
                         'placeholder' => 'Pays',
                         'class' => 'form-control',
                     ]])
                 ->add('zip', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputZip',
+                        'id' => 'inputParticulier',
                         'aria-describedby' => 'zip',
                         'placeholder' => 'Code Postal *',
                         'class' => 'form-control',
                     ]])
                 ->add('phone', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputPhone',
+                        'id' => 'inputParticulier',
                         'aria-describedby' => 'phone',
                         'placeholder' => 'Téléphone',
                         'class' => 'form-control',

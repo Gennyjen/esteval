@@ -32,7 +32,8 @@ class FormsParticulierController extends Controller
 
            if($request->getMethod() == 'POST' && $formParticulier->isSubmitted() && $formParticulier->isValid())
            {
-                return new Response('Les données ont bien été sauvegardées!');
+               echo 'OUUUUUai';
+               return new Response('Les données ont bien été sauvegardées!');
            }
 
         return $this->render('registration.html.twig', array('form' => $formParticulier->createView()));

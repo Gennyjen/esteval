@@ -1451,3 +1451,7 @@ footer .navigation_footer {
     max-height: 160%;
     overflow: scroll;
 }
+
+.page div.col-sm-6 {
+    height: 60px;
+}

@@ -23,77 +23,77 @@ class EntrepriseType extends AbstractType
         $builder
             ->add('lastname', TextType::class, [
                     'attr' => [
-                        'id' => 'inputLastname',
+                        'id' => 'inputEntreprise',
                         'aria-describedby' => 'lastname',
                         'placeholder' => 'Nom',
                         'class' => 'form-control invisible',
                 ]])
             ->add('firstname', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputFirstname',
+                        'id' => 'inputEntreprise',
                         'aria-describedby' => 'firstname',
                         'placeholder' => 'Prénom',
                         'class' => 'form-control invisible',
                 ]])
             ->add('email', 		EmailType::class, [
                     'attr' => [
-                        'id' => 'inputEmail',
+                        'id' => 'inputEntreprise',
                         'aria-describedby' => 'email',
                         'placeholder' => 'adresse@mail.com',
                         'class' => 'form-control invisible',
                 ]])
             ->add('address', 		TextType::class, [
                     'attr' => [
-                        'id' => 'inputEmail',
+                        'id' => 'inputEntreprise',
                         'aria-describedby' => 'address',
                         'placeholder' => 'Adresse *',
                         'class' => 'form-control invisible',
                 ]])
             ->add('company', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputCompany',
+                        'id' => 'inputEntreprise',
                         'aria-describedby' => 'company',
                         'placeholder' => 'Société',
                         'class' => 'form-control invisible',
                 ]])
             ->add('tva', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputTva',
+                        'id' => 'inputEntreprise',
                         'aria-describedby' => 'tva',
                         'placeholder' => 'TVA',
                         'class' => 'form-control invisible',
                 ]])
             ->add('city', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputCity',
+                        'id' => 'inputEntreprise',
                         'aria-describedby' => 'city',
                         'placeholder' => 'Ville *',
                         'class' => 'form-control invisible',
                 ]])
             ->add('zip', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputZip',
+                        'id' => 'inputEntreprise',
                         'aria-describedby' => 'zip',
                         'placeholder' => 'Code Postal *',
                         'class' => 'form-control invisible',
                 ]])
             ->add('country', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputCountry',
+                        'id' => 'inputEntreprise',
                         'aria-describedby' => 'country',
                         'placeholder' => 'Pays',
                         'class' => 'form-control invisible',
                 ]])
             ->add('phone', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputPhone',
+                        'id' => 'inputEntreprise',
                         'aria-describedby' => 'phone',
                         'placeholder' => 'Téléphone',
                         'class' => 'form-control invisible',
                 ]])
             ->add('password', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputPassword',
+                        'id' => 'inputEntreprise',
                         'aria-describedby' => 'password',
                         'placeholder' => '*******',
                         'class' => 'form-control invisible',
