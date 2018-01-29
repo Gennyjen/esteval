@@ -241,6 +241,21 @@ header .category.culture:hover {
     background-color: #c5000b;
     color: white;
 }
+header .navbar-collapse {
+    background: #333333;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+header .navbar-collapse li {
+    border-bottom: 1px solid #585858;
+}
+
 
 /* Index ********************************************************************************* */
 

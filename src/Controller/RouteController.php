@@ -81,4 +81,12 @@
     {
         return $this->render('professionnel/professionnel.html.twig');
     }
+
+    /**
+     * @Route("/connexion", name="connexion")
+     */
+    public function connexion()
+    {
+        return $this->render('login.html.twig');
+    }
 }
