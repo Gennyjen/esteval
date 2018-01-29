@@ -73,4 +73,12 @@
     {
         return $this->render('confirmation.html.twig');
     }
+
+    /**
+     * @Route("/moncompte", name="moncompte")
+     */
+    public function moncompte()
+    {
+        return $this->render('moncompte.html.twig');
+    }
 }
