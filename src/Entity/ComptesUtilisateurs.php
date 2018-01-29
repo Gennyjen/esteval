@@ -119,6 +119,14 @@ class ComptesUtilisateurs
      * )
      */
     private $tva;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isCompany;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $chooseNewsletter;
 
 
     /**
@@ -327,6 +335,38 @@ class ComptesUtilisateurs
     public function setFonction($fonction): void
     {
         $this->fonction = $fonction;
+    }
+
+    /**
+     * @param mixed $isCompany
+     */
+    public function setIsCompany($isCompany): void
+    {
+        $this->isCompany = $isCompany;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIsCompany()
+    {
+        return $this->isCompany;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getChooseNewsletter()
+    {
+        return $this->chooseNewsletter;
+    }
+
+    /**
+     * @param mixed $chooseNewletter
+     */
+    public function setChooseNewsletter($chooseNewsletter): void
+    {
+        $this->chooseNewsletter = $chooseNewsletter;
     }
 
 

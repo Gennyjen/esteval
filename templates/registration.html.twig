@@ -25,11 +25,12 @@
         </div>
         {{ form_start(form, {'attr' : { 'method': 'post', 'action': path('confirmation')}}) }}
         <div class="row">
-            <div class="col-sm-6">
-                <button id="ongletParticulier"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un particulier</span></button>
-            </div>
-            <div class="col-sm-6">
-                <button id="ongletEntreprise"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un professionnel</span></button>
+            <div class="col-sm-12">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        {{ form_widget(form.isCompany) }}
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row jqueryTopModif">
@@ -45,8 +46,7 @@
                 {{ form_widget(form.email) }}
             </div>
             <div class="col-sm-6">
-                <input type="text" class="form-control inputParticulier" aria-describedby="emailConf" placeholder="Confirmation du mail *" required>
-                <input type="text" class="form-control invisible inputEntreprise" aria-describedby="emailConf" placeholder="Confirmation du mail *" required>
+                <input type="text" class="form-control" placeholder="Confirmation du mail *" required>
             </div>
         </div>
         <div class="row">
@@ -54,8 +54,7 @@
                 {{ form_widget(form.password) }}
             </div>
             <div class="col-sm-6">
-                <input type="password" class="form-control inputParticulier" aria-describedby="passConf" placeholder="Confirmation du mot de passe *" required>
-                <input type="password" class="form-control invisible inputEntreprise" aria-describedby="passConf" placeholder="Confirmation du mot de passe *" required>
+                <input type="password" class="form-control" placeholder="Confirmation du mot de passe *" required>
             </div>
         </div>
         <div class="row">
@@ -84,7 +83,7 @@
                 {{ form_widget(form.fonction) }}
             </div>
         </div>
-        <div class="row inputCompany">
+        <div class="row">
             <div class="col-sm-6">
                 {{ form_widget(form.company) }}
             </div>
@@ -92,50 +91,48 @@
                 {{ form_widget(form.tva) }}
             </div>
         </div>
-        <div class="row jqueryMarginModif">
-            <div class="col-sm-12">
-                <h4>Conditions générales d'utilisations</h4>
-                <div id="footer">
-                    <p>loremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqerorveomsvmoesovesomvjeos
-                    jvoeovigjovj Contrat d'uilisations du site d'Esteval définissant les droits et
-                    obligations des parties dans le cadre de l'uilisation des informations et servic
-                    es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
-                    veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
-                    sant les droits et obligations des parties dans le cadre de l'uilisation des inf
-                    ormations et services proposés par Estevalj Contrat d'uilisations du site d'Este
-                    val définissant les droits et par Estevalj Contrat d'uilisations du site d'Este
-                    obligations des parties dans le cadre de l'uilisation des informations et servic
-                    es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
-                    veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
-                    sant les droits et obligat</p>
-                </div>
+        <div class="col-sm-12">
+            <h4>Conditions générales d'utilisations</h4>
+            <div id="footer">
+                <p>loremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqerorveomsvmoesovesomvjeos
+                jvoeovigjovj Contrat d'uilisations du site d'Esteval définissant les droits et
+                obligations des parties dans le cadre de l'uilisation des informations et servic
+                es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
+                veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
+                sant les droits et obligations des parties dans le cadre de l'uilisation des inf
+                ormations et services proposés par Estevalj Contrat d'uilisations du site d'Este
+                val définissant les droits et par Estevalj Contrat d'uilisations du site d'Este
+                obligations des parties dans le cadre de l'uilisation des informations et servic
+                es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
+                veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
+                sant les droits et obligat</p>
             </div>
         </div>
-        <div class="modifCheck">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="form-check modif">
-                        <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input">
-                        J'ai lu les conditions d'utilisation *
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input">
-                            Je m'abonne à la newsletter *
-                        </label>
-                    </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-check modif">
+                    <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    J'ai lu les conditions d'utilisation *
+                    </label>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
-                {{ form_widget(form.save) }}
+                <div class="form-check">
+                    <label class="form-check-label">
+                        Je m'abonne à la newsletter *
+                        {{ form_widget(form.chooseNewsletter) }}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label class="form-check-label">
+                    {{ form_widget(form.save) }}
+                </label>
             </div>
         </div>
             {{ form_end(form) }}
@@ -145,30 +142,18 @@
 
 {% endblock %}
     {% block javascripts %}
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $("#ongletEntreprise").click(function () {
-                    $(".inputEntreprise").removeClass("invisible");
-                    $(".inputParticulier").addClass("invisible");
-                    $(".inputEntreprise").addClass("visible");
-                    $(".inputParticulier").removeClass("visible");
-                    $(".inputCompany").css("margin-top", "46px");
-                    $("div.row.jqueryTopModif").css("margin-top", "-46px");
-                    $("div.modifCheck").css("margin-top", "58px");
-                    $("div.row.jqueryMarginModif").css("margin-top", "46px").css("margin-bottom", "-46px");
-                    $("button#particulier_save").addClass("invisible").remove("#particulier");
-                    $("button#entreprise_save").removeClass("invisible");
+                    $("#inputTva").prop('disabled', false);
+                    $("#inputCompany").prop('disabled', false);
+                    $("#inputFonction").prop('disabled', false);
                 });
                 $("#ongletParticulier").click(function () {
-                    $(".inputEntreprise").addClass("invisible");
-                    $(".inputParticulier").removeClass("invisible");
-                    $(".inputEntreprise").removeClass("visible");
-                    $(".inputParticulier").addClass("visible");
-                    $(".inputCompany").css("margin-top", "-46px");
-                    $("div.row.jqueryTopModif").css("margin-top", "0px");
-                    $("div.row.jqueryMarginModif").css("margin-top", "0px");
-                    $("button#entreprise_save").addClass("invisible");
-                    $("button#particulier_save").removeClass("invisible");
+                    $("#inputTva").prop('disabled', true);
+                    $("#inputCompany").prop('disabled', true);
+                    $("#inputFonction").prop('disabled', true);
                 });
             });
         </script>
