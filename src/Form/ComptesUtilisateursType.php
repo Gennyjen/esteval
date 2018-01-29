@@ -2,8 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Particulier;
-use App\Entity\Entreprise;
+use App\Entity\ComptesUtilisateurs;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -11,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class ParticulierType extends AbstractType
+class ComptesUtilisateursType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -21,60 +20,71 @@ class ParticulierType extends AbstractType
     {
         $builder
                 ->add('lastname', TextType::class, [
-                'attr' => [
-                    'id' => 'inputParticulier',
-                    'aria-describedby' => 'lastname',
-                    'placeholder' => 'Nom',
-                    'class' => 'form-control',
-                    ]])
+                    'attr' => [
+                        'id' => 'inputLastname',
+                        'aria-describedby' => 'lastname',
+                        'placeholder' => 'Nom',
+                        'class' => 'form-control ',
+                        'required' => true,
+                        ]])
                 ->add('firstname', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputParticulier',
+                        'id' => 'inputFirstname',
                         'aria-describedby' => 'firstname',
                         'placeholder' => 'Prénom',
-                        'class' => 'form-control',
+                        'class' => 'form-control ',
+                        'required' => true,
                     ]])
                 ->add('email', 		EmailType::class, [
                     'attr' => [
-                        'id' => 'inpuParticulier',
+                        'id' => 'inputEmail',
                         'aria-describedby' => 'email',
                         'placeholder' => 'adresse@mail.com',
                         'class' => 'form-control',
+                        'required' => true,
                     ]])
                 ->add('address', 		TextType::class, [
                     'attr' => [
-                        'id' => 'inpuParticulier',
+                        'id' => 'inpuAddress',
                         'aria-describedby' => 'address',
                         'placeholder' => 'Adresse *',
                         'class' => 'form-control',
+                        'required' => true,
                     ]])
                 ->add('city', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputParticulier',
+                        'id' => 'inputCity',
                         'aria-describedby' => 'city',
                         'placeholder' => 'Ville *',
-                        'class' => 'form-control',
+                        'class' => 'form-control ',
+                        'required' => true,
                     ]])
                 ->add('country', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputParticulier',
+                        'id' => 'inputCountry',
                         'aria-describedby' => 'country',
                         'placeholder' => 'Pays',
-                        'class' => 'form-control',
+                        'class' => 'form-control ',
+                        'required' => true,
+
                     ]])
                 ->add('zip', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputParticulier',
+                        'id' => 'inputZip',
                         'aria-describedby' => 'zip',
                         'placeholder' => 'Code Postal *',
-                        'class' => 'form-control',
+                        'class' => 'form-control ',
+                        'required' => true,
+
                     ]])
                 ->add('phone', 	TextType::class, [
                     'attr' => [
-                        'id' => 'inputParticulier',
+                        'id' => 'inputPhone',
                         'aria-describedby' => 'phone',
                         'placeholder' => 'Téléphone',
-                        'class' => 'form-control',
+                        'class' => 'form-control ',
+                        'required' => true,
+
                     ]])
                 ->add('password', 	TextType::class, [
                     'attr' => [
@@ -82,15 +92,38 @@ class ParticulierType extends AbstractType
                         'aria-describedby' => 'password',
                         'placeholder' => '*******',
                         'class' => 'form-control',
+                        'required' => true,
+
                     ]])
                 ->add('save',		SubmitType::class, [
                     'attr' => [
-                        'label_format' => 'Valider',
                         'id' => 'submit',
                         'class' => 'btn btn-primary btn-block',
                     ]])
-                ->add('entreprise', EntrepriseType::class)
-
+                ->add('company', 	TextType::class, [
+                    'attr' => [
+                        'id' => 'inputCompany',
+                        'aria-describedby' => 'company',
+                        'placeholder' => 'Société',
+                        'class' => 'form-control invisible',
+                        'required' => true,
+                    ]])
+                ->add('tva', 	TextType::class, [
+                    'attr' => [
+                        'id' => 'inputTva',
+                        'aria-describedby' => 'tva',
+                        'placeholder' => 'TVA',
+                        'class' => 'form-control invisible',
+                        'required' => true,
+                    ]])
+                ->add('fonction', 	TextType::class, [
+                    'attr' => [
+                        'id' => 'inputFonction',
+                        'aria-describedby' => 'fonction',
+                        'placeholder' => 'TVA',
+                        'class' => 'form-control invisible',
+                        'required' => true,
+                    ]])
                 ->getForm();
         }
 
@@ -100,7 +133,7 @@ class ParticulierType extends AbstractType
          * @param OptionsResolver $resolver
          */
         $resolver->setDefaults([
-            'data_class' => 'App\Entity\Particulier',
+            'data_class' => 'App\Entity\ComptesUtilisateurs',
         ]);
     }
 }
