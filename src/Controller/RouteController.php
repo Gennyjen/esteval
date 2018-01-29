@@ -9,16 +9,9 @@
     class RouteController extends Controller
     {
 
-    /**
-     * @Route("/login", name="login")
-     */
-    public function login()
-    {
-        return $this->render('login.html.twig');
-    }
 
     /**
-     * @Route("/registration", name="registration")
+     * @Route("/registration", name="registration2")
      */
     public function registration()
     {
@@ -59,7 +52,7 @@
     }
 
     /**
-     * @Route("/index", name="index")
+     * @Route("/", name="index")
      */
     public function index()
     {
@@ -75,6 +68,39 @@
     }
 
     /**
+     * @Route("/patrimoine-et-finance", name="patrimoine-et-finance")
+     */
+    public function patrimoineEtFinance()
+    {
+        return $this->render('patrimoine-et-finance.html.twig');
+    }
+
+
+    /**
+     * @Route("/entreprises-et-initiatives", name="entreprises-et-initiatives")
+     */
+    public function entreprisesEtInitiatives()
+    {
+        return $this->render('entreprises-et-initiatives.html.twig');
+    }
+
+     /**
+     * @Route("/culture-et-perspectives", name="culture-et-perspectives")
+     */
+    public function cultureEtPerspectives()
+    {
+        return $this->render('culture-et-perspectives.html.twig');
+    }
+
+     /**
+     * @Route("/mentions-legales", name="mentions-legales")
+     */
+    public function mentionsLegales()
+    {
+        return $this->render('mentions-legales.html.twig');
+    }
+    
+     /**
      * @Route("/pro", name="pro")
      */
     public function pro()

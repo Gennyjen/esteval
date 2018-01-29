@@ -2,6 +2,103 @@
 
 {% block body %}
 
-    Company
+    {% include('header.html.twig') %}
+
+    <main class="container entreprise">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>L'Entreprise</h1>
+                    </div>
+                    <div class="col-12">
+                        <p class="intro">Esteval est une entreprise spécialisée dans l'édition de publications professionnelles, culturelles et financières à destination des décideurs (chefs d'entreprise,entrepreneurs, managers) et des investisseurs (particuliers et professionnels).</p>
+                        <p class="paragraphe1">Comprendre l'économie durable pour s'y investir </p>
+                        <p>Son ambition est d'informer au mieux ses lecteurs. Elle s’appuie donc sur des convictions fortes, et des compétences diverses pour couvrir ses <strong> 3 grands thèmes de prédilection </strong> : </p>
+                    </div>
+                    <div class="col-12 themes">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <a href="/patrimoine-et-finance"><span class="theme1">Patrimoine et finance</span></a> 
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <a href="/entreprises-et-initiatives"><span class="theme2">Entreprises et Initiatives</span></a> 
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <a href="/culture-et-perspectives"><span class="theme3">Culture et Perspectives</span></a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="col-12">
+                        <p>Les quatres piliers de notre politique éditoriale :</p>
+                        <ul>
+                            <li><i class="fa fa-circle" aria-hidden="true"></i> Une vision de long terme pour s'affranchir des écueils du court terme.</li>
+                            <li><i class="fa fa-circle" aria-hidden="true"></i> Une approche à la fois pédagogique et professionnelle pour informer sans lasser.</li>
+                            <li><i class="fa fa-circle" aria-hidden="true"></i> Une indépendance d'esprit alliée à suffisamment de curiosité pour éviter tout parti pris.</li>
+                            <li><i class="fa fa-circle" aria-hidden="true"></i> La volonté d'alimenter les débats pour faire progresser les idées.</li>
+                        </ul>
+                           
+                        <citation>"Notre activité est axée sur une démarche durable, fondée sur la valorisation de la recherche et une considération permanente des enjeux sociaux, environnementaux et de gouvernance".</citation> 
+                               
+                        <p class="my-3">Les hommes, leurs projets et les entreprises sont au cœur de notre démarche.</p>
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="col">
+                     
+                            <h4>L'équipe de rédaction est pilotée par  :</h4>
+                        <div class="thierry">    
+                            <p><strong>Thierry Bisaga</strong> – membre de l’équipe de rédaction et du comité éditorial, fondateur et directeur des publications d’Esteval.</p>
+                            <a href="#demo" class="btn" data-toggle="collapse">Voir son CV</a>
+                            <div id="demo" class="collapse">
+                                <p>Diplômé de la Smurfit Business School de Dublin (MBS - programme Asset Management avec l’Université Bocconi de Milan et London Business School), de l’ENS GSI et des universités de Paris I, Metz et Nancy.</p> 
+
+                                <p>Thierry a évolué dans le monde de la banque (Banque Paribas), puis de la gestion d’actifs (Pioneer AM) avant d’initier différents projets entrepreneuriaux et, au cours des dix dernières années, de prêter sa plume à un grand nombre de publications françaises et luxembourgeoises.</p>
+                                <ul>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i> Rédacteur en chef du magazine l’As Patrimonial</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i> Rédacteur en chef du Canal Gestion de Patrimoine de la Tribune en 2011-2012</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i> Collaborateur régulier de La Tribune de 2003 à 2012 (rubriques quotidiennes et hebdomadaires sur la gestion d’actifs)</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i> Collaborateur régulier d’Investir de 2000 à 2008 (rubrique hebdomadaire).</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i> Collaborateur régulier de l’Expansion, du Point, de Boursorama, du Revenu, du Journal des Finances, d’Asset Management Magazine et de Gestion Alternative Magazine, du Jeudi (hebdomadaire luxembourgeois) au cours des dix dernières années.</li>
+                                    <li><i class="fa fa-circle" aria-hidden="true"></i> Collaborateur ponctuel de nombreux autres titres tels que Challenges, Mieux-Vivre Votre Argent, l’Agefi Hebdo, l’Agefi Luxembourg.</li>
+                                </ul>
+                            </div>
+                        </div>             
+                                
+                        <div class="michel">
+                            <p><strong>Michel Lemosof</strong>  – membre de l’équipe de rédaction et du comité éditorial pour le thème Patrimoine & Finance.</p>
+                            <a href="#demo1" class="btn" data-toggle="collapse">Voir son CV</a>
+                            <div id="demo1" class="collapse">
+                                    <p>Avant de rejoindre Esteval, Michel a été, de 2006 à 2012, rédacteur en chef adjoint, en charge de la gestion collective, pour l’hebdomadaire Investir, le magazine Investir et le site investir.fr (aujourd’hui bourse.lesechos.fr).</p> 
+
+                                    <p>De 1993 à 2006, il a été responsable, comme chef de service, du suivi des valeurs immobilières cotées, de la rubrique Sicav et des cahiers spéciaux “ gestion collective ” chez Investir Publications, éditeur de l’hebdomadaire et du magazine Investir.</p>
+                                    
+                                    <p>De 1989-1993, il a été responsable des rubriques Bourse et gestion collective au Revenu (ex-Le Revenu Français).</p> 
+                                    
+                                    <p>Au cours de sa carrière, il a également occupé les postes suivants :</p> 
+                                    <ul>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i> Responsable de la rubrique Bourse aux Propos Utiles aux Médecins.</li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i> Responsable des rubriques Vie pratique et La Semaine des Sicav à La Vie Financière (ex-La Vie Française).</li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i> Adjoint au rédacteur en chef d’Ingénieurs & Cadres de France.</li>
+                                    </ul>
+                                    
+                                    
+                                    
+                            </div>
+                        </div>
+                    </div>
+                        
+                 </div>
+            </div>
+
+            {% include('sidebar.html.twig') %}
+
+        </div>
+    </main>
+
+        {% include('footer.html.twig') %}
+
 
 {% endblock %}

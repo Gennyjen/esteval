@@ -2,10 +2,15 @@
 
 namespace App\Entity;
 
+use App\Entity\Particulier;
+use App\Form\ParticulierType;
+use App\Form\EntrepriseType;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ContactEntrepriseRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\EntrepriseRepository")
  */
 class Entreprise
 {
@@ -15,42 +20,63 @@ class Entreprise
      * @ORM\Column(type="integer")
      */
     private $id;
+
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
      */
     private $lastname;
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
      */
     private $firstname;
     /**
      * @ORM\Column(type="text", length=30)
+     * @Assert\Email()
+     * @Assert\NotBlank()
      */
     private $email;
     /**
      * @ORM\Column(type="integer", length=30)
+     * @Assert\NotBlank()
      */
     private $phone;
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank()
      */
     private $address;
     /**
      * @ORM\Column(type="integer", length=30)
+     * @Assert\NotBlank()
      */
     private $zip;
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
      */
     private $city;
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
      */
     private $country;
     /**
      * @ORM\Column(type="text", length=30)
+     * @Assert\NotBlank()
      */
     private $password;
+    /**
+     * @ORM\Column(type="text", length=30)
+     * @Assert\NotBlank()
+     */
+    private $company;
+    /**
+     * @ORM\Column(type="text", length=30)
+     * @Assert\NotBlank()
+     */
+    private $tva;
 
     /**
      * @return mixed
@@ -212,6 +238,36 @@ class Entreprise
         $this->password = $password;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getCompany()
+    {
+        return $this->company;
+    }
 
+    /**
+     * @param mixed $company
+     */
+    public function setCompany($company): void
+    {
+        $this->company = $company;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTva()
+    {
+        return $this->tva;
+    }
+
+    /**
+     * @param mixed $tva
+     */
+    public function setTva($tva): void
+    {
+        $this->tva = $tva;
+    }
 
 }

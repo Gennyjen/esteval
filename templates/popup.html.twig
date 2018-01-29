@@ -1,10 +1,10 @@
-<div class="modal-dialog modal-lg">
+<div class="modal-dialog modal-lg popupConnect">
     <div class="modal-content">
 
-        <div class="container">
+        <div class="container ">
             <div class="row">
 
-                <div class="col-sm-6">
+                <div class="col-6">
                     <div id="headerConnexion"  class="modal-header">
                         <h2 class="leftBottom">Connectez-vous...</h2>
                     </div>
@@ -23,7 +23,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6">
+                <div class="col-6">
                     <div id="headerInscription" class="modal-header">
                         <h2 class="rightBottom">Inscrivez-vous...</h2>
                     </div>
@@ -36,21 +36,20 @@
                                 <input type="text" class="form-control" placeholder="Prénom">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="adresse@email.fr">
+                                <input type="password" class="form-control" id="exampleInputPassword" placeholder="adresse@email.fr">
                             </div>
                             <div class="ligne">
                                 <div id="phrase">
                                     <p>Je suis</p>
-                                    <p>(un choix possible)</p>
                                 </div>
                                 <div id="checkbox">
                                     <div id="checkEntreprise" class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="entreprise">
-                                        <p>entreprise</p>
+                                        <input type="radio" class="form-check-input" name="type" value="entreprise">
+                                        <p>un professionnel</p>
                                     </div>
                                     <div id="checkParticulier" class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="particulier">
-                                        <p>particulier</p>
+                                        <input type="radio" class="form-check-input" name="type" value="particulier">
+                                        <p>un particulier</p>
                                     </div>
                                 </div>
                             </div>
