@@ -16,6 +16,11 @@ a, a:hover {
     background: #779d48;
     border: 1px solid #658c34;
     color: white;
+    transition: 0.2s all;
+}
+
+.btn-vesteval:hover {
+    background: #628538;
 }
 
 .btn {
@@ -256,48 +261,6 @@ header .rubrique a {
 main.container {
     margin-top: 20px;
 }
-/* Les images */
-
-main .logo-partenaire {
-    margin-right: 9px;
-}
-
-main .logo-active {
-    max-width: 17%;
-}
-
-main .logo-positive {
-    max-width: 38%;
-}
-
-main .logo-forcemedia {
-    max-width: 28%;
-}
-
-
-/* Nos Partenaires */
-
-main .partenaires {
-    background-color: #f3f3f3;
-    margin-top: 7px;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 7px;
-    border-radius: 5px;
-    border: 1px solid rgb(231, 231, 231);
-}
-
-main .partenaires h6 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 500;
-}
-
-main .partenaires .nos{
-
-    font-weight: 300;
-}
 
 /* Articles */
 
@@ -372,11 +335,14 @@ main article button {
     height: 25px;
     background: #bfbfbf;
     cursor: pointer;
+    transition: 0.2s all;
 }
 
 .suite button:hover {
     background-color: #779d48;
+    
 }
+
 .carousel-indicators li {
     width: 15px;
     height: 15px;
@@ -998,6 +964,7 @@ aside .abonnement img {
     padding-right: 67px;
     text-align: center;
     margin-top: 8px;
+    margin-left: 50px;
 } 
 
 .abonnements h6 span {
@@ -1066,6 +1033,14 @@ aside .abonnement img {
     border-radius: 5px;
     text-transform: uppercase;
     margin-top: 20px;
+}
+
+.abonnements button.btn.btn-bulle {
+    margin-top: 34px;
+}
+
+.abonnements button.btn.btn-abo {
+    margin-top: 50px;
 }
 
 .abonnements .offre-groupee {
@@ -1618,3 +1593,55 @@ footer .navigation_footer {
 .page div.col-sm-6 {
     height: 60px;
 }
+
+/* Nos partenaires ********************************************************************************************************** */
+
+
+.partenaires {
+    background-color: #f3f3f3;
+    margin-top: 7px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 231, 231);
+}
+
+.partenaires h6 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 500;
+    width: 100%;
+    margin: 0;
+}
+
+.partenaires .nos{
+
+    font-weight: 300;
+}
+
+.partenaires .part {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.logo-partenaire {
+    margin: 9px;
+}
+
+.partenaires .nos {
+    color: #000000;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .partenaires h6 {
+        font-size: 20px;
+        width: 25%;
+    }
+
+}
+
+
+
