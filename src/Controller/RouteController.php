@@ -11,7 +11,7 @@
 
 
     /**
-     * @Route("/registration", name="registration")
+     * @Route("/registration", name="registration2")
      */
     public function registration()
     {
@@ -98,5 +98,13 @@
     public function mentionsLegales()
     {
         return $this->render('mentions-legales.html.twig');
+    }
+    
+     /**
+     * @Route("/pro", name="pro")
+     */
+    public function pro()
+    {
+        return $this->render('professionnel/professionnel.html.twig');
     }
 }

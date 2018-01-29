@@ -2,10 +2,15 @@
 
 namespace App\Entity;
 
+use App\Entity\Entreprise;
+use App\Form\ParticulierType;
+use App\Form\EntrepriseType;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ContactParticulierRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ParticulierRepository")
  */
 class Particulier
 {
@@ -15,50 +20,69 @@ class Particulier
      * @ORM\Column(type="integer")
      */
     private $id;
+
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
      */
     private $lastname;
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
      */
     private $firstname;
     /**
      * @ORM\Column(type="text", length=30)
+     * @Assert\NotBlank()
      */
     private $email;
     /**
      * @ORM\Column(type="integer", length=30)
+     * @Assert\NotBlank()
+     * @Assert\Email()
      */
     private $phone;
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank()
      */
     private $address;
     /**
      * @ORM\Column(type="integer", length=30)
+     * @Assert\NotBlank()
      */
     private $zip;
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
      */
     private $city;
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
      */
     private $country;
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
      */
     private $company;
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
      */
     private $tva;
     /**
      * @ORM\Column(type="text", length=30)
+     * @Assert\NotBlank()
      */
     private $password;
+    /**
+     * @ORM\Column(type="text", length=30)
+     * @Assert\NotBlank()
+     * @ORM\OneToOne(targetEntity=Entreprise::class)
+     */
+    private $entreprise;
 
     /**
      * @return mixed
@@ -252,5 +276,20 @@ class Particulier
         $this->password = $password;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getEntreprise()
+    {
+        return $this->entreprise;
+    }
+
+    /**
+     * @param mixed $entreprise
+     */
+    public function setEntreprise($entreprise): void
+    {
+        $this->entreprise = $entreprise;
+    }
 
 }
