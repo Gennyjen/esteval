@@ -106,5 +106,23 @@
     public function pro()
     {
         return $this->render('professionnel/professionnel.html.twig');
+
     }
+
+    /**
+     * @Route("/moncompte", name="moncompte")
+     */
+    public function monCompte()
+    {
+        return $this->render('moncompte.html.twig');
+    }
+
+    /**
+     * @Route("/connexion", name="connexion")
+     */
+    public function connexion()
+    {
+        return $this->render('login.html.twig');
+    }
+
 }
