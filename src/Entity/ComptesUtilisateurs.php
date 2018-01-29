@@ -119,6 +119,18 @@ class ComptesUtilisateurs
      * )
      */
     private $tva;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $chooseParticulier;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $chooseCompany;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $chooseNewsletter;
 
 
     /**
@@ -327,6 +339,54 @@ class ComptesUtilisateurs
     public function setFonction($fonction): void
     {
         $this->fonction = $fonction;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getChooseParticulier()
+    {
+        return $this->chooseParticulier;
+    }
+
+    /**
+     * @param mixed $chooseParticulier
+     */
+    public function setChooseParticulier($chooseParticulier): void
+    {
+        $this->chooseParticulier = $chooseParticulier;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getChooseCompany()
+    {
+        return $this->chooseCompany;
+    }
+
+    /**
+     * @param mixed $chooseCompany
+     */
+    public function setChooseCompany($chooseCompany): void
+    {
+        $this->chooseCompany = $chooseCompany;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getChooseNewsletter()
+    {
+        return $this->chooseNewsletter;
+    }
+
+    /**
+     * @param mixed $chooseNewletter
+     */
+    public function setChooseNewsletter($chooseNewsletter): void
+    {
+        $this->chooseNewsletter = $chooseNewsletter;
     }
 
 
