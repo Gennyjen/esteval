@@ -1,0 +1,276 @@
+{% extends "base.html.twig" %}
+
+    {% block body %}
+
+        {% include('header.html.twig') %}
+
+    <?php include('header.php'); ?>
+
+    <div class="container">
+        <div class="row rounded-top">
+            <div class="col-12 perso mt-3">
+                <h1>Mon Espace Personnel</h1>
+                <h2>Gérez ici votre espace personnel</h2>
+            </div>
+
+            <!-- Espace Perso -->
+            <div class="col-md-4 px-3 border-left border-right" style="background-color: #eaeaea;"> 
+            
+                <div class="info_coordonnees bg-white">
+
+                    <h3 class="mt-2 pt-2 mon-compte">
+                        <i class="fa fa-user pr-2" aria-hidden="true"></i>  
+                        Mon compte
+                    </h3>
+
+
+
+                    <!-- Prénom Nom bdd -->
+
+                    <form class="p-3" action="#" method="post">
+                    
+                        <!-- Email -->
+                        
+                        <div>
+                            <label for="email" class="champs">Mon email :</label>
+                            <input type="text" id="email" name="email"/>
+                        </div>
+                        <!-- Nom -->
+                        <div>
+                            <label for="nom" class="champs">Nom :</label>
+                            <input type="text" id="nom" name="nom"/>
+                        </div>
+                    
+                        <!-- Prénom -->
+                        <div>
+                            <label for="prenom" class="champs">Prénom :</label>
+                            <input type="text" id="prenom" name="prenom" />
+                        </div>
+
+                        <!-- Adresse -->
+                        <div>
+                            <label for="adresse" class="champs">Adresse :</label>
+                            <input type="text" id="adresse" name="adresse" />
+                        </div>
+                        
+                        <!-- Code postal -->
+                        <div>
+                            <label for="codePostal" class="champs">Code postal :</label>
+                            <input type="text" id="codePostal" name="codePostal" />
+                        </div>
+
+                        <!-- Ville automatic selon code postal-->
+
+                        <div>
+                            <label for="ville" class="champs">Ville :</label>
+                            <input type="text" id="ville" name="ville" />
+                        </div>
+
+                        <!-- Pays automatic -->
+
+                        <div>
+                            <label for="pays" class="champs">Pays :</label>
+                            <input type="text" id="pays" name="pays" />
+                        </div>
+
+                        <!-- En plus si professionnel -->
+
+                        <!-- entreprise -->
+                            
+                            <div>
+                                <label for="entreprise" class="champs">Entreprise :</label>
+                                <input type="text" id="entreprise" name="entreprise" />
+                            </div>
+                            <!-- fonction-->
+                            <div>
+                                <label for="fonction" class="champs">Fonction :</label>
+                                <input type="text" id="fonction" name="fonction" />
+                            </div>
+                            <!-- tva-->
+                            <div>
+                                <label for="tva" class="champs">TVA% :</label>
+                                <input type="text" id="tva" name="tva" />
+                            </div>
+
+                            <p><div class="separator"></div></p>
+
+                            <p>
+                                <i class="fa fa-envelope pr-2 green-esteval fa-1x" aria-hidden="true"></i>
+                                Je reçois la newsletter : (oui ou non)
+                            </p> 
+                            <p>
+                                Je peux modifier ces informations quand je le souhaite.
+                            </p> 
+                        <div>
+                            <button type="button" class="btn btn-esteval btn-lg btn-block mt-2">Modifier mes informations</button>
+                        </div>
+
+                    </form>
+
+                </div>
+     
+            </div>
+            <!-- End Espace Perso -->
+
+
+            
+            <div class="col-12 col-md-8 border-right" style="background-color: #eaeaea;">
+
+                <div class="row">
+
+                    <!-- Abonnements Perso    -->
+                    <div class="col-12">
+
+                        <div class="info_abo_perso bg-white">
+                            <h3 class="mt-2 pt-2">
+                                <i class="fa fa-file-o pr-2" aria-hidden="true"></i>
+                                Mes abonnements
+                            </h3>
+
+
+                            <!-- Si PARTICULIER afficher les offres pour particuliers -->
+
+
+
+
+                            <!-- Si PROFFESSIONNEL afficher les offres pour Professionnels -->
+                            <div class="row mx-auto pt-2">
+                                <div class="col-4 col-lg-3">
+                                    <div class="img-offre">
+                                        <img src="images\choix_mag_sidebar.png" alt="" >
+                                    </div>
+                                </div>
+                                <div class="col-8 text-center">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-4">
+                                            <h4>La Bulle des Entrepreneurs</h4>
+                                        </div>
+                                        <div class="col-12 col-lg-2">
+                                            <div class="mx-auto text-sm-center">Gratuit</div>
+                                        </div>
+                                        <div class="col-12 col-lg-2">
+                                            <div class="mx-auto text-sm-center"></div>
+                                        </div>
+                                        <div class="mt-3 mx-auto col-lg-4">
+                                            <button type="button" class="btn btn-esteval-abonnement btn-block">Je m'abonne !</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        
+                            <div class="separator"></div>
+
+                            <div class="row mx-auto pt-2">
+                                <div class="col-4 col-lg-3">
+                                    <div class="img-offre">
+                                        <img src="images\choix_mag_sidebar.png" alt="" >
+                                    </div>
+                                </div>
+                                <div class="col-8 text-center">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-4">
+                                            <h4>Abonnement Corporate</h4>
+                                            <h5>Tout esteval pendant un an</h5>
+                                        </div>
+                                        <div class="col-12 col-lg-2">
+                                            <div class="mx-auto text-sm-center">150€ HT</div>
+                                        </div>
+                                        <div class="col-12 col-lg-2">
+                                        <div class="mx-auto text-sm-center">prix TTC</div>
+                                        </div>
+                                        <div class="mt-3 mx-auto col-lg-4">
+                                            <button type="button" class="btn btn-esteval-abonnement btn-block">Je m'abonne !</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="separator"></div>
+
+                            <div class="row mx-auto pt-2">
+                                <div class="col-4 col-lg-3">
+                                    <div class="img-offre">
+                                        <img src="images\choix_mag_sidebar.png" alt="" >
+                                    </div>
+                                </div>
+                                <div class="col-8 text-center">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-4">
+                                            <h4>Abonnement Corporate</h4>
+                                            <h5>Tout esteval pendant un an</h5>
+                                            <span>+</span>
+                                            <p>Publi-rédactionnel site</p>
+                                        </div>
+                                        <div class="col-12 col-lg-2">
+                                            <div class="mx-auto text-sm-center">350€ HT</div>
+                                        </div>
+                                        <div class="col-12 col-lg-2">
+                                        <div class="mx-auto text-sm-center">prix TTC</div>
+                                        </div>
+                                        <div class="mt-3 mx-auto col-lg-4">
+                                            <button type="button" class="btn btn-esteval-abonnement  btn-block">Je m'abonne !</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> 
+
+                    </div>
+                    <!-- End Abonnements Perso -->
+
+                    <!-- Factures -->
+                    <div class="col-12">
+
+                        <div class="info_factures_perso bg-white">
+                            <h3 class="mt-2 pt-2">
+                                <i class="fa fa-file-text-o pr-2" aria-hidden="true"></i>
+                                Mes Factures
+                            </h3>
+
+                            <table class="table table-responsive table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">N°</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Objet</th>
+                                        <th scope="col">Montant</th>
+                                        <th scope="col">Etat</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">001</th>
+                                        <td>02/01/2018</td>
+                                        <td>Corporate abonnement</td>
+                                        <td>150€ TTC</td>
+                                        <td>Abonné</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">002</th>
+                                        <td>11/01/2018</td>
+                                        <td>Brique par Brique</td>
+                                        <td>28€ TTC</td>
+                                        <td>Abonné</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">003</th>
+                                        <td>15/03/2018</td>
+                                        <td>La bulle des Entrepreneurs</td>
+                                        <td>Gratuit</td>
+                                        <td>Abonnement se terminant dans 3 mois</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> <!-- end factures -->
+                </div> <!-- row -->
+            </div>
+        </div>
+    </div>
+
+
+        {% include('footer.html.twig') %}
+
+    {% endblock %}
