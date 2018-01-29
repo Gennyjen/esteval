@@ -116,4 +116,12 @@
     {
         return $this->render('moncompte.html.twig');
     }
+
+    /**
+     * @Route("/connexion", name="connexion")
+     */
+    public function connexion()
+    {
+        return $this->render('login.html.twig');
+    }
 }
