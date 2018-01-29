@@ -1,26 +1,28 @@
 <?php
 
-    namespace App\Repository;
+namespace App\Repository;
 
-    use App\Entity\Articles;
-    use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-    use Symfony\Bridge\Doctrine\RegistryInterface;
+use App\Entity\Articles;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 
-    class ArticlesRepository extends ServiceEntityRepository
+class ArticlesRepository extends ServiceEntityRepository
+{
+    public function __construct(RegistryInterface $registry)
     {
-
-
-        public function findArticles()
-        {
-            $sql = "SELECT DATE_PUBLICATION_YYYYMMDD, TITRE, TEXTE, TEXTE_RAW FROM larticle LIMIT 10";
-
-            $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
-            $stmt->execute([]);
-
-            return $stmt->fetchAll();
-        }
-
-
-
-
+        parent::__construct($registry, Articles::class);
     }
+
+    /*
+    public function findBySomething($value)
+    {
+        return $this->createQueryBuilder('a')
+            ->where('a.something = :value')->setParameter('value', $value)
+            ->orderBy('a.id', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+    */
+}
