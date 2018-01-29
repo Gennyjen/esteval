@@ -4,6 +4,10 @@ namespace App\Form;
 
 use App\Entity\ComptesUtilisateurs;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -78,7 +82,7 @@ class ComptesUtilisateursType extends AbstractType
                         'required' => true,
 
                     ]])
-                ->add('password', 	TextType::class, [
+                ->add('password', 	PasswordType::class, [
                     'attr' => [
                         'id' => 'inputPassword',
                         'placeholder' => '*******',
@@ -104,22 +108,20 @@ class ComptesUtilisateursType extends AbstractType
                         'placeholder' => 'TVA',
                         'class' => 'form-control',
                     ]])
-                ->add('chooseParticulier', 	TextType::class, [
+
+                ->add('isCompany', 	ChoiceType::class, [
+                    'choices' => [
+                        'particulier' => true,
+                        'entreprise' => false,
+                    ],
+                    'expanded' => true,
                     'attr' => [
-                        'type' => 'checkbox',
-                        'id' => 'ongletParticulier',
-                        'class' => 'form-control',
-                    ]])
-                ->add('chooseCompany', 	TextType::class, [
-                    'attr' => [
-                        'type' => 'checkbox',
                         'id' => 'ongletEntreprise',
                         'class' => 'form-control',
                     ]])
-                ->add('chooseNewsletter', 	TextType::class, [
+                ->add('chooseNewsletter', 	CheckboxType::class, [
                     'attr' => [
                         'class' => 'form-check-input',
-                        'type' => 'checkbox',
                         'id' => 'newsletter',
                     ]])
                 ->add('save',		SubmitType::class, [

@@ -122,11 +122,7 @@ class ComptesUtilisateurs
     /**
      * @ORM\Column(type="boolean")
      */
-    private $chooseParticulier;
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $chooseCompany;
+    private $isCompany;
     /**
      * @ORM\Column(type="boolean")
      */
@@ -342,35 +338,19 @@ class ComptesUtilisateurs
     }
 
     /**
-     * @return mixed
+     * @param mixed $isCompany
      */
-    public function getChooseParticulier()
+    public function setIsCompany($isCompany): void
     {
-        return $this->chooseParticulier;
-    }
-
-    /**
-     * @param mixed $chooseParticulier
-     */
-    public function setChooseParticulier($chooseParticulier): void
-    {
-        $this->chooseParticulier = $chooseParticulier;
+        $this->isCompany = $isCompany;
     }
 
     /**
      * @return mixed
      */
-    public function getChooseCompany()
+    public function getIsCompany()
     {
-        return $this->chooseCompany;
-    }
-
-    /**
-     * @param mixed $chooseCompany
-     */
-    public function setChooseCompany($chooseCompany): void
-    {
-        $this->chooseCompany = $chooseCompany;
+        return $this->isCompany;
     }
 
     /**
