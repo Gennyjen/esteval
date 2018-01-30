@@ -2,6 +2,7 @@
 
     namespace App\Controller;
 
+    use App\Entity\Articles;
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
     use Symfony\Component\Routing\Annotation\Route;
     use Symfony\Component\HttpFoundation\Response;
@@ -56,7 +57,10 @@
      */
     public function index()
     {
-    return $this->render('index.html.twig');
+        $em = $this->getDoctrine()->getRepository(Articles::class);
+        $articles = $em->findBy([], ['datePublication' => 'DESC'], 10);
+        $firstArticle = array_shift($articles);
+        return $this->render('index.html.twig',['articles' => $articles, 'firstArticle' => $firstArticle]); // Premier article retiré dans la liste ** Premier article gardé pour le carousel
     }
 
     /**
@@ -125,13 +129,13 @@
         return $this->render('login.html.twig');
     }
 
-
     /**
-     * @Route("/contacter-esteval", name="contacter-esteval")
+     * @Route("/contact", name="contact")
      */
-    public function contacterEsteval()
+    public function contact()
     {
         return $this->render('contacter-esteval.html.twig');
     }
 
-    }
+
+}

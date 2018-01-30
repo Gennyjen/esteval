@@ -10,17 +10,9 @@
                     <h1>Nos offres d'abonnements</h1>
                 </div>
             </div>
-            <div class="row partenaires align-items-center">
-                <div class="col-4">
-                    <h6>
-                        <span class="nos">Nos</span> partenaires</h4>
-                </div>
-                <div class="col-8">
-                    <img class="logo-partenaire logo-active" src="images/a.png" alt="Logo Active">
-                    <img class="logo-partenaire logo-positive" src="images/positive.png" alt="Logo Positive">
-                    <img class="logo-partenaire logo-forcemedia" src="images/force_media.png" alt="Logo Force Media">
-                </div>
-            </div>
+            
+            {% include('partenaires.html.twig') %}
+
             <div class="row">
                 <div class="col-12">
                     <div id="exTab2" class="infos-abo">
@@ -101,7 +93,7 @@
                                             </div>
                                             <div class="col-12 text-center">
                                                 <a href="">
-                                                    <button type="button" class="btn">S'abonner</button>
+                                                    <button type="button" class="btn btn-bulle">S'abonner</button>
                                                 </a>
                                             </div>
                                         </div>
@@ -144,14 +136,14 @@
                                             </div>
                                             <div class="col-12 text-center">
                                                 <a href="">
-                                                    <button type="button" class="btn">S'abonner</button>
+                                                    <button type="button" class="btn btn-abo">S'abonner</button>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="offre-abo">
-                                            <h6><span>Abonnement Corporate <br></span>Tout Esteval pendant un an et publi-rédactionnel du site</h6>
+                                            <h6><span>Abonnement Corporate <br></span>Tout Esteval pendant un an<br> et publi-rédactionnel du site</h6>
                                                 <div class="prix">
                                                     <div class="info_price">
                                                         <span>350<span>€</span></span>par an 
