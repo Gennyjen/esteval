@@ -152,12 +152,13 @@ header .btn {
 header .btn-entreprise {
     margin-left: 20px;
     border : 1px solid #5d822f;
-    background-color: #75964c;
+    background-color: #83a756;;
     color: white;
+    font-size: 18px;
 }
 
 header .btn-entreprise:hover {
-    background-color: #5d822f;
+    background-color: #6e9243;
 }
 
 header .btn:focus {
@@ -167,15 +168,15 @@ header .btn:focus {
 
 header .btn-abonnement {
     padding: 5px 15px;
-    font-size: 20px;
-    background-color: #75964c;
+    font-size: 18px;
+    background-color: #83a756;;
     border: 1px solid #5d822f;
     color: white;
     margin-right: 20px;
 }
 
 header .btn-abonnement:hover {
-    background-color:#5d822f;
+    background-color:#6e9243;
 }
 
 /* Barre de recherche */
@@ -269,7 +270,22 @@ header .rubrique a {
     display: block;
     width: 100%;
 }
+header .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+}
 
+header input.form-control.search_mobile {
+    width: 96%;
+    margin: 7px auto;
+}
+
+header .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #779d48;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgb(119, 157, 72);
+}
 
 /* Index ********************************************************************************* */
 
@@ -1628,7 +1644,6 @@ footer .navigation_footer {
     font-size: 25px;
     font-weight: 500;
     width: 100%;
-    margin: 0;
 }
 
 .partenaires .nos{
@@ -1659,4 +1674,44 @@ footer .navigation_footer {
 }
 
 
+/* Nous Contacter ****************************************************************************************************************************** */
 
+.contact h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.contact address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.contact .btn-contact {
+    color: #f8f9fa;
+    background-color: #779d48;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+} 
+
+.contact .perso {
+    background-color: #eaeaea;
+    text-align: center;
+    line-height: 20px;
+    /* border-top-left-radius: 20px; */
+    /* border-top-right-radius: 20px; */
+    border-radius: 20px;
+}
