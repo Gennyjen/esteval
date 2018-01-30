@@ -129,4 +129,12 @@
         return $this->render('login.html.twig');
     }
 
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact()
+    {
+        return $this->render('contacter-esteval.html.twig');
+    }
+
 }
