@@ -1,0 +1,62 @@
+/*
+background color grey  : #eaeaea
+Green : #99cc66
+gray fonce : #5a5c58
+Yellow orange : #efb336
+
+google font : Roboto & Ralaway
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+*/
+    /* Masquer le bouton radio d'origine */
+input[type=radio]{
+    display: none;
+}
+/* Affichage par défaut du bouton radio personnalisé */
+input[type=radio] + label:before {
+    background: #eaeaea;
+    border: 1px solid #ccc;
+    padding-top: 10px;
+    color: #5a5c58;
+    border-radius: 15px 15px 0px 0px ;
+    display: inline-block;
+    content: 'Je suis un Particulier';
+    font-size: 20px;
+    width: 100%;
+    height: 60px;
+}
+
+#comptes_utilisateurs_isCompany {
+    border:none;
+}
+#comptes_utilisateurs_isCompany label:nth-child(4):before {
+    content: 'Je suis un Professionnel';
+}
+
+#comptes_utilisateurs_isCompany label {
+    font-size: 0;
+    width: 100%;
+}
+.input-group-text {
+    width: 100%;
+    border:none;
+    background-color: white;
+}
+div#comptes_utilisateurs_isCompany {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+/* Affichage du bouton radio personnalisé quand il est sélectionné */
+input[type=radio]:checked + label:before {
+    background: #99cc66;
+    color:white;
+}
+.element{
+    margin-bottom:14px;
+}
+label{
+    cursor:pointer;
+}
+
