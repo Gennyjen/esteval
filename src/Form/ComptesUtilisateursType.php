@@ -4,6 +4,10 @@ namespace App\Form;
 
 use App\Entity\ComptesUtilisateurs;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -22,7 +26,6 @@ class ComptesUtilisateursType extends AbstractType
                 ->add('lastname', TextType::class, [
                     'attr' => [
                         'id' => 'inputLastname',
-                        'aria-describedby' => 'lastname',
                         'placeholder' => 'Nom',
                         'class' => 'form-control ',
                         'required' => true,
@@ -30,7 +33,6 @@ class ComptesUtilisateursType extends AbstractType
                 ->add('firstname', 	TextType::class, [
                     'attr' => [
                         'id' => 'inputFirstname',
-                        'aria-describedby' => 'firstname',
                         'placeholder' => 'Prénom',
                         'class' => 'form-control ',
                         'required' => true,
@@ -38,7 +40,6 @@ class ComptesUtilisateursType extends AbstractType
                 ->add('email', 		EmailType::class, [
                     'attr' => [
                         'id' => 'inputEmail',
-                        'aria-describedby' => 'email',
                         'placeholder' => 'adresse@mail.com',
                         'class' => 'form-control',
                         'required' => true,
@@ -46,7 +47,6 @@ class ComptesUtilisateursType extends AbstractType
                 ->add('address', 		TextType::class, [
                     'attr' => [
                         'id' => 'inpuAddress',
-                        'aria-describedby' => 'address',
                         'placeholder' => 'Adresse *',
                         'class' => 'form-control',
                         'required' => true,
@@ -54,7 +54,6 @@ class ComptesUtilisateursType extends AbstractType
                 ->add('city', 	TextType::class, [
                     'attr' => [
                         'id' => 'inputCity',
-                        'aria-describedby' => 'city',
                         'placeholder' => 'Ville *',
                         'class' => 'form-control ',
                         'required' => true,
@@ -62,7 +61,6 @@ class ComptesUtilisateursType extends AbstractType
                 ->add('country', 	TextType::class, [
                     'attr' => [
                         'id' => 'inputCountry',
-                        'aria-describedby' => 'country',
                         'placeholder' => 'Pays',
                         'class' => 'form-control ',
                         'required' => true,
@@ -71,7 +69,6 @@ class ComptesUtilisateursType extends AbstractType
                 ->add('zip', 	TextType::class, [
                     'attr' => [
                         'id' => 'inputZip',
-                        'aria-describedby' => 'zip',
                         'placeholder' => 'Code Postal *',
                         'class' => 'form-control ',
                         'required' => true,
@@ -80,49 +77,57 @@ class ComptesUtilisateursType extends AbstractType
                 ->add('phone', 	TextType::class, [
                     'attr' => [
                         'id' => 'inputPhone',
-                        'aria-describedby' => 'phone',
                         'placeholder' => 'Téléphone',
                         'class' => 'form-control ',
                         'required' => true,
 
                     ]])
-                ->add('password', 	TextType::class, [
+                ->add('password', 	PasswordType::class, [
                     'attr' => [
                         'id' => 'inputPassword',
-                        'aria-describedby' => 'password',
                         'placeholder' => '*******',
                         'class' => 'form-control',
                         'required' => true,
 
+                        ]])
+                ->add('company', 	TextType::class, [
+                    'attr' => [
+                        'id' => 'inputCompany',
+                        'placeholder' => 'Société',
+                        'class' => 'form-control',
+                    ]])
+                ->add('tva', 	TextType::class, [
+                    'attr' => [
+                        'id' => 'inputTva',
+                        'placeholder' => 'TVA',
+                        'class' => 'form-control',
+                    ]])
+                ->add('fonction', 	TextType::class, [
+                    'attr' => [
+                        'id' => 'inputFonction',
+                        'placeholder' => 'TVA',
+                        'class' => 'form-control',
+                    ]])
+
+                ->add('isCompany', 	ChoiceType::class, [
+                    'choices' => [
+                        'particulier' => true,
+                        'entreprise' => false,
+                    ],
+                    'expanded' => true,
+                    'attr' => [
+                        'id' => 'ongletEntreprise',
+                        'class' => 'form-control',
+                    ]])
+                ->add('chooseNewsletter', 	CheckboxType::class, [
+                    'attr' => [
+                        'class' => 'form-check-input',
+                        'id' => 'newsletter',
                     ]])
                 ->add('save',		SubmitType::class, [
                     'attr' => [
                         'id' => 'submit',
                         'class' => 'btn btn-primary btn-block',
-                    ]])
-                ->add('company', 	TextType::class, [
-                    'attr' => [
-                        'id' => 'inputCompany',
-                        'aria-describedby' => 'company',
-                        'placeholder' => 'Société',
-                        'class' => 'form-control invisible',
-                        'required' => true,
-                    ]])
-                ->add('tva', 	TextType::class, [
-                    'attr' => [
-                        'id' => 'inputTva',
-                        'aria-describedby' => 'tva',
-                        'placeholder' => 'TVA',
-                        'class' => 'form-control invisible',
-                        'required' => true,
-                    ]])
-                ->add('fonction', 	TextType::class, [
-                    'attr' => [
-                        'id' => 'inputFonction',
-                        'aria-describedby' => 'fonction',
-                        'placeholder' => 'TVA',
-                        'class' => 'form-control invisible',
-                        'required' => true,
                     ]])
                 ->getForm();
         }
