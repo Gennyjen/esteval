@@ -1508,6 +1508,7 @@ footer .navigation_footer {
  */
 
 .page button#submit {
+    content: "Je m\'inscris et  bénéficie d\'un accès de l\'ensemble des publications";
     margin: auto;
     width: 370px;
     border-radius: 0px;
@@ -1714,4 +1715,7 @@ footer .navigation_footer {
     /* border-top-left-radius: 20px; */
     /* border-top-right-radius: 20px; */
     border-radius: 20px;
+}
+.page div.form-check.modif {
+    margin-top: 12px;
 }
