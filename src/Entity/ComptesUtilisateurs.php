@@ -2,17 +2,16 @@
 
 namespace App\Entity;
 
-use App\Entity\Entreprise;
-use App\Form\ParticulierType;
-use App\Form\EntrepriseType;
+use App\Form\ComptesUtilisateursType;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ParticulierRepository")
  */
-class Particulier
+class ComptesUtilisateurs
 {
     /**
      * @ORM\Id
@@ -20,69 +19,115 @@ class Particulier
      * @ORM\Column(type="integer")
      */
     private $id;
-
     /**
-     * @ORM\Column(type="string", length=30)
-     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=28)
+     * @Assert\Length(
+     *     max=28,
+     *     maxMessage = "Le champs de votre nom ne doit pas comporter plus de {{ limit }} caractères"
+     * )
      */
     private $lastname;
     /**
-     * @ORM\Column(type="string", length=30)
-     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=28)
+     * @Assert\Length(
+     *     max=28,
+     *     maxMessage = "Le champs du prénom ne doit pas comporter plus de {{ limit }} caractères"
+     * )
      */
     private $firstname;
     /**
      * @ORM\Column(type="text", length=30)
-     * @Assert\NotBlank()
+     * @Assert\Length(
+     *     max=30,
+     *     maxMessage = "Le champ de l'email ne doit pas comporter plus de {{ limit }} caractères"
+     * )
+     * @Assert\Email(strict=true, message="Le format de l'email est incorrect")
+     * @Assert\Email(checkMX=true, message="Aucun serveur mail n'a été trouvé pour ce domaine")
      */
     private $email;
     /**
-     * @ORM\Column(type="integer", length=30)
-     * @Assert\NotBlank()
-     * @Assert\Email()
+     * @ORM\Column(type="integer", length=28)
+     * @Assert\Length(
+     *     max=28,
+     *     maxMessage = "Le champ du numéro de téléphone ne doit pas comporter plus de {{ limit }} caractères"
+     * )
      */
     private $phone;
     /**
-     * @ORM\Column(type="string", length=50)
-     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=60)
+     * @Assert\Length(
+     *     max=60,
+     *     maxMessage = "Le champ de l'adresse ne doit pas comporter plus de {{ limit }} caractères"
+     * )
      */
     private $address;
     /**
-     * @ORM\Column(type="integer", length=30)
-     * @Assert\NotBlank()
+     * @ORM\Column(type="integer", length=20)
+     * @Assert\Length(
+     *     max=20,
+     *     maxMessage = "Votre nom ne doit pas comporter plus de {{ limit }} caractères"
+     * )
      */
     private $zip;
     /**
-     * @ORM\Column(type="string", length=30)
-     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=26)
+     * @Assert\Length(
+     *     max=26,
+     *     maxMessage = "Le champs de la ville ne doit pas comporter plus de {{ limit }} caractères"
+     * )
      */
     private $city;
     /**
-     * @ORM\Column(type="string", length=30)
-     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=26)
+     * @Assert\Length(
+     *     max=26,
+     *     maxMessage = "Le champ du pays ne doit pas comporter plus de {{ limit }} caractères"
+     * )
      */
     private $country;
     /**
-     * @ORM\Column(type="string", length=30)
-     * @Assert\NotBlank()
-     */
-    private $company;
-    /**
-     * @ORM\Column(type="string", length=30)
-     * @Assert\NotBlank()
-     */
-    private $tva;
-    /**
-     * @ORM\Column(type="text", length=30)
-     * @Assert\NotBlank()
+     * @ORM\Column(type="text", length=40)
+     * @Assert\Length(
+     *     min=8,
+     *     max=40,
+     *     maxMessage = "Le champs du mot de passe ne doit pas comporter plus de {{ limit }} caractères",
+     *     minMessage = "Le champs du mot de passe ne nom ne doit pas comporter moins de {{ limit }} caractères"
+     * )
      */
     private $password;
     /**
-     * @ORM\Column(type="text", length=30)
-     * @Assert\NotBlank()
-     * @ORM\OneToOne(targetEntity=Entreprise::class)
+     * @ORM\Column(type="text", length=38)
+     * @Assert\Length(
+     *     max=38,
+     *     maxMessage = "Le champs fonction ne doit pas comporter plus de {{ limit }} caractères",
+     * )
      */
-    private $entreprise;
+    private $fonction;
+    /**
+     * @ORM\Column(type="text", length=38)
+     * @Assert\Length(
+     *     max=38,
+     *     maxMessage = "Le champs du mot de passe ne doit pas comporter plus de {{ limit }} caractères",
+     * )
+     */
+    private $company;
+    /**
+     * @ORM\Column(type="text", length=68)
+     * @Assert\Length(
+     *     max=68,
+     *     maxMessage = "Le champs du mot de passe ne doit pas comporter plus de {{ limit }} caractères",
+     * )
+     */
+    private $tva;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isCompany;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $chooseNewsletter;
+
 
     /**
      * @return mixed
@@ -279,17 +324,50 @@ class Particulier
     /**
      * @return mixed
      */
-    public function getEntreprise()
+    public function getFonction()
     {
-        return $this->entreprise;
+        return $this->fonction;
     }
 
     /**
-     * @param mixed $entreprise
+     * @param mixed $fonction
      */
-    public function setEntreprise($entreprise): void
+    public function setFonction($fonction): void
     {
-        $this->entreprise = $entreprise;
+        $this->fonction = $fonction;
     }
+
+    /**
+     * @param mixed $isCompany
+     */
+    public function setIsCompany($isCompany): void
+    {
+        $this->isCompany = $isCompany;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIsCompany()
+    {
+        return $this->isCompany;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getChooseNewsletter()
+    {
+        return $this->chooseNewsletter;
+    }
+
+    /**
+     * @param mixed $chooseNewletter
+     */
+    public function setChooseNewsletter($chooseNewsletter): void
+    {
+        $this->chooseNewsletter = $chooseNewsletter;
+    }
+
 
 }
