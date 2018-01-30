@@ -304,6 +304,9 @@ main .text_article {
     padding: 10px 0;
     color: white;
     text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px 5px;
 }
 
 main article {
@@ -327,6 +330,11 @@ main article button {
     border-radius: 4px;
     border: none;
 }
+main .raw_nowrap:after {
+    content: "...";
+}
+
+
 
 .row.articles {
     margin: 0;
