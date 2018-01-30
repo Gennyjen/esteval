@@ -21,7 +21,7 @@
                                 <div class="carousel-item active">
                                     <img class="d-block w-100" src="http://www.voyage-sponsorise.com/wp-content/uploads/2017/09/image-slider2.jpg" alt="First slide">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5 class="h1">Je suis un titre d'article super trop cool et sur deux lignes</h5>
+                                        <h5 class="h1">{{ firstArticle.titre }}</h5>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -66,150 +66,45 @@
                 {% include('partenaires.html.twig') %}
 
                 <div class="row">
-                    <div class="articles col-12 col-lg-6">
-                        <article>
-                            <a href="#">
-                                <div class="content_article">
-                                    <div style="position:relative;z-index:1">
-                                        <div class="content_image">
-                                            <img src="http://www.voyage-sponsorise.com/wp-content/uploads/2017/09/image-slider2.jpg" alt="Image de l'article">
-                                        </div>
-                                        <div class="rubrique_index">
-                                            rubrique
-                                        </div>
-                                        <div class="text_article">
-                                            Elephant
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, corporis libero aut alias autem vel, commodi neque, a enim aliquid soluta. Delectus deleniti beatae voluptatum illum. Nisi, perspiciatis rem! </p>
-                            <div class="row m-0">
-                                <div class="col-6 p-0 reseaux-sociaux">
-                                    <a href="https://www.facebook.com/Estevaleditions/?ref=hl" target="_blank">
-                                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://twitter.com/bisaga" target="_blank">
-                                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://fr.linkedin.com/in/thierry-bisaga-66a77a" target="_blank">
-                                        <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                <div class="col-6 p-0 d-flex justify-content-end">
-                                    <div class="suite"><button class="btn-suite">Lire la suite</button></div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="articles col-12 col-lg-6">
-                        <article>
-                            <a href="#">
-                                <div class="content_article">
-                                    <div style="position:relative;z-index:1">
-                                        <div class="content_image">
-                                            <img src="http://www.voyage-sponsorise.com/wp-content/uploads/2017/09/image-slider2.jpg"  alt="Image de l'article">
-                                        </div>
-                                        <div class="rubrique_index">
-                                            rubrique
-                                        </div>
-                                        <div class="text_article">
-                                            Elephant
+                    {% for article in articles %}
+                        <div class="articles col-12 col-lg-6">
+                            <article>
+                                <a href="#">
+                                    <div class="content_article">
+                                        <div style="position:relative;z-index:1">
+                                            <div class="content_image">
+                                                <img src="http://www.voyage-sponsorise.com/wp-content/uploads/2017/09/image-slider2.jpg" alt="Image de l'article">
+                                            </div>
+                                            <div class="rubrique_index">
+                                                rubrique
+                                            </div>
+                                            <div class="text_article">
+                                                {{ article.titre }}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, corporis libero aut alias autem vel, commodi neque, a enim aliquid soluta. Delectus deleniti beatae voluptatum illum. Nisi, perspiciatis rem! </p>
-                            <div class="row m-0">
-                                <div class="col-6 p-0 reseaux-sociaux">
-                                    <a href="https://www.facebook.com/Estevaleditions/?ref=hl" target="_blank">
-                                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://twitter.com/bisaga" target="_blank">
-                                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://fr.linkedin.com/in/thierry-bisaga-66a77a" target="_blank">
-                                        <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                <div class="col-6 p-0 d-flex justify-content-end">
-                                    <div class="suite"><button class="btn-suite">Lire la suite</button></div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="articles col-12 col-lg-6">
-                        <article>
-                            <a href="#">
-                                <div class="content_article">
-                                    <div style="position:relative;z-index:1">
-                                        <div class="content_image">
-                                            <img src="http://www.voyage-sponsorise.com/wp-content/uploads/2017/09/image-slider2.jpg"  alt="Image de l'article">
-                                        </div>
-                                        <div class="rubrique_index">
-                                            rubrique
-                                        </div>
-                                        <div class="text_article">
-                                            Elephant
-                                        </div>
+                                </a>
+                                <p class="raw_nowrap">{{ article.texteRaw }}</p>
+                                <div class="row m-0">
+                                    <div class="col-6 p-0 reseaux-sociaux">
+                                        <a href="https://www.facebook.com/Estevaleditions/?ref=hl" target="_blank">
+                                            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="https://twitter.com/bisaga" target="_blank">
+                                            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="https://fr.linkedin.com/in/thierry-bisaga-66a77a" target="_blank">
+                                            <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-6 p-0 d-flex justify-content-end">
+                                        <div class="suite"><button class="btn-suite">Lire la suite</button></div>
                                     </div>
                                 </div>
-                            </a>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, corporis libero aut alias autem vel, commodi neque, a enim aliquid soluta. Delectus deleniti beatae voluptatum illum. Nisi, perspiciatis rem! </p>
-                            <div class="row m-0">
-                                <div class="col-6 p-0 reseaux-sociaux">
-                                    <a href="https://www.facebook.com/Estevaleditions/?ref=hl" target="_blank">
-                                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://twitter.com/bisaga" target="_blank">
-                                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://fr.linkedin.com/in/thierry-bisaga-66a77a" target="_blank">
-                                        <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                <div class="col-6 p-0 d-flex justify-content-end">
-                                    <div class="suite"><button class="btn-suite">Lire la suite</button></div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="articles col-12 col-lg-6">
-                        <article>
-                            <a href="#">
-                                <div class="content_article">
-                                    <div style="position:relative;z-index:1">
-                                        <div class="content_image">
-                                            <img src="http://www.voyage-sponsorise.com/wp-content/uploads/2017/09/image-slider2.jpg"  alt="Image de l'article">
-                                        </div>
-                                        <div class="rubrique_index">
-                                            rubrique
-                                        </div>
-                                        <div class="text_article">
-                                            Elephant
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, corporis libero aut alias autem vel, commodi neque, a enim aliquid soluta. Delectus deleniti beatae voluptatum illum. Nisi, perspiciatis rem! </p>
-                            <div class="row m-0">
-                                <div class="col-6 p-0 reseaux-sociaux">
-                                    <a href="https://www.facebook.com/Estevaleditions/?ref=hl" target="_blank">
-                                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://twitter.com/bisaga" target="_blank">
-                                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://fr.linkedin.com/in/thierry-bisaga-66a77a" target="_blank">
-                                        <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                <div class="col-6 p-0 d-flex justify-content-end">
-                                    <div class="suite"><a href="#"><button class="btn-suite">Lire la suite</button></a></div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                            </article>
+                        </div>
+                    {% endfor %}
+
                 </div>
             </div>
 

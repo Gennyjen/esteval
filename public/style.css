@@ -658,6 +658,18 @@ aside .abonnement img {
     position: relative;
     top: 2px;
 }
+.flux_pro {
+    background: #1d1d1d;
+    padding: 4px;
+    position: relative;
+    height: 67px;
+}
+.flux_pro .texte_pro {
+    position: absolute;
+    left: calc(50% + 26px);
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
 
 /* Page article *************************************************************************************************** */
 
