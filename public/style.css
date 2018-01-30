@@ -1492,6 +1492,7 @@ footer .navigation_footer {
  */
 
 .page button#submit {
+    content: "Je m\'inscris et  bénéficie d\'un accès de l\'ensemble des publications";
     margin: auto;
     width: 370px;
     border-radius: 0px;
@@ -1660,3 +1661,6 @@ footer .navigation_footer {
 
 
 
+.page div.form-check.modif {
+    margin-top: 12px;
+}
