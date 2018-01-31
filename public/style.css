@@ -388,6 +388,10 @@ main article button {
     font-size: 100px;
 }
 
+main .carousel h3 {
+    text-shadow: 1px 1px #000000;
+}
+
 /* page-article ****************************************************************************************************************** */
 
 /* Titre */
@@ -512,7 +516,7 @@ main .section-articles-similaires {
 }
 
 main .articles {
-    margin-top: 10px;
+    margin-top: 4px;
 }
 
 /* Page Entreprises et initiatives ************************************************************************************************ */
@@ -671,6 +675,14 @@ aside .abonnement img {
     transform: translate(-50%,-50%);
 }
 
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #cae2ad;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(119, 157, 72, 0.25);
+}
+
 /* Page article *************************************************************************************************** */
 
 /* Titre */
@@ -825,7 +837,7 @@ aside .abonnement img {
 }
 
 .librairie select {
-    width: calc(100% - 200px);
+    width: 100%;
     background-color: #f3f3f3;
     color: #6f6b6b;
 }
@@ -901,6 +913,12 @@ aside .abonnement img {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1024px) {
+    .librairie select {
+        width: calc(100% - 200px);
+    }
 }
 
 
@@ -1643,7 +1661,7 @@ footer .navigation_footer {
 
 .partenaires {
     background-color: #f3f3f3;
-    margin-top: 7px;
+    margin-top: 11px;
     margin-left: 0;
     margin-right: 0;
     padding: 7px;

@@ -15,6 +15,9 @@ header .reseaux-sociaux i.fa {
 header .btn-entreprise, header .btn-abonnement {
     border: 1px solid #333333;
     background-color: #565656;
+    margin-left: 20px;
+    color: white;
+    font-size: 18px;
 }
 
 header .btn-entreprise:hover, header .btn-abonnement:hover {
@@ -28,11 +31,44 @@ header .category {
     border-bottom: 4px solid #424244;
     transition: 0.2s all;
     color: #424244;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px 0;
+    text-transform: uppercase;
 }
+
 header .category:hover {
     background: #424244;
     color: white;
 }
+
+header .row.navigation div {
+    padding: 0;
+}
+
+header .row.navigation {
+    margin-bottom: -4px;
+}
+
+header img {
+    margin-left: 35px;
+}
+
+
 footer {
     border-top: 2px solid #424244;
+}
+
+.gestion-patrimoine h1,
+.immobilier h1,
+.financement-entreprise h1,
+.gestion-institutionnelle h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 35px;
+    border-bottom: 3px solid #424244; 
+    font-weight: 100;
 }
