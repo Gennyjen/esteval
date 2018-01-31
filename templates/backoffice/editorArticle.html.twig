@@ -99,3 +99,17 @@
         </div>
 
 {% endblock %}
+
+{% block javascripts %}
+
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+            $('#tags-input').on('keypress', function (e) {
+                if (e.keyCode == 13) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+
+{% endblock %}

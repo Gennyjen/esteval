@@ -2,16 +2,16 @@
 
 namespace App\Entity;
 
-use App\Form\ComptesUtilisateursType;
+use App\Form\UserType;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 
-
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ParticulierRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Table(name="User")
  */
-class ComptesUtilisateurs
+class User
 {
     /**
      * @ORM\Id
@@ -19,6 +19,7 @@ class ComptesUtilisateurs
      * @ORM\Column(type="integer")
      */
     private $id;
+
     /**
      * @ORM\Column(type="string", length=28)
      * @Assert\Length(
@@ -362,7 +363,7 @@ class ComptesUtilisateurs
     }
 
     /**
-     * @param mixed $chooseNewletter
+     * @param mixed $chooseNewsletter
      */
     public function setChooseNewsletter($chooseNewsletter): void
     {
