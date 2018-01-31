@@ -1,5 +1,6 @@
 {% extends "base.html.twig" %}
 
+<<<<<<< HEAD
 {% block body %}
 
     {% include('header.html.twig') %}
@@ -125,3 +126,127 @@
 
 
 {% endblock %}
+=======
+    {% block body %}
+
+        {% include('header.html.twig') %}
+
+        <main class="container librairie">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>Librairie</h1>
+                        </div>
+                    </div>
+                        {% include('partenaires.html.twig') %}
+                    <div class="row">
+                        <div class="col-12 paragraphe">
+                            <p>Veuillez trouver ci-dessous l'ensemble de nos publications au format PDF. <br>
+                            Si vous souhaitez sélectionner plus précisement celles qui vous intéressent, <br> merci d'utiliser le menu déroulant ci-dessous.</p>
+                        </div>
+                        <div class="col-12">
+                            <form class="form-inline">
+                                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Choisissez un magasine : </label>
+                                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                    <option selected>Les derniers numéros parus</option>
+                                    <option value="1">Epargnons Responsable</option>
+                                    <option value="2">La bulle des entrepreneurs </option>
+                                    <option value="3">Brique par Brique</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="col-12 titre-derniers-numeros">
+                            <h4>Les derniers numéros<br><span>parus</span></h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <h6><span>Epargnons</span> responsable</h6>
+                            <a href="#">
+                                <div class="magasines">
+                                    <div class="info_mag">
+                                        <span class="numero">n°298</span>
+                                        <span class="mois-annee">Janvier 2018</span>
+                                    </div>
+                                    <img src="images/magasine2.jpg" alt="Image de magasine">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <h6><span>Brique</span> par Brique</h6>
+                            <a href="#">
+                                <div class="magasines">
+                                    <div class="info_mag">
+                                        <span class="numero">n°297</span>
+                                        <span class="mois-annee">Décembre 2017</span>
+                                    </div>
+                                    <img src="images/magasine1.jpg" alt="Image de magasine">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <h6><span>La Bulle</span> des Entrepreneurs</h6>
+                            <a href="#">
+                                <div class="magasines">
+                                    <div class="info_mag">
+                                        <span class="numero">n°296</span>
+                                        <span class="mois-annee">Novembre 2017</span>
+                                    </div>
+                                    <img src="images/magasine2.jpg" alt="Image de magasine">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <h6><span>Epargnons</span> responsable</h6>
+                            <a href="#">
+                                <div class="magasines">
+                                    <div class="info_mag">
+                                        <span class="numero">n°298</span>
+                                        <span class="mois-annee">Janvier 2018</span>
+                                    </div>
+                                    <img src="images/magasine2.jpg" alt="Image de magasine">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <h6><span>Brique</span> par Brique</h6>
+                            <a href="#">
+                                <div class="magasines">
+                                    <div class="info_mag">
+                                        <span class="numero">n°297</span>
+                                        <span class="mois-annee">Décembre 2017</span>
+                                    </div>
+                                    <img src="images/magasine1.jpg" alt="Image de magasine">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <h6><span>La Bulle</span> des Entrepreneurs</h6>
+                            <a href="#">
+                                <div class="magasines">
+                                    <div class="info_mag">
+                                        <span class="numero">n°296</span>
+                                        <span class="mois-annee">Novembre 2017</span>
+                                    </div>
+                                    <img src="images/magasine2.jpg" alt="Image de magasine">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                {% include('sidebar.html.twig') %}
+    
+            </div>
+        </main>
+    
+
+
+
+
+        {% include('footer.html.twig') %}
+
+    {% endblock %}
+    
+>>>>>>> ae32a85d2db6ddb5c4b88428c076d2e7dfd3e35a

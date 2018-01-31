@@ -8,15 +8,14 @@ use Doctrine\DBAL\Schema\Schema;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-class Version20180123133704 extends AbstractMigration
+class Version20180129131802 extends AbstractMigration
 {
     public function up(Schema $schema)
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE contact_particulier ADD password TINYTEXT NOT NULL');
-        $this->addSql('ALTER TABLE contact_entreprise ADD password TINYTEXT NOT NULL, CHANGE compagny company VARCHAR(40) NOT NULL');
+        $this->addSql('CREATE TABLE articles (id INT AUTO_INCREMENT NOT NULL, date_publication DATE NOT NULL, titre VARCHAR(255) NOT NULL, texte VARCHAR(255) NOT NULL, texte_raw VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB');
     }
 
     public function down(Schema $schema)
@@ -24,7 +23,6 @@ class Version20180123133704 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE contact_entreprise DROP password, CHANGE company compagny VARCHAR(40) NOT NULL COLLATE utf8_unicode_ci');
-        $this->addSql('ALTER TABLE contact_particulier DROP password');
+        $this->addSql('DROP TABLE articles');
     }
 }

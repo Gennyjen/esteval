@@ -1,0 +1,105 @@
+/*
+background color grey  : #eaeaea
+Green : #99cc66
+gray fonce : #5a5c58
+Yellow orange : #efb336
+
+google font : Roboto & Ralaway
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+*/
+
+
+.mon-compte .perso{
+    background-color: #eaeaea;
+    text-align: center;
+    line-height: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.mon-compte h1.moncompte {
+    padding-top: 5px;
+    color: rgb(65, 65, 65);
+    font-size: 1.6em;
+}
+
+.mon-compte h2.moncompte{
+    color: #5a5c58;
+    font-size: 1.4em;
+    font-family: 'Raleway', sans-serif;
+}
+.mon-compte h3.moncompte {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    height: 40px;
+    background-color: #b9b9b9;
+    color: white;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.mon-compte h3.moncompte {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    height: 40px;
+    background-color:  rgb(65, 65, 65);
+    color: white;
+    text-align: center;
+}
+
+.mon-compte h4.moncompte{
+    font-size: 1.1em;
+
+}
+
+.mon-compte h5.moncompte{
+    font-size: 1.0em;
+    color: #99cc66;
+
+}
+
+.mon-compte .champs{
+    width : 100px;
+}
+
+.mon-compte .btn-esteval {
+    background-color: #99cc66;
+    height: 60px;
+    color: white;
+}
+
+.mon-compte .btn-esteval-abonnement {
+    background-color: #efb336;
+    height: 40px;
+    color: white;
+}
+
+.mon-compte .img-offre {
+    width: 100px;
+    margin: auto;
+
+}
+
+.mon-compte .img-offre img {
+    width: 100%;
+
+}
+
+.mon-compte .text-titre-offre {
+    font-size: 1.1em;
+}
+
+.mon-compte .green-esteval{
+    color: #99cc66;
+}
+
+.mon-compte .info_coordonnees {
+    border-radius: 20px 20px 0 0;
+    height: calc(100% - 20px);
+}
+.mon-compte .info_abo_perso, .info_factures_perso {
+    border-radius: 20px 20px 0 0;
+}

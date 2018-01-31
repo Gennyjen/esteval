@@ -1,15 +1,10 @@
-{% extends "base.html.twig" %}
-
-    {% block stylesheets %}
-    {% endblock %}
-
 
 {% block body %}
 
 
 <header class="container-fluid">
     <div class="row align-item-center">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-6">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
             <!--Navbar-->
             <nav class="d-block d-sm-block d-md-block d-xl-none navbar-light light-blue lighten-4">
 
@@ -29,8 +24,16 @@
 
                     <!-- Links -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <i class="fa fa-search fa-lg d-none d-sm-none d-md-none d-xl-block" aria-hidden="true"></i>
+                            <form>
+                                <div class="form-group m-0">
+                                    <input type="search" placeholder="Rechercher un article.." class="form-control search_mobile">
+                                </div>
+                            </form>
+                        </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">L'entreprise
+                            <a class="nav-link" href="/company">L'entreprise
                                 <span class="sr-only"></span>
                             </a>
                         </li>
@@ -38,22 +41,19 @@
                             <a class="nav-link" href="/librairie">e-magasines & livres blancs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Connexion / Inscription</a>
+                            <a class="nav-link" href="/connexion">Connexion / Inscription</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/abonnements">Abonnement</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Rechercher</a>
+                            <a class="nav-link" href="https://www.facebook.com/Estevaleditions/?ref=hl">Facebook</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Facebook</a>
+                            <a class="nav-link" href="https://twitter.com/bisaga">Twitter</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Twitter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Linkedin</a>
+                            <a class="nav-link" href="https://fr.linkedin.com/in/thierry-bisaga-66a77a">Linkedin</a>
                         </li>
                     </ul>
                     <!-- Links -->
@@ -63,7 +63,11 @@
 
             </nav>
             <!--/.Navbar-->
+<<<<<<< HEAD
             <a href="/"><img style="width: 150px; height: 45px;" class="my-3" src="images/logo-esteval.svg" alt="Logo"></a>
+=======
+            <a href="/"><img class="my-1"  src="images/logo-esteval.jpg" alt="Logo"></a>
+>>>>>>> ae32a85d2db6ddb5c4b88428c076d2e7dfd3e35a
             <div class="col reseaux-sociaux d-none d-sm-none d-md-none d-xl-block">
                 <a href="https://www.facebook.com/Estevaleditions/?ref=hl" target="_blank">
                     <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
@@ -100,7 +104,7 @@
             </div>
 
             <a href="/abonnements">
-                <button type="button" class="btn btn-abonnement btn-esteval d-none d-sm-none d-md-none d-xl-block">Je m'abonne !</button>
+                <button type="button" class="btn btn-abonnement btn-esteval d-none d-sm-none d-md-none d-xl-block">S'abonner</button>
             </a>
             <form>
                 <div class="form-group m-0">
@@ -113,10 +117,10 @@
     <div class="row align-item-center all_category">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <div class="category patrimoine">Patrimoine et finance</div>
-                    <div class="category entreprises">Entreprises et initiatives</div>
-                    <div class="category culture">Culture et perspectives</div>
+                <div class="col rubrique">
+                    <a href="/patrimoine-et-finance" class="patrimoine">Patrimoine et finance</a>
+                    <a href="/entreprises-et-initiatives" class="entreprise">Entreprises et initiatives</a>
+                    <a href="/culture-et-perspectives" class="culture">Culture et perspectives</a>
                 </div>
             </div>
         </div>

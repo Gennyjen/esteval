@@ -1,12 +1,12 @@
 <?php
 
-    namespace App\Controller\Backoffice;
+    namespace App\Controller;
 
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
     use Symfony\Component\Routing\Annotation\Route;
 
 
-    class RouteController extends Controller
+    class RouteBackofficeController extends Controller
     {
         /**
          * @Route("/backoffice/dashboard", name="dashboard")

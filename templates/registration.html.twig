@@ -1,14 +1,9 @@
 {% extends "base.html.twig" %}
 
-{% block stylesheets %}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-              integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"
-              xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-    <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
-    <link href="{{ asset('registration.css') }}" rel="stylesheet"/>
-{% endblock %}
+
 
 {% block body %}
+
 <div class="page">
     <div class="containerHeader">
         <div class="row">
@@ -21,120 +16,145 @@
         </div>
     </div>
     <div class="container">
-         <div class="row">
-                <div class="col-sm-12">
-                    <div class="header">
-                        <h3>Mes informations personnelles</h3>
-                    </div>
-                </div>
-         </div>
-      {# {{ form(formEntrepriseAdd) }} #}
-
-            {{ form_start(formEntrepiseAdd) }}
-            <div class="row">
-                <div class="col-sm-6">
-                        <button id="ongletParticulier"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un particulier</span></button>
-                </div>
-                <div class="col-sm-6">
-                        <button id="ongletEntreprise"  type="button" class="btn btn-primary btn-lg btn-block">Je suis  <span>un professionnel</span></button>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="header">
+                    <h3>Mes informations personnelles</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputLastname" aria-describedby="lastname" placeholder="Nom" required>
-                </div>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputFirstname"  aria-describedby="firstname"placeholder="Prénom" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputEmail" aria-describedby="email" placeholder="adresse@email.com" required>
-                </div>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputEmailConf" aria-describedby="emailConf" placeholder="adresse@email.com" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="******" required>
-                </div>
-                <div class="col-sm-6">
-                    <input type="password" class="form-control" id="inputPasswordConf" placeholder="Confirmation du mot de passe *" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Adresse *" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <input type="number" class="form-control" id="inputZip" placeholder="Code Postal *" required>
-                </div>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputCity" placeholder="Ville *" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputCountry" placeholder="France" required>
-                </div>
-                <div class="col-sm-6">
-                    <input type="number" class="form-control" id="inputPhone" placeholder="Téléphone" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4>Conditions générales d'utilisations</h4>
-                    <div id="footer">
-                        <p>loremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqerorveomsvmoesovesomvjeos
-                            jvoeovigjovj Contrat d'uilisations du site d'Esteval définissant les droits et
-                            obligations des parties dans le cadre de l'uilisation des informations et servic
-                            es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
-                            veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
-                            sant les droits et obligations des parties dans le cadre de l'uilisation des inf
-                            ormations et services proposés par Estevalj Contrat d'uilisations du site d'Este
-                            val définissant les droits et par Estevalj Contrat d'uilisations du site d'Este
-                            obligations des parties dans le cadre de l'uilisation des informations et servic
-                            es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
-                            veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
-                            sant les droits et obligat</p>
+        </div>
+        {{ form_start(form, {'attr' : { 'method': 'post'}}) }}
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        {{ form_widget(form.isCompany) }}
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input">
-                            J'ai lu les conditions d'utilisation *
-                        </label>
-                    </div>
+        </div>
+        <div class="row jqueryTopModif">
+            <div class="col-sm-6">
+                {{ form_widget(form.lastname) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form_widget(form.firstname) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                {{ form_widget(form.email) }}
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Confirmation du mail *" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                {{ form_widget(form.password) }}
+            </div>
+            <div class="col-sm-6">
+                <input type="password" class="form-control" placeholder="Confirmation du mot de passe *" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                {{ form_widget(form.address) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                {{ form_widget(form.zip ) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form_widget(form.city ) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                {{ form_widget(form.country ) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form_widget(form.phone ) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                {{ form_widget(form.fonction) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                {{ form_widget(form.company) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form_widget(form.tva) }}
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <h4>Conditions générales d'utilisations</h4>
+            <div id="footer">
+                <p>loremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqerorveomsvmoesovesomvjeos
+                jvoeovigjovj Contrat d'uilisations du site d'Esteval définissant les droits et
+                obligations des parties dans le cadre de l'uilisation des informations et servic
+                es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
+                veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
+                sant les droits et obligations des parties dans le cadre de l'uilisation des inf
+                ormations et services proposés par Estevalj Contrat d'uilisations du site d'Este
+                val définissant les droits et par Estevalj Contrat d'uilisations du site d'Este
+                obligations des parties dans le cadre de l'uilisation des informations et servic
+                es proposés par Estevalloremfojrfnoamzqfofq,zqefqzfozefzqozfeofqdpppmqerrofqeror
+                veomsvmoesovesomvjeosjvoeovigjovj Contrat d'uilisations du site d'Esteval définis
+                sant les droits et obligat</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-check modif">
+                    <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    J'ai lu les conditions d'utilisation *
+                    </label>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input">
-                            Je m'abonne à la newsletter *
-                        </label>
-                    </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-check">
+                    <label class="form-check-label">
+                        Je m'abonne à la newsletter *
+                        {{ form_widget(form.chooseNewsletter) }}
+                    </label>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <button id="submit" type="submit" class="btn btn-primary btn-block"><span class="oi oi-arrow-circle-right"></span>Je m'inscris et je bénéficie <br> d'un accès de l'ensemble des publications</button>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label class="form-check-label">
+                    {{ form_widget(form.save) }}
+                </label>
             </div>
-        {{ form_end(formAdd) }}
+        </div>
+            {{ form_end(form) }}
+        </div>
     </div>
-</div>
-{% endblock %}
 
-{% block javascripts %}
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 {% endblock %}
+    {% block javascripts %}
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#ongletEntreprise").click(function () {
+                    $("#inputTva").prop('disabled', false);
+                    $("#inputCompany").prop('disabled', false);
+                    $("#inputFonction").prop('disabled', false);
+                });
+                $("#ongletParticulier").click(function () {
+                    $("#inputTva").prop('disabled', true);
+                    $("#inputCompany").prop('disabled', true);
+                    $("#inputFonction").prop('disabled', true);
+                });
+            });
+        </script>
+    {% endblock %}

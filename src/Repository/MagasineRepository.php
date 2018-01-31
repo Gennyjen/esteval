@@ -2,23 +2,23 @@
 
 namespace App\Repository;
 
-use App\Entity\ContactParticulier;
+use App\Entity\Magasine;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
-class ContactParticulierRepository extends ServiceEntityRepository
+class MagasineRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, ContactParticulier::class);
+        parent::__construct($registry, Magasine::class);
     }
 
     /*
     public function findBySomething($value)
     {
-        return $this->createQueryBuilder('c')
-            ->where('c.something = :value')->setParameter('value', $value)
-            ->orderBy('c.id', 'ASC')
+        return $this->createQueryBuilder('m')
+            ->where('m.something = :value')->setParameter('value', $value)
+            ->orderBy('m.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()

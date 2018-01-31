@@ -16,9 +16,16 @@ a, a:hover {
     background: #779d48;
     border: 1px solid #658c34;
     color: white;
+    transition: 0.2s all;
 }
 
+.btn-vesteval:hover {
+    background: #628538;
+}
 
+.btn {
+    box-shadow: none !important;
+}
 
 /* Header ********************************************************************************************* */
 
@@ -144,13 +151,14 @@ header .btn {
 
 header .btn-entreprise {
     margin-left: 20px;
-    border : 1px solid #698f3a;
-    background-color: #86a362;
+    border : 1px solid #5d822f;
+    background-color: #83a756;;
     color: white;
+    font-size: 18px;
 }
 
 header .btn-entreprise:hover {
-    background-color: #75984b;
+    background-color: #6e9243;
 }
 
 header .btn:focus {
@@ -159,16 +167,16 @@ header .btn:focus {
 
 
 header .btn-abonnement {
-    padding: 10px;
-    font-size: 20px;
-    background-color: #668b38;
+    padding: 5px 15px;
+    font-size: 18px;
+    background-color: #83a756;;
     border: 1px solid #5d822f;
     color: white;
     margin-right: 20px;
 }
 
 header .btn-abonnement:hover {
-    background-color:#566b3c;
+    background-color:#6e9243;
 }
 
 /* Barre de recherche */
@@ -197,95 +205,92 @@ header .row.align-item-center.all_category {
 
 /* Les 3 catégories */
 
-header .category {
+header .rubrique   {
     width: 34%;
     text-align: center;
-    border-bottom: 4px solid red;
-    height: calc(100% + 4px);
     position: relative;
-    top: 2px;
+    top: 0;
     text-transform: uppercase;
+    margin-bottom: -4px;
 }
 
-header .category.patrimoine {
+header .rubrique a {
+    color: black;
+}
+
+header .rubrique a.patrimoine {
     border-bottom: 4px solid #8eae68;
     transition: 0.2s all;
     cursor: pointer;
 }
 
-header .category.entreprises {
+header .rubrique a.entreprise {
     border-bottom: 4px solid #2c9696;
     transition: 0.2s all;
     cursor: pointer;
 } 
 
-header .category.culture {
+header .rubrique a.culture {
     border-bottom: 4px solid #c5000b;
     transition: 0.2s all;
     cursor: pointer;
 }
 
-header .category.patrimoine:hover {
+header .rubrique a.patrimoine:hover {
     background-color: #8eae68;
     color: white;
 }
 
-header .category.entreprises:hover {
+header .rubrique a.entreprise:hover {
     background-color: #2c9696;
     color: white;
 }
 
-header .category.culture:hover {
+header .rubrique a.culture:hover {
     background-color: #c5000b;
     color: white;
+}
+header .navbar-collapse {
+    background: #333333;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+header .navbar-collapse li {
+    border-bottom: 1px solid #585858;
+}
+
+
+header .rubrique a {
+    display: block;
+    width: 100%;
+}
+header .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+}
+
+header input.form-control.search_mobile {
+    width: 96%;
+    margin: 7px auto;
+}
+
+header .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #779d48;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgb(119, 157, 72);
 }
 
 /* Index ********************************************************************************* */
 
 main.container {
     margin-top: 20px;
-}
-/* Les images */
-
-main .logo-partenaire {
-    margin-right: 9px;
-}
-
-main .logo-active {
-    max-width: 17%;
-}
-
-main .logo-positive {
-    max-width: 38%;
-}
-
-main .logo-forcemedia {
-    max-width: 28%;
-}
-
-
-/* Nos Partenaires */
-
-main .partenaires {
-    background-color: #f3f3f3;
-    margin-top: 7px;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 7px;
-    border-radius: 5px;
-    border: 1px solid rgb(231, 231, 231);
-}
-
-main .partenaires h6 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 500;
-}
-
-main .partenaires .nos{
-
-    font-weight: 300;
 }
 
 /* Articles */
@@ -344,7 +349,7 @@ main article button {
     display: inline-block;
     position: absolute;
     top: 10px;
-    left: -10px;
+    left: -8px;
     padding: 0 10px;
     font-size: 11px;
     border-radius: 0 5px 5px 0;
@@ -360,6 +365,31 @@ main article button {
 .suite button {
     height: 25px;
     background: #bfbfbf;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.suite button:hover {
+    background-color: #779d48;
+    
+}
+
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 6px;
+    cursor: pointer;
+}
+.carousel-indicators {
+    bottom: 2px;
+}
+.arrow {
+    font-size: 100px;
+}
+
+main .carousel h3 {
+    text-shadow: 1px 1px #000000;
 }
 
 /* page-article ****************************************************************************************************************** */
@@ -486,8 +516,45 @@ main .section-articles-similaires {
 }
 
 main .articles {
-    margin-top: 10px;
+    margin-top: 4px;
 }
+
+/* Page Entreprises et initiatives ************************************************************************************************ */
+
+.entreprises-et-initiatives h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 35px;
+    border-bottom: 3px solid #2c9696; 
+    font-weight: 100;
+}
+
+/* Page patrimoine et finance ********************************************************************************************************** */
+
+.patrimoine-et-finance h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 35px;
+    border-bottom: 3px solid #8eae68;
+    font-weight: 100;
+}
+
+/* Page culture et perspectives ****************************************************************************************************** */
+
+.culture-et-perspectives h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 35px;
+    border-bottom: 3px solid #c5000b;
+    font-weight: 100;
+}
+
 
 
 /* Sidebar ******************************************************************************************************************************* */
@@ -595,7 +662,20 @@ aside .abonnement img {
     position: relative;
     top: 2px;
 }
+.flux_pro {
+    background: #1d1d1d;
+    padding: 4px;
+    position: relative;
+    height: 67px;
+}
+.flux_pro .texte_pro {
+    position: absolute;
+    left: calc(50% + 26px);
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
 
+<<<<<<< HEAD
 /* Librairie */
 
 .librairie h2 {
@@ -877,6 +957,547 @@ aside .abonnement img {
 .abonnements .offre-groupee .prix {
     background-color: #739f53;
 }
+=======
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #cae2ad;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(119, 157, 72, 0.25);
+}
+
+/* Page article *************************************************************************************************** */
+>>>>>>> ae32a85d2db6ddb5c4b88428c076d2e7dfd3e35a
+
+/* Titre */
+
+.page-article .titre {
+    margin-top: 15px;
+}
+
+.page-article  h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.page-article .titre p {
+    border: 1px solid #2dacac;
+    display: inline-block;
+    background-color: #2c9696;
+    color: white;
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+
+/* Réseaux sociaux */
+
+.page-article .reseaux-sociaux i.fa {
+    padding: 6px;
+    margin: 5px 5px;
+    /* margin-bottom: 20px; */
+    border-radius: 5px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 15px;
+    transition: 0.2s all;
+    color: white;
+    width: 25px;
+    height: 25px;
+}
+
+.page-article .reseaux-sociaux i.fa-facebook,
+.page-article .reseaux-sociaux i.fa-twitter,
+.page-article .reseaux-sociaux i.fa-linkedin {
+    margin: 2px;
+}
+
+.page-article .reseaux-sociaux i.fa.fa-facebook{
+    background: #3B5998;
+}
+
+.page-article .reseaux-sociaux i.fa.fa-twitter {
+    background: #00ACED;
+}
+
+.page-article .reseaux-sociaux i.fa.fa-linkedin {
+    background: #007BB6;
+}
+
+.page-article .col.reseaux-sociaux {
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.page-article .reseaux-sociaux i.fa:nth-child(1) {
+    margin-left: 0;
+}
+
+/* Paragraphes */
+
+.page-article .paragraphes p {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.page-article .paragraphes {
+    margin-bottom: 25px;
+}
+
+/* Magasine */
+
+.page-article .magasine p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.page-article .magasine a {
+    font-size: 14px;
+}
+
+.page-article .magasine {
+    margin-bottom: 25px;
+}
+
+/* Articles similaires */
+
+.page-article .titre-article h3 {
+    font-size: 20px;
+    background-color: #779d48;
+    color: white;
+    padding: 8px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+
+.page-article .articles-similaires {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background: #1f1f1fa3;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+.page-article .section-articles-similaires {
+    margin-bottom: 20px;
+    padding: 2px;
+    background-color: #f0f0f0;
+    border: solid 1px #dadada;
+    border-radius: 4px;
+}
+
+.page-article .articles {
+    margin-top: 10px;
+}
+
+/* Librairie **************************************************************************************************** */
+
+.librairie h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.librairie .partenaires {
+    margin-bottom: 20px;
+}
+
+.librairie .paragraphe p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6f6b6b;
+}
+
+.librairie select {
+    width: 100%;
+    background-color: #f3f3f3;
+    color: #6f6b6b;
+}
+
+.librairie h4 {
+    text-align: center;
+    color: #789e47;
+    font-weight: 100;
+    font-size: 29px;
+}
+
+.librairie h4 span{
+    color: #6f6b6b;
+}
+
+.librairie form.form-inline {
+    margin-bottom: 30px;
+}
+
+.librairie .titre-derniers-numeros {
+    margin-bottom: 25px;
+}
+
+.librairie .magasines {
+    border: 1px solid #dad7d7;
+    margin-bottom: 35px;
+}
+
+.librairie .magasines img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.librairie h6 {
+    text-align: center;
+}
+
+.librairie h6 span {
+    color: #779d48;
+    font-weight: 100;
+}
+
+
+.librairie .info_mag span {
+    font-size: 13px;
+}
+
+.librairie .magasines .numero {
+    color: white;
+    background-color: #779d48;
+    border: 1px solid #638638;
+    border-radius: 0 0 5px 0;
+    padding: 0px 3px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.librairie .magasines .mois-annee {
+    color: white;
+    background-color: #efa627;
+    border: 1px solid #dea01c;
+    border-radius: 0 0 0 5px;
+    padding: 0px 3px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.librairie .info_mag {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1024px) {
+    .librairie select {
+        width: calc(100% - 200px);
+    }
+}
+
+
+
+/* Abonnement ************************************************************************************************************************** */
+
+.abonnements .infos-abo .nav-tabs a {
+    background: #dadada;
+    width: 100%;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 10px 10px 0 0;
+    text-transform: uppercase;
+}
+
+.abonnements .infos-abo .nav-tabs li {
+    width: 50%;
+}
+
+.abonnements .infos-abo .nav-tabs a.active  {
+    color: white;
+    background: #779d48;
+}
+
+.abonnements .infos-abo .nav-tabs a {
+    color: #464646;
+}
+
+.abonnements .infos-abo .tab-content {
+    background: #f3f3f3;
+    padding: 20px;
+    font-size: 13px;
+    border-radius: 0 0 8px 8px;
+}
+
+.abonnements .infos-abo .tab-content li {
+    list-style: none;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+
+
+.abonnements .infos-abo .tab-content li:after {
+    content: "";
+    width: 80%;
+    height: 1px;
+    background: black;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    opacity: 0.15;
+    transform: translateX(-50%);
+}
+
+.abonnements .infos-abo .tab-content li:nth-last-child(1) {
+    margin: 0;
+}
+
+.abonnements .infos-abo .tab-content li:nth-last-child(1):after {
+    display: none;
+}
+
+.abonnements .infos-abo .tab-content li a {
+    color: #4e4e4e;
+}
+
+
+
+.abonnements .infos-abo .tab-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.abonnements h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 35px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.abonnements .partenaires {
+    margin-bottom: 35px;
+}
+
+.abonnements .offre-abo {
+    border: 1px solid #e2e2e2;
+    border-radius: 5px 30px 30px 0px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.abonnements h6 {
+    font-weight: 300;
+    font-size: 24px;
+    padding-right: 67px;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 50px;
+} 
+
+.abonnements h6 span {
+    color: #779d48;
+}
+
+.abonnements .prix {
+    background-color: #424242;
+    display: inline-block;
+    text-align: center;
+    border: 3px solid #ececec;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    color: white;
+    box-shadow: 0 0 10px #0000004a;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+}
+
+.abonnements .info_price {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.abonnements .info_price > span  {
+    display: block;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.abonnements .info_price > span > span {
+    font-size: 25px;
+    font-weight: 300;
+    position: relative;
+    top: -8px;
+}
+
+.abonnements .offre-abo p {
+    text-align: justify;
+}
+
+.abonnements .prix .info_price span.gratuit {
+    font-size: 26px;
+}
+
+.abonnements img.w-75 {
+    margin: 26px 0px;
+}
+
+.abonnements .offre-abo .mag {
+    box-shadow: 0 0 10px #0000004a;
+}
+
+
+.abonnements button {
+    background-color: #ff9900;
+    color: white;
+    border: 1px solid #ec991a;
+    padding: 5px 17px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.abonnements button.btn.btn-bulle {
+    margin-top: 34px;
+}
+
+.abonnements button.btn.btn-abo {
+    margin-top: 50px;
+}
+
+.abonnements .offre-groupee {
+    background-color: #6f6f6f;
+}
+
+.abonnements .offre-groupee h6 {
+    color: white;
+    font-size: 31px;
+}
+
+.abonnements .offre-groupee .prix {
+    background-color: #739f53;
+}
+
+/* Entreprise ***************************************************************************************************************************** */
+
+.entreprise h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.entreprise p.intro {
+    font-style: italic;
+}
+
+.entreprise p.paragraphe1 {
+    text-align: center;
+    color: #779d48;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.entreprise .themes span {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.entreprise .themes span.theme1 {
+    background-color: #8eae68;
+}
+
+.entreprise .themes span.theme2 {
+    background-color: #2c9696;
+}
+
+.entreprise .themes span.theme3 {
+    background-color: #c5000b;
+}
+
+.entreprise li {
+    list-style: none;
+}
+
+.entreprise i.fa.fa-circle {
+    font-size: 11px;
+    color: #dedede;
+    position: relative;
+    top: -1px;
+    margin-right: 8px;
+}
+
+.entreprise div#demo, .entreprise div#demo1 {
+    background-color: #ffffff;
+    border: 3px solid #8eae68;
+    border-radius: 0 10px 10px 10px;
+    padding: 15px;
+}
+
+.entreprise .btn {
+    box-shadow: none !important;
+    background-color: #8eae68;
+    border-radius: 0;
+    color: white;
+}
+
+.entreprise .thierry, .entreprise .michel {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.entreprise citation {
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 30px;
+    margin: 60px 0;
+    padding: 0 50px;
+    color: #a9a9a9;
+    font-family: 'Roboto Slab', serif;
+}
+
+.entreprise h4 {
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
 
 /* Footer ****************************************************************************************************************************** */
 
@@ -915,6 +1536,520 @@ footer .navigation_footer {
 
 
 
-.block {
-    background-color: red;
+/* Login inscription connection ******************************************** */
+
+.popupConnect h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.popupConnect h2.leftBottom {
+    color: #adadad;
+}
+
+
+.popupConnect h2.rightBottom {
+    color: white;
+}
+
+.popupConnect #headerConnexion {
+    display: flex;
+    flex-direction: column;
+    background-color: #444441;
+    border-radius: 0;
+    right: -155px;
+    left: -135px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 22px;
+    padding-left: 30px;
+    top: 0;
+    bottom: 0;
+    border-right: solid 1px white;
+    align-items: left;
+}
+
+.popupConnect #headerInscription {
+    display: flex;
+    flex-direction: column;
+    background-color: #F7B815;
+    border-radius: 0;
+    right: -65px;
+    left: -135px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-right: 30px;
+    padding-top: 22px;
+    top: 0;
+    border-left: solid 1px white;
+    align-items: flex-end;
+}
+
+/*
+*** Checkbox
+ */
+
+.popupConnect div#topCheckbox {
+    display: flex;
+    font-size: 10px;
+    font-family: roboto;
+}
+
+.popupConnect div#bottomCheckbox {
+    display: flex;
+    font-size: 10px;
+    font-family: roboto;
+    color: #737472;
+}
+
+.popupConnect div#checkbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popupConnect label#top.form-check-label {
+    font-size: 11.5px;
+    bottom: 20px;
+    color: #737472;
+}
+
+.popupConnect label#bottom.form-check-label {
+    font-size: 11.5px;
+    top: 20px;
+    color: #737472;
+}
+
+
+/*
+*** Buttons
+ */
+
+.popupConnect button#inscription.btn.btn-primary {
+    background-color: #F7B815;
+    border: none;
+    width: 260px;
+    border-radius: 0;
+    height: 50px;
+}
+
+.popupConnect button#connexion.btn.btn-primary {
+    background-color: #9CCC53;
+    border: none;
+    width: 260px;
+    border-radius: 0;
+    height: 50px;
+}
+
+/*
+*** Width formulaires
+ */
+
+.popupConnect form.connexion {
+    width: 260px;
+    margin: auto;
+}
+
+.popupConnect form.inscription {
+    width: 260px;
+    margin: auto;
+}
+
+.popupConnect input.form-control {
+    height: 30px;
+    background-color: #ECE9E8;
+    border: none;
+    margin-top: 19px;
+    border-radius: 0;
+    font-weight: 100;
+}
+
+/*
+*** Phrase d'invitation à la fin de l'inscription
+ */
+
+.popupConnect p.invitation {
+    font-size: 14.8px;
+    text-align: center;
+    color: #737472;
+    margin-top: 10px;
+}
+
+/*
+*** Phrase de connexion avec les réseaux sociaux
+ */
+
+.popupConnect p.loginSocials {
+    color : black;
+    text-align: center;
+    font-size: 14.8px;
+    margin-top: 50px;
+}
+
+.popupConnect a {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: lightslategrey;
+    margin-top: 10px;
+}
+
+/*
+*** Border-radius modal
+ */
+
+.popupConnect .modal-content {
+    border-bottom-right-radius: 26px 26px;
+}
+
+/*
+*** Séparateur
+ */
+
+.popupConnect .separator {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, black, black, transparent);
+    margin: 20px 0;
+    opacity: 0.2;
+}
+
+/*
+*** Liens réseaux sociaux
+ */
+
+.popupConnect ul {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 70px;
+    margin-left: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.popupConnect li {
+    list-style: none;
+}
+
+.popupConnect img {
+    height: 28px;
+    width: 28px;
+}
+
+
+/* Registration connection ******************************************** */
+
+
+/*
+*** Width background page container
+ */
+
+.page {
+    border-right: solid 2px #F4F5F3;
+    border-left: solid 2px #F4F5F3;
+    width: 760px;
+    margin: auto;
+}
+
+.page.container {
+    background-color: #FEFFFE;
+    width: 760px;
+}
+
+/*
+*** Header
+ */
+
+.page div#headerInscription {
+    background-color: #F4F5F3;
+    font-weight: 300;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-bottom: 7.3px;
+    margin-bottom: 10px;
+}
+
+/*
+*** Titre header
+ */
+
+.page h1 {
+    font-size: 17.5px;
+    font-family: roboto;
+}
+
+.page h2 {
+    font-weight: 100;
+    font-size: 16px;
+    color: #9CCB53;
+}
+
+.page h3 {
+    font-size: 19px;
+    text-align: center;
+    font-family: roboto;
+}
+
+.page h4 {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 100;
+    font-family: roboto;
+}
+
+/*
+*** Input
+ */
+
+.page input.form-control {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    border: none;
+    background-color: #EBE9E7;
+    font-weight: 100;
+}
+
+.page input.form-check-input {
+    margin-top: 10px;
+    font-family: roboto;
+    font-size: 14px;
+}
+
+/*
+*** Bouton submit inscription
+ */
+
+.page button#submit {
+    content: "Je m\'inscris et  bénéficie d\'un accès de l\'ensemble des publications";
+    margin: auto;
+    width: 370px;
+    border-radius: 0px;
+    background-color: #F7B716;
+    border: none;
+}
+
+/*
+*** Mes informations
+ */
+
+.page div.header {
+    margin-right: -16px;
+    margin-left: -16px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.page p.header {
+    font-size: 13px;
+}
+
+.page button#ongletParticulier, button#ongletEntreprise{
+    font-size: 17px;
+    font-family: Roboto;
+    color: white;
+    border-top-left-radius: 25px 24px;
+    border-top-right-radius: 25px 24px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border: none;
+}
+
+.page button#ongletEntreprise {
+    background-color: #8F908F;
+}
+
+.page button#ongletParticulier {
+    background-color: #799C37;
+}
+
+.page button#ongletEntreprise {
+    background-color: #8F908F;
+}
+
+.page button#ongletParticulier {
+    background-color: #799C37;
+}
+
+.page span {
+    font-size: x-large;
+}
+
+.page div.particulierHeader {
+    text-align: center;
+    background-color: #9CCB53;
+    margin-right: -10px;
+    margin-left: -14px;
+    padding-top: 10px;
+    padding-bottom: 0.1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-left-radius: 40px 40px;
+    border-top-right-radius: 40px 40px;
+}
+
+.page div.entrepriseHeader {
+    text-align: center;
+    background-color: #8F908F;
+    margin-right: -14px;
+    margin-left: -10px;
+    padding-top: 10px;
+    padding-bottom: 0.1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-left-radius: 40px 40px;
+    border-top-right-radius: 40px 40px;
+}
+
+/*
+*** Button header
+ */
+
+.page button#entreprise {
+    font-size: 21px;
+    font-family: Roboto;
+    color: white;
+    margin-left: 4.8px;
+}
+
+.page button#particulier {
+    font-size: 21px;
+    font-family: Roboto;
+    color: white;
+    margin-left: 4.8px;
+}
+
+/*
+*** Footer
+ */
+
+.page div#footer {
+    border: solid 1px peachpuff;
+    background-color: #F6F7F6;
+}
+
+.page div#footer p {
+    height: 210px;
+    min-height: 20%;
+    max-height: 160%;
+    overflow: scroll;
+}
+
+.page div.col-sm-6 {
+    height: 60px;
+}
+
+/* Nos partenaires ********************************************************************************************************** */
+
+
+.partenaires {
+    background-color: #f3f3f3;
+    margin-top: 11px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 231, 231);
+}
+
+.partenaires h6 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.partenaires .nos{
+
+    font-weight: 300;
+}
+
+.partenaires .part {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.logo-partenaire {
+    margin: 9px;
+}
+
+.partenaires .nos {
+    color: #000000;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .partenaires h6 {
+        font-size: 20px;
+        width: 25%;
+    }
+
+}
+
+
+/* Nous Contacter ****************************************************************************************************************************** */
+
+.contact h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.contact address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.contact .btn-contact {
+    color: #f8f9fa;
+    background-color: #779d48;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+} 
+
+.contact .perso {
+    background-color: #eaeaea;
+    text-align: center;
+    line-height: 20px;
+    /* border-top-left-radius: 20px; */
+    /* border-top-right-radius: 20px; */
+    border-radius: 20px;
+}
+.page div.form-check.modif {
+    margin-top: 12px;
+<<<<<<< HEAD
+
+=======
+}
+
+/* Page Success ******************************************** */
+
+
+div#successPage.alert.alert-success {
+    top: 150px;
+    width: 470px;
+    left: 25%;
+    background-color: #684ad7;
+    color: #fff;
+    display: block;
+    padding: 15px;
+    margin-bottom: 32px;
+    border: 1px solid transparent;
+    border-radius: 0;
+>>>>>>> backoffice-backend-
 }
