@@ -130,7 +130,6 @@
     }
 
     /**
-<<<<<<< HEAD
      * @Route("/contact", name="contact")
      */
     public function contact()
@@ -168,13 +167,14 @@
     public function gestionInstitutionnelle()
     {
         return $this->render('professionnel/gestion-institutionnelle.html.twig');
-=======
+
+    }
+    /**
      * @Route("/success", name="success")
      */
     public function success()
     {
         return $this->render('success.html.twig');
->>>>>>> backoffice-backend-
     }
 
 }

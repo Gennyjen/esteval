@@ -11,49 +11,57 @@
     use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 
-class FormsBackofficeController extends Controller
-{
+class FormsBackofficeController extends Controller {
 
     /**
      * @Route("/backoffice/registration", name="registrationB")
      * @param Request $request
+     * @param ValidatorInterface $validator
      * @return Response
      */
-    public function newUser(Request $request)
-    {
+    public function formAddNewUser(Request $request, ValidatorInterface $validator) {
 
-        $user = new UserBackoffice();
+        $form = $this->createForm(UserBackofficeType::class);
 
-        $form = $this->createForm(UserBackofficeType::class, $user);
+        $validator = $this->get('validator');
 
-        $form->handleRequest($request);
+        if ($request->getMethod() == 'POST') {
 
-        if ($request->getMethod($request) == 'POST') {
+            $form->handleRequest($request);
 
-            if ($form->isSubmitted()
-                && $form->isValid()) {
+            $listErrors = $validator->validate($form);
+
+            if ($form->isSubmitted() && $form->isValid()) {
 
                 $userSave=$form->getData();
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($userSave);
                 $em->flush();
 
-                return $this->redirectToRoute('dashboard');
+                return new Response('Les données ont bien été sauvegardées!');
 
             } else {
 
-                return $this->render('backoffice/registration.html.twig', array('form' => $form->createView()));
+                return new Response((string)$listErrors);
+
             }
+
         }
+        return $this->render('backoffice/registration.html.twig', array('form' => $form->createView()));
+
     }
 
     /**
      * @Route("/backoffice/login", name="loginB")
+     * @param Request $request
+     * @param ValidatorInterface $validator
+     * @return Response
      */
-    public function connectUser(Request $request)
-    {
+    public function formConnectUser(Request $request, ValidatorInterface $validator) {
 
-        $form = $this->createForm(UserBackofficeType::class);
+        $user = new User();
+
+        $form = $this->createForm(UserBackofficeType::class, $user);
 
         $form->handleRequest($request);
 
