@@ -2,15 +2,15 @@
 
 namespace App\Controller;
 
-use App\Entity\ComptesUtilisateurs;
-use App\Form\ComptesUtilisateursType;
+use App\Entity\User;
+use App\Form\UserType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
-class FormController extends Controller {
+class FormsController extends Controller {
 
     /**
      * @Route("/registration", name="registration")
@@ -18,11 +18,11 @@ class FormController extends Controller {
      * @param ValidatorInterface $validator
      * @return Response
      */
-    public function formsAddNewParticulier(Request $request, ValidatorInterface $validator) {
+    public function formAddNewUser(Request $request, ValidatorInterface $validator) {
 
-        $user = new ComptesUtilisateurs();
+        $user = new User();
 
-        $form = $this->createForm(ComptesUtilisateursType::class, $user);
+        $form = $this->createForm(UserType::class, $user);
 
         $validator = $this->get('validator');
 
