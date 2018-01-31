@@ -125,4 +125,12 @@
         return $this->render('login.html.twig');
     }
 
+    /**
+     * @Route("/success", name="success")
+     */
+    public function success()
+    {
+        return $this->render('success.html.twig');
+    }
+
 }

@@ -11,7 +11,8 @@
     use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 
-class FormsBackofficeController extends Controller {
+class FormsBackofficeController extends Controller
+{
 
     /**
      * @Route("/backoffice/registration", name="registrationB")
@@ -32,15 +33,9 @@ class FormsBackofficeController extends Controller {
             if ($form->isSubmitted()
                 && $form->isValid()) {
 
-                $user->setFonction('fonction');
-                $user->setFirstname('firstname');
-                $user->setLastname('lastname');
-                $user->setEmail('email');
-                $user->setPassword('password');
-
-
+                $userSave=$form->getData();
                 $em = $this->getDoctrine()->getManager();
-                $em->persist($user);
+                $em->persist($userSave);
                 $em->flush();
 
                 return $this->redirectToRoute('dashboard');
@@ -54,36 +49,26 @@ class FormsBackofficeController extends Controller {
 
     /**
      * @Route("/backoffice/login", name="loginB")
-     * @param Request $request
-     * @return Response
      */
-    public function connectUser(Request $request) {
+    public function connectUser(Request $request)
+    {
 
-        $user = new UserBackoffice();
-
-        $form = $this->createForm(UserBackofficeType::class, $user);
+        $form = $this->createForm(UserBackofficeType::class);
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $user->getFonction($fonction);
-            $user->getFirstname();
-            $user->getLastname();
-            $user->getEmail();
-            $user->getPassword();
-
+            $userSave=$form->getData();
             $em = $this->getDoctrine()->getManager();
-            $em->persist($user);
+            $em->persist($userSave);
             $em->flush();
 
             return $this->redirectToRoute('dashboard');
 
-        } else {
-
-            return $this->render('backoffice/login.html.twig', array('form' => $form->createView()));
         }
 
-    }
+            return $this->render('backoffice/login.html.twig', array('form' => $form->createView()));
 
+    }
 }
