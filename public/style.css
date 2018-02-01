@@ -888,7 +888,8 @@ aside .abonnement img {
     font-size: 13px;
 }
 
-.librairie .magasines .numero {
+.librairie .magasines .numero 
+{
     color: white;
     background-color: #779d48;
     border: 1px solid #638638;
