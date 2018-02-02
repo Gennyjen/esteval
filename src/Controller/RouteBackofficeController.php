@@ -81,4 +81,13 @@
             return $this->render('/backoffice/editorArticle.html.twig');
         }
 
-}
+        /**
+         * @Route("/backoffice/", name="loginDashboard")
+         */
+        public function loginB()
+        {
+            return $this->render('/backoffice/login.html.twig');
+        }
+
+
+    }

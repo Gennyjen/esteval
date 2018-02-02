@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+    {% block stylesheets %}
+        <link href="{{ asset('style.css') }}" rel="stylesheet"/>
+    {% endblock %}
+
+
+{% block body %}
+
+<div id="successPage" class="alert alert-success" role="alert">Vos données ont bien été envoyées! <br> Pour confirmer votre adresse e-mail. <br> Un email de confirmation vient de vous être envoyé. </div>
+
+{% endblock %}

@@ -138,7 +138,7 @@ class UserType extends AbstractType
          * @param OptionsResolver $resolver
          */
         $resolver->setDefaults([
-            'data_class' => 'App\Entity\ComptesUtilisateurs',
+            'data_class' => 'App\Entity\User',
         ]);
     }
 }

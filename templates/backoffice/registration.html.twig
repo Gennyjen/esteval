@@ -29,10 +29,10 @@
                         <h3 class="panel-title">Inscription</h3>
                     </div>
                     <div class="panel-body registration">
-                        {{ form_start(form, {'attr' : { 'role': 'form', 'method': 'POST', 'action': path('dashboard') }}) }}
+                        {{ form_start(form, {'attr' : { 'role': 'form', 'method': 'POST' }}) }}
                             <fieldset>
                                 <div class="form-group">
-                                    {{ form_widget(form.fonction) }}
+                                    {{ form_widget(form.fonction | trim | striptags) }}
                                 </div>
                                 <div class="form-group">
                                     {{ form_widget(form.firstname) }}
@@ -59,7 +59,20 @@
                                 </div>
                                 {{ form_widget(form.save) }}
                             </fieldset>
-                        {{ form_end(form) }}
+                        <div class="form-group">
+                            {{ form_end(form) }}
+                            {% block field_errors %}
+                                {% spaceless %}
+                                    {% if errors|length > 0 %}
+                                        <ul class="error_list">
+                                            {% for error in errors %}
+                                                <li>{{ error.messageTemplate|trans(error.messageParameters, 'validators') }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                {% endspaceless %}
+                            {% endblock field_errors %}
+                        </div>
                     </div>
                 </div>
             </div>

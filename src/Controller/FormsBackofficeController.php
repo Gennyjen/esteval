@@ -16,74 +16,65 @@ class FormsBackofficeController extends Controller {
     /**
      * @Route("/backoffice/registration", name="registrationB")
      * @param Request $request
+     * @param ValidatorInterface $validator
      * @return Response
      */
-    public function newUser(Request $request)
-    {
+    public function formAddNewUser(Request $request, ValidatorInterface $validator) {
 
-        $user = new UserBackoffice();
+        $form = $this->createForm(UserBackofficeType::class);
 
-        $form = $this->createForm(UserBackofficeType::class, $user);
+        $validator = $this->get('validator');
 
-        $form->handleRequest($request);
+        if ($request->getMethod() == 'POST') {
 
-        if ($request->getMethod($request) == 'POST') {
+            $form->handleRequest($request);
 
-            if ($form->isSubmitted()
-                && $form->isValid()) {
+            $listErrors = $validator->validate($form);
 
-                $user->setFonction('fonction');
-                $user->setFirstname('firstname');
-                $user->setLastname('lastname');
-                $user->setEmail('email');
-                $user->setPassword('password');
+            if ($form->isSubmitted() && $form->isValid()) {
 
-
+                $userSave=$form->getData();
                 $em = $this->getDoctrine()->getManager();
-                $em->persist($user);
+                $em->persist($userSave);
                 $em->flush();
 
-                return $this->redirectToRoute('dashboard');
+                return new Response('Les données ont bien été sauvegardées!');
 
             } else {
 
-                return $this->render('backoffice/registration.html.twig', array('form' => $form->createView()));
+                return new Response((string)$listErrors);
+
             }
+
         }
+        return $this->render('backoffice/registration.html.twig', array('form' => $form->createView()));
+
     }
 
     /**
-     * @Route("/backoffice/login", name="loginB")
+     * @Route("/backoffice/", name="loginB")
      * @param Request $request
+     * @param ValidatorInterface $validator
      * @return Response
      */
-    public function connectUser(Request $request) {
+    public function formConnectUser(Request $request, ValidatorInterface $validator) {
 
-        $user = new UserBackoffice();
-
-        $form = $this->createForm(UserBackofficeType::class, $user);
+        $form = $this->createForm(UserBackofficeType::class);
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $user->getFonction($fonction);
-            $user->getFirstname();
-            $user->getLastname();
-            $user->getEmail();
-            $user->getPassword();
-
+            $userSave=$form->getData();
             $em = $this->getDoctrine()->getManager();
-            $em->persist($user);
+            $em->persist($userSave);
             $em->flush();
 
             return $this->redirectToRoute('dashboard');
 
-        } else {
-
-            return $this->render('backoffice/login.html.twig', array('form' => $form->createView()));
         }
 
-    }
+            return $this->render('backoffice/login.html.twig', array('form' => $form->createView()));
 
+    }
 }

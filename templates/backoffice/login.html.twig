@@ -29,21 +29,26 @@
                         <h3 class="panel-title">Veuillez vous connecter</h3>
                     </div>
                     <div class="panel-body">
-                            <fieldset>
-                                {{ form_start(form, {'attr' : { 'role': 'form', 'method': 'POST', 'action': path('dashboard') }}) }}
-                                <div class="form-group">
-                                    {{ form_widget(form.email) }}
-                                </div>
-                                <div class="form-group">
-                                    {{ form_widget(form.password) }}
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Se souvenir de moi
-                                    </label>
-                                </div>
-                                {{ form_widget(form.save) }}
-                            </fieldset>
+                        <fieldset>
+                            {{ form_start(form, {'attr' : { 'role': 'form', 'method': 'POST' }}) }}
+                            <div class="form-group">
+                                {{ form_widget(form.email) }}
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.password) }}
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="remember" type="checkbox" value="Remember Me">Se souvenir de moi
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.save, {'label': 'Se connecter' } ) }}
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.registration, {'label': 'Pas encore inscrit ?' }) }}
+                            </div>
+                        </fieldset>
                     </div>
                 </div>
             </div>
