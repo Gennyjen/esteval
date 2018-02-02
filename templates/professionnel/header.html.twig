@@ -24,8 +24,16 @@
 
                     <!-- Links -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <i class="fa fa-search fa-lg d-none d-sm-none d-md-none d-xl-block" aria-hidden="true"></i>
+                            <form>
+                                <div class="form-group m-0">
+                                    <input type="search" placeholder="Rechercher un article.." class="form-control search_mobile">
+                                </div>
+                            </form>
+                        </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">L'entreprise
+                            <a class="nav-link" href="/company">L'entreprise
                                 <span class="sr-only"></span>
                             </a>
                         </li>
@@ -33,13 +41,10 @@
                             <a class="nav-link" href="/librairie">e-magasines & livres blancs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Connexion / Inscription</a>
+                            <a class="nav-link" href="/connexion">Connexion / Inscription</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/abonnements">Abonnement</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Rechercher</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://www.facebook.com/Estevaleditions/?ref=hl">Facebook</a>
@@ -107,12 +112,18 @@
     </div>
     <div class="row align-item-center all_category">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <a href="#" class="category">Gestion de patrimoine</a>
-                    <a href="#" class="category">Immobilier</a>
-                    <a href="#" class="category">Financement de l'entreprise</a>
-                    <a href="#" class="category">Gestion institutionnelle</a>
+            <div class="row navigation">
+                <div class="col-6 col-lg-3">
+                    <a href="/gestion-patrimoine" class="category">Gestion de patrimoine</a>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <a href="/immobilier" class="category">Immobilier</a>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <a href="/financement-entreprise" class="category">Financement de l'entreprise</a>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <a href="/gestion-institutionnelle" class="category">Gestion institutionnelle</a>
                 </div>
             </div>
         </div>

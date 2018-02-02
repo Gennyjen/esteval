@@ -36,6 +36,8 @@
     }
 
     /**
+<<<<<<< HEAD
+=======
      * @Route("/article", name="article")
      */
     public function article()
@@ -53,6 +55,7 @@
     }
 
     /**
+>>>>>>> ae32a85d2db6ddb5c4b88428c076d2e7dfd3e35a
      * @Route("/", name="index")
      */
     public function index()
@@ -137,4 +140,55 @@
         return $this->render('contacter-esteval.html.twig');
     }
 
+    /**
+     * @Route("/gestion-patrimoine", name="gestion-patrimoine")
+     */
+    public function gestionPatrimoine()
+    {
+        return $this->render('professionnel/gestion-patrimoine.html.twig');
+    }
+
+    /**
+     * @Route("/immobilier", name="immobilier")
+     */
+    public function immobilier()
+    {
+        return $this->render('professionnel/immobilier.html.twig');
+    }
+
+    /**
+     * @Route("/financement-entreprise", name="financement-entreprise")
+     */
+    public function financementEntreprise()
+    {
+        return $this->render('professionnel/financement-entreprise.html.twig');
+    }
+
+    /**
+     * @Route("/gestion-institutionnelle", name="gestion-institutionnelle")
+     */
+    public function gestionInstitutionnelle()
+    {
+        return $this->render('professionnel/gestion-institutionnelle.html.twig');
+
+    }
+    /**
+     * @Route("/success", name="success")
+     */
+    public function success()
+    {
+        return $this->render('success.html.twig');
+    }
+
+<<<<<<< HEAD
+    /**
+     * @Route("/librairie", name="librairie")
+     */
+    public function librairie()
+    {
+        return $this->render('librairie.html.twig');
+    }
+=======
+>>>>>>> ae32a85d2db6ddb5c4b88428c076d2e7dfd3e35a
 }
+

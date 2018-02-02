@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\ComptesUtilisateurs;
+use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -14,7 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class ComptesUtilisateursType extends AbstractType
+class UserType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -138,7 +138,7 @@ class ComptesUtilisateursType extends AbstractType
          * @param OptionsResolver $resolver
          */
         $resolver->setDefaults([
-            'data_class' => 'App\Entity\ComptesUtilisateurs',
+            'data_class' => 'App\Entity\User',
         ]);
     }
 }
