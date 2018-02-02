@@ -36,8 +36,6 @@
     }
 
     /**
-<<<<<<< HEAD
-=======
      * @Route("/article", name="article")
      */
     public function article()
@@ -55,7 +53,6 @@
     }
 
     /**
->>>>>>> ae32a85d2db6ddb5c4b88428c076d2e7dfd3e35a
      * @Route("/", name="index")
      */
     public function index()
@@ -180,15 +177,12 @@
         return $this->render('success.html.twig');
     }
 
-<<<<<<< HEAD
     /**
      * @Route("/librairie", name="librairie")
      */
-    public function librairie()
+    public function library()
     {
         return $this->render('librairie.html.twig');
     }
-=======
->>>>>>> ae32a85d2db6ddb5c4b88428c076d2e7dfd3e35a
 }
 

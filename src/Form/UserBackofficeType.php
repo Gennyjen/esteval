@@ -61,6 +61,11 @@ class UserBackofficeType extends AbstractType {
                     'class' => 'form-control',
                     'name' => 'fonction',
                 ]])
+            ->add('registration', SubmitType::class, [
+                'attr' => [
+                    'id' => 'submit',
+                    'class' => 'btn btn-lg btn-success btn-block',
+                ]])
             ->add('save', SubmitType::class, [
                 'attr' => [
                     'id' => 'submit',

@@ -1998,7 +1998,6 @@ footer .navigation_footer {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-weight: 100;
-    margin-top: 20px;
 }
 
 .contact h2 {
@@ -2032,9 +2031,6 @@ footer .navigation_footer {
 }
 .page div.form-check.modif {
     margin-top: 12px;
-<<<<<<< HEAD
-
-=======
 }
 
 /* Page Success ******************************************** */
@@ -2051,5 +2047,4 @@ div#successPage.alert.alert-success {
     margin-bottom: 32px;
     border: 1px solid transparent;
     border-radius: 0;
->>>>>>> backoffice-backend-
 }
