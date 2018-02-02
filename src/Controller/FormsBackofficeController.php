@@ -52,16 +52,14 @@ class FormsBackofficeController extends Controller {
     }
 
     /**
-     * @Route("/backoffice/login", name="loginB")
+     * @Route("/backoffice/", name="loginB")
      * @param Request $request
      * @param ValidatorInterface $validator
      * @return Response
      */
     public function formConnectUser(Request $request, ValidatorInterface $validator) {
 
-        $user = new User();
-
-        $form = $this->createForm(UserBackofficeType::class, $user);
+        $form = $this->createForm(UserBackofficeType::class);
 
         $form->handleRequest($request);
 

@@ -3,20 +3,23 @@
 namespace App\Entity;
 
 use App\Form\UserType;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
+ * @ORM\Table(name="app_users")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @ORM\Table(name="User")
  */
-class User
+class User implements UserInterface, \Serializable
 {
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
@@ -128,6 +131,15 @@ class User
      * @ORM\Column(type="boolean")
      */
     private $chooseNewsletter;
+    /**
+     * @ORM\Column(type="array")
+     */
+    private $roles;
+
+    /**
+     * @ORM\Column(type="string", length=25, unique=true)
+     */
+    private $username;
 
 
     /**
@@ -369,6 +381,39 @@ class User
     {
         $this->chooseNewsletter = $chooseNewsletter;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRoles()
+    {
+        return $this->roles;
+    }
+
+    /**
+     * @param mixed $roles
+     */
+    public function setRoles($roles): void
+    {
+        $this->roles = $roles;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @param mixed $username
+     */
+    public function setUsername($username): void
+    {
+        $this->username = $username;
+    }
+
 
 
 }

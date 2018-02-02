@@ -40,7 +40,10 @@
     }
 
     /**
+<<<<<<< HEAD
 
+=======
+>>>>>>> connexion-backend
      * @Route("/article", name="article")
      */
     public function article(Request $request)
@@ -256,7 +259,17 @@
         return $this->render('success.html.twig');
     }
 
+<<<<<<< HEAD
 
 
+=======
+    /**
+     * @Route("/librairie", name="librairie")
+     */
+    public function library()
+    {
+        return $this->render('librairie.html.twig');
+    }
+>>>>>>> connexion-backend
 }
 

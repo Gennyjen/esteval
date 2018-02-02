@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Controller;
 
 use App\Entity\User;
@@ -13,7 +14,7 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 class FormsController extends Controller {
 
     /**
-     * @Route("/registration", name="registration")
+     * @Route("/success", name="success")
      * @param Request $request
      * @param ValidatorInterface $validator
      * @return Response
@@ -48,7 +49,7 @@ class FormsController extends Controller {
              }
 
         }
-        return $this->render('registration.html.twig', array('form' => $form->createView()));
+        return $this->render('success.html.twig', array('form' => $form->createView()));
 
         }
 
