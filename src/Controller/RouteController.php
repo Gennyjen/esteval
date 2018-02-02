@@ -50,7 +50,6 @@ class RouteController extends Controller
 
         $oneArticle = $articles->findBy(['id' => $id]);
 
-        // return $this->render('page-article.html.twig');
         return $this->render('page-article.html.twig',['article' => $oneArticle]);
     }
 
@@ -255,11 +254,4 @@ class RouteController extends Controller
         return $this->render('success.html.twig');
     }
 
-    /**
-     * @Route("/librairie", name="librairie")
-     */
-    public function library()
-    {
-        return $this->render('librairie.html.twig');
-    }
 }

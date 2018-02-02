@@ -32,6 +32,7 @@ $(function() {
             $.each(data.data, function(index, value){
                 titleMagasines = value.titre;
                 var date = new Date(value.moisParution.date);
+                console.log('Date 1 :' + date);
                 html += '<div class="col-12 col-lg-4">\n' +
                     '<h6>'+ value.titre +'</h6>\n' +
                     '                            <a href="#">\n' +
@@ -40,7 +41,7 @@ $(function() {
                     '                                        <span class="numero">n°' + value.numero + '</span>\n' +
                     '                                        <span class="mois-annee">' + monthList[date.getMonth()] + ' ' + date.getFullYear() + '</span>\n' +
                     '                                    </div>\n' +
-                    '                                    <img src="' + value.couverture + '" alt="' + value.titre + '">\n' +
+                    '                                    <img class="couverture" src="' + value.couverture + '" alt="' + value.titre + '">\n' +
                     '                                </div>\n' +
                     '                            </a>\n' +
                     '                        </div>\n' +
@@ -69,7 +70,30 @@ $(function() {
                     '<a id="previous" href="ajax/' + id + '?page=' + (page - 1) + '">Précédent</a>';
             }
 
-            $('#pagination').html(paginationHtml)
+            $('#pagination').html(paginationHtml);
+            $('#next').click(function(e) {
+                e.preventDefault();
+                ++page;
+
+                $.ajax({
+                    url: $(this).attr('href'),
+                    method: 'GET',
+                    success: function(magasines) {
+
+
+
+
+                        for($i = 1; $i < 4; $i++) {
+                            var date = new Date(magasines.data[($i - 1)].moisParution.date);
+                            console.log('Date 2 :' + date);
+
+                            $('#magasine-liste > div:nth-child('+ $i +') .numero').html('n°' + magasines.data[($i - 1)].numero);
+                            $('#magasine-liste > div:nth-child('+ $i +') .couverture').attr('src', magasines.data[($i - 1)].couverture);
+                            $('#magasine-liste > div:nth-child('+ $i +') .mois-annee').html(monthList[date.getMonth()] + ' ' + date.getFullYear());
+                        }
+                    }
+                })
+            });
 
 
 
