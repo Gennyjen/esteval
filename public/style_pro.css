@@ -36,3 +36,16 @@ header .category:hover {
 footer {
     border-top: 2px solid #424244;
 }
+
+.flux_editions {
+    background: #779d48;
+    padding: 4px;
+    position: relative;
+    height: 67px;
+}
+.flux_editions .texte_pro {
+    position: absolute;
+    left: calc(50% + 26px);
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

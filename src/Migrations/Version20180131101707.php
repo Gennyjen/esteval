@@ -8,14 +8,14 @@ use Doctrine\DBAL\Schema\Schema;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-class Version20180129124714 extends AbstractMigration
+class Version20180131101707 extends AbstractMigration
 {
     public function up(Schema $schema)
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE comptes_utilisateurs ADD choose_particulier TINYINT(1) NOT NULL, ADD choose_company TINYINT(1) NOT NULL, ADD choose_newsletter TINYINT(1) NOT NULL');
+        $this->addSql('ALTER TABLE magasines CHANGE titre titre VARCHAR(255) NOT NULL');
     }
 
     public function down(Schema $schema)
@@ -23,6 +23,6 @@ class Version20180129124714 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE comptes_utilisateurs DROP choose_particulier, DROP choose_company, DROP choose_newsletter');
+        $this->addSql('ALTER TABLE magasines CHANGE titre titre INT NOT NULL');
     }
 }
