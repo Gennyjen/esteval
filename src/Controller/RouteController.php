@@ -3,13 +3,9 @@
     namespace App\Controller;
 
     use App\Entity\Articles;
-    use App\Entity\Magasines;
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-    use Symfony\Component\HttpFoundation\JsonResponse;
     use Symfony\Component\Routing\Annotation\Route;
     use Symfony\Component\HttpFoundation\Response;
-    use Symfony\Component\HttpFoundation\Request;
-    use Doctrine\ORM\Tools\Pagination\Paginator;
 
     class RouteController extends Controller
     {
@@ -40,22 +36,11 @@
     }
 
     /**
-<<<<<<< HEAD
-
-=======
->>>>>>> connexion-backend
      * @Route("/article", name="article")
      */
-    public function article(Request $request)
+    public function article()
     {
-
-        $articles = $this->getDoctrine()->getRepository(Articles::class);
-        $id = $request->query->get('id');
-
-        $oneArticle = $articles->findBy(['id' => $id]);
-
-        // return $this->render('page-article.html.twig');
-        return $this->render('page-article.html.twig',['article' => $oneArticle]);
+        return $this->render('page-article.html.twig');
     }
 
 
@@ -75,7 +60,6 @@
         $em = $this->getDoctrine()->getRepository(Articles::class);
         $articles = $em->findBy([], ['datePublication' => 'DESC'], 10);
         $firstArticle = array_shift($articles);
-
         return $this->render('index.html.twig',['articles' => $articles, 'firstArticle' => $firstArticle]); // Premier article retiré dans la liste ** Premier article gardé pour le carousel
     }
 
@@ -154,72 +138,6 @@
     }
 
     /**
-     * @Route("/ajax/{cat_id}", name="ajax")
-     */
-    public function ajax(Request $request, $cat_id)
-    {
-        $mag = $this->getDoctrine()->getRepository(Magasines::class);
-
-        $page = $request->query->get('page');
-        if (!isset($page)) {
-            $page = 1;
-        }
-        $limit = 3;
-
-        if ( $cat_id != 0 ) {
-
-            // $magasines = $mag->findBy(['catId' => $cat_id]);
-            $magasines = $mag->findBy(['catId' => $cat_id], ['numero' => 'DESC'], $limit, $limit*($page - 1));
-
-            $totalPages = ceil(count($mag->findBy(['catId' => $cat_id])) / $limit);
-
-            $data = [
-                'data' => [],
-                'pagination' => [
-                    'page' => $page,
-                    'pageTotal' => $totalPages
-                ]
-            ];
-            foreach ($magasines as $magasine) {
-                $data['data'][] = [
-                    'id' => $magasine->getId(),
-                    'numero' => $magasine->getNumero(),
-                    'moisParution' => $magasine->getMoisParution(),
-                    'titre' => $magasine->getTitre(),
-                    'couverture' => $magasine->getCouverture()
-                ];
-            }
-        } else {
-            // Magasines 'Les derniers parus'
-            $magasines = [];
-            $magasines[] = $mag->findBy(['catId' => 1], ['moisParution' => 'DESC'], 1);
-            $magasines[] = $mag->findBy(['catId' => 2], ['moisParution' => 'DESC'], 1);
-            $magasines[] = $mag->findBy(['catId' => 3], ['moisParution' => 'DESC'], 1);
-
-            $data = [
-                'data' => [],
-                'pagination' => [
-                    'page' => 1,
-                    'pageTotal' => 1
-                ]
-            ];
-            foreach ($magasines as $magasine) {
-
-                $data['data'][] = [
-                    'id' => $magasine[0]->getId(),
-                    'numero' => $magasine[0]->getNumero(),
-                    'moisParution' => $magasine[0]->getMoisParution(),
-                    'titre' => $magasine[0]->getTitre(),
-                    'couverture' => $magasine[0]->getCouverture()
-                ];
-            }
-
-        }
-
-        return new JsonResponse($data);
-    }
-
-    /**
      * @Route("/gestion-patrimoine", name="gestion-patrimoine")
      */
     public function gestionPatrimoine()
@@ -259,10 +177,6 @@
         return $this->render('success.html.twig');
     }
 
-<<<<<<< HEAD
-
-
-=======
     /**
      * @Route("/librairie", name="librairie")
      */
@@ -270,6 +184,5 @@
     {
         return $this->render('librairie.html.twig');
     }
->>>>>>> connexion-backend
 }
 

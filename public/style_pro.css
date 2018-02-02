@@ -60,19 +60,6 @@ footer {
     border-top: 2px solid #424244;
 }
 
-
-.flux_editions {
-    background: #779d48;
-    padding: 4px;
-    position: relative;
-    height: 67px;
-}
-.flux_editions .texte_pro {
-    position: absolute;
-    left: calc(50% + 26px);
-    top: 50%;
-    transform: translate(-50%,-50%);
-
 .gestion-patrimoine h1,
 .immobilier h1,
 .financement-entreprise h1,
@@ -84,5 +71,4 @@ footer {
     font-size: 35px;
     border-bottom: 3px solid #424244; 
     font-weight: 100;
-
 }

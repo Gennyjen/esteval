@@ -973,8 +973,6 @@ aside .abonnement img {
     box-shadow: 0 0 0 0.2rem rgba(119, 157, 72, 0.25);
 }
 
-/* Page article *************************************************************************************************** */
-
 /* Titre */
 
 .page-article .titre {
@@ -1203,46 +1201,6 @@ aside .abonnement img {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-#pagination {
-    justify-content: space-between;
-    position: relative;
-    height: 27px;
-    margin: 0;
-}
-
-
-#pagination a {
-    background: #779d48;
-    border: none;
-    font-size: 13px;
-    padding: 4px 10px;
-    color: white;
-    border-radius: 2px;
-    cursor: pointer;
-}
-#pagination a#previous {
-    background: #616060;
-}
-#pagination a#previous {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-a#previous:before {
-    content: "\f104";
-    font-family: fontawesome;
-    margin-right: 10px;
-}
-#pagination a#next {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-a#next:after {
-    content: "\f105";
-    font-family: fontawesome;
-    margin-left: 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -2077,10 +2035,6 @@ footer .navigation_footer {
 }
 .page div.form-check.modif {
     margin-top: 12px;
-<<<<<<< HEAD
-
-=======
->>>>>>> connexion-backend
 }
 
 /* Page Success ******************************************** */
@@ -2097,8 +2051,4 @@ div#successPage.alert.alert-success {
     margin-bottom: 32px;
     border: 1px solid transparent;
     border-radius: 0;
-<<<<<<< HEAD
-
-=======
->>>>>>> connexion-backend
 }
