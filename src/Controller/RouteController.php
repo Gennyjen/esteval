@@ -259,10 +259,6 @@
         return $this->render('success.html.twig');
     }
 
-<<<<<<< HEAD
-
-
-=======
     /**
      * @Route("/librairie", name="librairie")
      */
@@ -270,6 +266,5 @@
     {
         return $this->render('librairie.html.twig');
     }
->>>>>>> connexion-backend
 }
 
