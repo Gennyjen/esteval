@@ -2,15 +2,15 @@
 
 namespace App\Repository;
 
-use App\Entity\Magasine;
+use App\Entity\Magasines;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
-class MagasineRepository extends ServiceEntityRepository
+class MagasinesRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, Magasine::class);
+        parent::__construct($registry, Magasines::class);
     }
 
     /*
