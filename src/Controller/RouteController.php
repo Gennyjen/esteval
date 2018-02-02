@@ -45,11 +45,11 @@
 
 
     /**
-     * @Route("/company", name="company")
+     * @Route("/entreprise", name="entreprise")
      */
-    public function company()
+    public function entreprise()
     {
-        return $this->render('company.html.twig');
+        return $this->render('entreprise.html.twig');
     }
 
     /**

@@ -1,7 +1,7 @@
 $(function() {
     $(".search").hide()
     $(".fa-search").click(function(){
-        $(".search").fadeToggle("slow");
+        $(".search").fadeToggle(400);
     });
 });
   

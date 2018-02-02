@@ -390,6 +390,7 @@ main article button {
 
 main .carousel h3 {
     text-shadow: 1px 1px #000000;
+    font-size: 18px;
 }
 
 /* page-article ****************************************************************************************************************** */
@@ -517,6 +518,12 @@ main .section-articles-similaires {
 
 main .articles {
     margin-top: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+    main .carousel h3 {
+        font-size: 30px;
+    }
 }
 
 /* Page Entreprises et initiatives ************************************************************************************************ */
@@ -1183,11 +1190,13 @@ aside .abonnement img {
     padding: 15px;
 }
 
-.entreprise .btn {
+.entreprise .btn-parcours {
     box-shadow: none !important;
     background-color: #8eae68;
     border-radius: 0;
     color: white;
+    padding: 5px 6px;
+    font-size: 16px;
 }
 
 .entreprise .thierry, .entreprise .michel {
@@ -1750,4 +1759,31 @@ footer .navigation_footer {
 .page div.form-check.modif {
     margin-top: 12px;
 
+}
+
+
+/* Mention légales ********************************************************************************************* */
+
+.mentions-legales h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.mentions-legales h5 {
+    font-size: 15px;
+}
+
+.mentions-legales h4 {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.mentions-legales p.intro {
+    font-size: 18px;
+    margin-bottom: 25px;
 }
