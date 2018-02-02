@@ -1,0 +1,24 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.btn-success.btn-outline:hover {
+    color: #fff;
+}
+
+.panel  {
+    margin-right: 5px;
+}
+
+.panel-body {
+    height: 270px;
+}
+
+.login-panel {
+    margin-top: 25%;
+
+}
+
+.panel-body.registration {
+    height: 460px;
+}

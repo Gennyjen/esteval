@@ -11,7 +11,7 @@ font-family: 'Roboto', sans-serif;
 */
 
 
-.perso{
+.mon-compte .perso{
     background-color: #eaeaea;
     text-align: center;
     line-height: 20px;
@@ -19,18 +19,18 @@ font-family: 'Roboto', sans-serif;
     border-top-right-radius: 20px;
 }
 
-h1.moncompte {
+.mon-compte h1.moncompte {
     padding-top: 5px;
     color: rgb(65, 65, 65);
     font-size: 1.6em;
 }
 
-h2.moncompte{
+.mon-compte h2.moncompte{
     color: #5a5c58;
     font-size: 1.4em;
     font-family: 'Raleway', sans-serif;
 }
-h3.moncompte {
+.mon-compte h3.moncompte {
     font-family: 'Raleway', sans-serif;
     font-size: 1.2em;
     height: 40px;
@@ -41,7 +41,7 @@ h3.moncompte {
     border-top-left-radius: 20px;
 }
 
-h3.moncompte {
+.mon-compte h3.moncompte {
     font-family: 'Raleway', sans-serif;
     font-size: 1.2em;
     height: 40px;
@@ -50,56 +50,56 @@ h3.moncompte {
     text-align: center;
 }
 
-h4.moncompte{
+.mon-compte h4.moncompte{
     font-size: 1.1em;
 
 }
 
-h5.moncompte{
+.mon-compte h5.moncompte{
     font-size: 1.0em;
     color: #99cc66;
 
 }
 
-.champs{
+.mon-compte .champs{
     width : 100px;
 }
 
-.btn-esteval {
+.mon-compte .btn-esteval {
     background-color: #99cc66;
     height: 60px;
     color: white;
 }
 
-.btn-esteval-abonnement {
+.mon-compte .btn-esteval-abonnement {
     background-color: #efb336;
     height: 40px;
     color: white;
 }
 
-.img-offre {
+.mon-compte .img-offre {
     width: 100px;
     margin: auto;
 
 }
 
-.img-offre img {
+.mon-compte .img-offre img {
     width: 100%;
 
 }
 
-.text-titre-offre {
+.mon-compte .text-titre-offre {
     font-size: 1.1em;
 }
 
-.green-esteval{
+.mon-compte .green-esteval{
     color: #99cc66;
 }
 
-.info_coordonnees {
+.mon-compte .info_coordonnees {
     border-radius: 20px 20px 0 0;
     height: calc(100% - 20px);
 }
-.info_abo_perso, .info_factures_perso {
+.mon-compte .info_abo_perso, .info_factures_perso {
     border-radius: 20px 20px 0 0;
 }

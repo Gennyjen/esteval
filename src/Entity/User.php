@@ -2,16 +2,18 @@
 
 namespace App\Entity;
 
-use App\Form\ComptesUtilisateursType;
+use App\Form\UserType;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 
-
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ParticulierRepository")
+ * @ORM\Table(name="app_users")
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
-class ComptesUtilisateurs
+class User
 {
     /**
      * @ORM\Id
@@ -19,6 +21,7 @@ class ComptesUtilisateurs
      * @ORM\Column(type="integer")
      */
     private $id;
+
     /**
      * @ORM\Column(type="string", length=28)
      * @Assert\Length(
@@ -127,6 +130,15 @@ class ComptesUtilisateurs
      * @ORM\Column(type="boolean")
      */
     private $chooseNewsletter;
+    /**
+     * @ORM\Column(type="array")
+     */
+    private $roles;
+
+    /**
+     * @ORM\Column(type="string", length=25, unique=true)
+     */
+    private $username;
 
 
     /**
@@ -362,12 +374,45 @@ class ComptesUtilisateurs
     }
 
     /**
-     * @param mixed $chooseNewletter
+     * @param mixed $chooseNewsletter
      */
     public function setChooseNewsletter($chooseNewsletter): void
     {
         $this->chooseNewsletter = $chooseNewsletter;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRoles()
+    {
+        return $this->roles;
+    }
+
+    /**
+     * @param mixed $roles
+     */
+    public function setRoles($roles): void
+    {
+        $this->roles = $roles;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @param mixed $username
+     */
+    public function setUsername($username): void
+    {
+        $this->username = $username;
+    }
+
 
 
 }
