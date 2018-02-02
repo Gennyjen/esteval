@@ -40,6 +40,7 @@
     }
 
     /**
+
      * @Route("/article", name="article")
      */
     public function article(Request $request)
@@ -215,4 +216,47 @@
         return new JsonResponse($data);
     }
 
+    /**
+     * @Route("/gestion-patrimoine", name="gestion-patrimoine")
+     */
+    public function gestionPatrimoine()
+    {
+        return $this->render('professionnel/gestion-patrimoine.html.twig');
+    }
+
+    /**
+     * @Route("/immobilier", name="immobilier")
+     */
+    public function immobilier()
+    {
+        return $this->render('professionnel/immobilier.html.twig');
+    }
+
+    /**
+     * @Route("/financement-entreprise", name="financement-entreprise")
+     */
+    public function financementEntreprise()
+    {
+        return $this->render('professionnel/financement-entreprise.html.twig');
+    }
+
+    /**
+     * @Route("/gestion-institutionnelle", name="gestion-institutionnelle")
+     */
+    public function gestionInstitutionnelle()
+    {
+        return $this->render('professionnel/gestion-institutionnelle.html.twig');
+
+    }
+    /**
+     * @Route("/success", name="success")
+     */
+    public function success()
+    {
+        return $this->render('success.html.twig');
+    }
+
+
+
 }
+

@@ -1,4 +1,5 @@
 $(function() {
+
     function displayMags(id, page) {
 
         $.ajax({
@@ -87,6 +88,10 @@ $(function() {
     // Script pour afficher la barre de recherche
     $(".search").hide();
     $(".fa-search").click(function(){
+
+    $(".search").hide();
+
+    $(".fa-search").on('click', function(){
         $(".search").fadeToggle("slow");
     });
 
