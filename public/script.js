@@ -127,18 +127,13 @@ $(function() {
             alert('Une erreur est survenue. Code erreur :' + data);
         });
 
-    }
+    };
 
 
     // Script pour afficher la barre de recherche
     $(".search").hide();
     $(".fa-search").click(function(){
-
-        $(".search").hide();
-
-        $(".fa-search").on('click', function(){
             $(".search").fadeToggle("slow");
-        });
     });
 
     // Code ajax Librairie pour afficher les magasines au change du 'select'

@@ -19,7 +19,7 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <a href="">
+                                    <a href="/article?id={{ firstArticle.id }}">
                                         <img class="d-block w-100" src="{{ firstArticle.images }}" alt="First slide">
                                         <div class="carousel-caption d-block">
                                             <h3>{{ firstArticle.titre }}</h3>
@@ -75,6 +75,8 @@
                 
                 {% include('partenaires.html.twig') %}
 
+
+
                 <div class="row">
                     {% for article in articles %}
                         <div class="articles col-12 col-lg-6">
@@ -85,8 +87,8 @@
                                             <div class="content_image">
                                                 <img src="{{ article.images }}" alt="Image de l'article">
                                             </div>
-                                            <div class="rubrique_index">
-                                                rubrique
+                                            <div class="rubrique_index" data-type="{{ article.idRubrique }}">
+                                                {{ article.idRubrique }}
                                             </div>
                                             <div class="text_article">
                                                 {{ article.titre }}
@@ -108,7 +110,7 @@
                                         </a>
                                     </div>
                                     <div class="col-6 p-0 d-flex justify-content-end">
-                                        <div class="suite"><button class="btn-suite">Lire la suite</button></div>
+                                        <div class="suite"><a href="/article?id={{ article.id }}"><button class="btn-suite">Lire la suite</button></a></div>
                                     </div>
                                 </div>
                             </article>

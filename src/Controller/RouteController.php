@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Articles;
 use App\Entity\Magasines;
+use App\Entity\Rubriques;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
@@ -62,6 +63,14 @@ class RouteController extends Controller
         $em = $this->getDoctrine()->getRepository(Articles::class);
         $articles = $em->findBy([], ['datePublication' => 'DESC'], 10);
         $firstArticle = array_shift($articles);
+
+        foreach($articles as $currentArticle ) {
+            $currentArticle
+                ->setIdRubrique($this->getDoctrine()->getRepository(Rubriques::class)
+                ->find($currentArticle->getIdRubrique())
+                ->getNom());
+        }
+
 
         return $this->render('index.html.twig',['articles' => $articles, 'firstArticle' => $firstArticle]); // Premier article retiré dans la liste ** Premier article gardé pour le carousel
     }
@@ -244,6 +253,18 @@ class RouteController extends Controller
     public function success()
     {
         return $this->render('success.html.twig');
+    }
+
+    /**
+     * @Route("/sidebar", name="sidebar")
+     */
+    public function sidebar() {
+        $em = $this->getDoctrine()->getRepository(Articles::class);
+        $articleSidebar = $em->findBy([], ['datePublication' => 'DESC'], 5, 40);
+
+
+
+        return $this->render('sidebar.html.twig',['articleSidebar' => $articleSidebar]);
     }
 
 }

@@ -294,6 +294,10 @@ main.container {
 }
 
 /* Articles */
+.carousel-item {
+    height: 310px;
+    overflow: hidden;
+}
 
 main .text_article {
     position: absolute;
@@ -320,6 +324,8 @@ main article p {
     padding-top: 7px;
     padding-bottom: 7px; 
     line-height: 15px;
+    height: 53px;
+    overflow: hidden;
 }
 
 main article button {
@@ -334,6 +340,16 @@ main .raw_nowrap:after {
     content: "...";
 }
 
+.rubrique_index[data-type="Analyses de marchés"], .rubrique_index[data-type="Patrimoine"], .rubrique_index[data-type="Acteurs du secteur financier"], .rubrique_index[data-type="Produits de placement"], .rubrique_index[data-type="Immobilier"], .rubrique_index[data-type="EP - Gestion de patrimoine"], .rubrique_index[data-type="EP - Investisseurs professionnels"], .rubrique_index[data-type="A la une - Patrimoine & Finance"] {
+     background: #8eae68 !important;
+ }
+.rubrique_index[data-type="Entreprises & initiatives"],
+.rubrique_index[data-type="EP - Financement de l'entreprise"],
+.rubrique_index[data-type="Lorraine"],
+.rubrique_index[data-type="Luxembourg"],
+.rubrique_index[data-type="A la une - Entreprises & Initiatives"] {
+    background: #2c9696 !important;
+}
 
 
 .row.articles {
