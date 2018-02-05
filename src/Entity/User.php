@@ -414,6 +414,32 @@ class User implements UserInterface, \Serializable
         $this->username = $username;
     }
 
+    public function eraseCredentials()
+    {
+    }
+    public function getSalt()
+    {
+        return null;
+    }
 
+    /** @see \Serializable::serialize() */
+    public function serialize()
+    {
+        return serialize([
+            $this->id,
+            $this->username,
+            $this->password,
+        ]);
+    }
+
+    /** @see \Serializable::unserialize() */
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+            ) = unserialize($serialized);
+    }
 
 }

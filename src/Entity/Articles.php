@@ -37,6 +37,11 @@
         private $texteRaw;
 
         /**
+         * @ORM\Column(type="string")
+         */
+        private $images;
+
+        /**
          * @return mixed
          */
         public function getId()
@@ -114,6 +119,22 @@
         public function setTexteRaw($texteRaw): void
         {
             $this->texteRaw = $texteRaw;
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getImages()
+        {
+            return $this->images;
+        }
+
+        /**
+         * @param mixed $images
+         */
+        public function setImages($images): void
+        {
+            $this->images = $images;
         }
 
 
