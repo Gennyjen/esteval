@@ -398,6 +398,13 @@ main .raw_nowrap:after {
 
 main .carousel h3 {
     text-shadow: 1px 1px #000000;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    main .carousel h3 {
+        font-size: 25px;
+    }
 }
 
 /* page-article ****************************************************************************************************************** */
