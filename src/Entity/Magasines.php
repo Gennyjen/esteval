@@ -41,6 +41,9 @@ class Magasines
      */
     private $catId;
 
+    
+    
+
     /**
      * @return mixed
      */
@@ -136,6 +139,9 @@ class Magasines
     {
         $this->catId = $catId;
     }
+
+    
+
 
 
 

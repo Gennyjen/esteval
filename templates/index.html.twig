@@ -20,7 +20,7 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <a href="">
-                                        <img class="d-block w-100" src="images-article/vendeur.jpg" alt="First slide">
+                                        <img class="d-block w-100" src="{{ firstArticle.images }}" alt="First slide">
                                         <div class="carousel-caption d-block">
                                             <h3>{{ firstArticle.titre }}</h3>
                                         </div>
@@ -83,7 +83,7 @@
                                     <div class="content_article">
                                         <div style="position:relative;z-index:1">
                                             <div class="content_image">
-                                                <img src="" alt="Image de l'article">
+                                                <img src="{{ article.images }}" alt="Image de l'article">
                                             </div>
                                             <div class="rubrique_index">
                                                 rubrique
