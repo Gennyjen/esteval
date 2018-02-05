@@ -56,6 +56,14 @@ class RouteController extends Controller
     }
 
     /**
+     * @Route("/librairie", name="librairie")
+     */
+    public function librairie()
+    {
+        return $this->render('librairie.html.twig');
+    }
+
+    /**
      * @Route("/", name="index")
      */
     public function index()

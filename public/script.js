@@ -7,20 +7,21 @@ $(function() {
         var paginationHtml = '';
 
 
+        if ( page == 1 && totalPage == 1 ) {
+            $('#previous').hide();
+            $('#next').hide();
+        }
         if ( page == 1 && totalPage > 1 ) {
             $('#previous').hide();
-            $('#next').show().attr('href', 'ajax/' + id + '?page=' + (page + 1) + '');
-
+            $('#next').show().attr('href', 'ajax/' + id + '?page=' + (page + 1) + '');;
         }
-        if ( page > 1 && page < totalPage ) {
+        if ( page > 1 ) {
             $('#previous').show().attr('href', 'ajax/' + id + '?page=' + (page - 1) + '');;
             $('#next').show().attr('href', 'ajax/' + id + '?page=' + (page + 1) + '');;
-
         }
         if ( page > 1 && page == totalPage ) {
             $('#previous').show().attr('href', 'ajax/' + id + '?page=' + (page - 1) + '');;
             $('#next').hide();
-
         }
 
     }
@@ -117,6 +118,7 @@ $(function() {
 
 
 
+            // Afichage du titre dans librairie
             if ( $('#select_magasines').val() != '0' ) {
                 $('.titre-derniers-numeros h4').html(titleMagasines);
             } else {
