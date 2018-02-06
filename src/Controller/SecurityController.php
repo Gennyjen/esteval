@@ -12,12 +12,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends Controller
 {
-    /**
-     * @Route("/registration", name="security_register_user")
-     * @param UserPasswordEncoderInterface $encoder
-     * @param AuthenticationUtils $authUtils
-     * @return Response
-     */
+
     public function registerUser(UserPasswordEncoderInterface $encoder, AuthenticationUtils $authUtils)
     {
         $user = new User();

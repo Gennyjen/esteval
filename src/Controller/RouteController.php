@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Articles;
 use App\Entity\Magasines;
+use App\Entity\Rubriques;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
@@ -41,8 +42,13 @@ class RouteController extends Controller
         $id = $request->query->get('id');
 
         $oneArticle = $articles->findBy(['id' => $id]);
+        foreach($oneArticle as $currentArticle ) {
+            $currentArticle
+                ->setIdRubrique($this->getDoctrine()->getRepository(Rubriques::class)
+                    ->find($currentArticle->getIdRubrique())
+                    ->getNom());
+        }
 
-        // return $this->render('page-article.html.twig');
         return $this->render('page-article.html.twig',['article' => $oneArticle]);
     }
 
@@ -56,6 +62,14 @@ class RouteController extends Controller
     }
 
     /**
+     * @Route("/librairie", name="librairie")
+     */
+    public function librairie()
+    {
+        return $this->render('librairie.html.twig');
+    }
+
+    /**
      * @Route("/", name="index")
      */
     public function index()
@@ -63,6 +77,14 @@ class RouteController extends Controller
         $em = $this->getDoctrine()->getRepository(Articles::class);
         $articles = $em->findBy([], ['datePublication' => 'DESC'], 10);
         $firstArticle = array_shift($articles);
+
+        foreach($articles as $currentArticle ) {
+            $currentArticle
+                ->setIdRubrique($this->getDoctrine()->getRepository(Rubriques::class)
+                ->find($currentArticle->getIdRubrique())
+                ->getNom());
+        }
+
 
         return $this->render('index.html.twig',['articles' => $articles, 'firstArticle' => $firstArticle]); // Premier article retiré dans la liste ** Premier article gardé pour le carousel
     }
@@ -78,9 +100,22 @@ class RouteController extends Controller
     /**
      * @Route("/patrimoine-et-finance", name="patrimoine-et-finance")
      */
-    public function patrimoineEtFinance()
+    public function patrimoineEtFinance(Request $request)
     {
-        return $this->render('patrimoine-et-finance.html.twig');
+
+
+        $em = $this->getDoctrine()->getRepository(Articles::class);
+        $articles = $em->findBy([], ['datePublication' => 'DESC'], 10, 30);
+
+        foreach($articles as $currentArticle ) {
+            $currentArticle
+                ->setIdRubrique($this->getDoctrine()->getRepository(Rubriques::class)
+                    ->find($currentArticle->getIdRubrique())
+                    ->getNom());
+        }
+
+
+        return $this->render('patrimoine-et-finance.html.twig',['articles' => $articles]);
     }
 
 
@@ -89,7 +124,18 @@ class RouteController extends Controller
      */
     public function entreprisesEtInitiatives()
     {
-        return $this->render('entreprises-et-initiatives.html.twig');
+        $em = $this->getDoctrine()->getRepository(Articles::class);
+        $articles = $em->findBy([], ['datePublication' => 'DESC'], 10, 40);
+
+        foreach($articles as $currentArticle ) {
+            $currentArticle
+                ->setIdRubrique($this->getDoctrine()->getRepository(Rubriques::class)
+                    ->find($currentArticle->getIdRubrique())
+                    ->getNom());
+        }
+
+
+        return $this->render('entreprises-et-initiatives.html.twig',['articles' => $articles]);
     }
 
     /**
@@ -97,7 +143,18 @@ class RouteController extends Controller
      */
     public function cultureEtPerspectives()
     {
-        return $this->render('culture-et-perspectives.html.twig');
+        $em = $this->getDoctrine()->getRepository(Articles::class);
+        $articles = $em->findBy([], ['datePublication' => 'DESC'], 10, 50);
+
+        foreach($articles as $currentArticle ) {
+            $currentArticle
+                ->setIdRubrique($this->getDoctrine()->getRepository(Rubriques::class)
+                    ->find($currentArticle->getIdRubrique())
+                    ->getNom());
+        }
+
+
+        return $this->render('culture-et-perspectives.html.twig',['articles' => $articles]);
     }
 
     /**
@@ -248,10 +305,15 @@ class RouteController extends Controller
     }
 
     /**
-     * @Route("/librairie", name="librairie")
+     * @Route("/sidebar", name="sidebar")
      */
-    public function library()
-    {
-        return $this->render('librairie.html.twig');
+    public function sidebar() {
+        $em = $this->getDoctrine()->getRepository(Articles::class);
+        $articleSidebar = $em->findBy([], ['datePublication' => 'DESC'], 5, 40);
+
+
+
+        return $this->render('sidebar.html.twig',['articleSidebar' => $articleSidebar]);
     }
+
 }

@@ -14,7 +14,7 @@
 class FormsBackofficeController extends Controller {
 
     /**
-     * @Route("/backoffice/registration", name="registrationB")
+     * @Route("/backoffice/register", name="register")
      * @param Request $request
      * @param ValidatorInterface $validator
      * @return Response

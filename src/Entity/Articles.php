@@ -42,6 +42,13 @@
         private $images;
 
         /**
+         * @ORM\Column(type="integer")
+         * @ORM\ManyToOne(targetEntity="\App\Entity\Rubriques")
+         * @ORM\JoinColumn(nullable=false)
+         */
+        private $idRubrique;
+
+        /**
          * @return mixed
          */
         public function getId()
@@ -136,6 +143,28 @@
         {
             $this->images = $images;
         }
+
+        /**
+         * @return mixed
+         */
+        public function getIdRubrique()
+        {
+            return $this->idRubrique;
+        }
+
+        /**
+         * @param mixed $idRubrique
+         */
+        public function setIdRubrique($idRubrique): void
+        {
+            $this->idRubrique = $idRubrique;
+        }
+
+
+
+
+
+
 
 
     }
