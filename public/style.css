@@ -451,6 +451,15 @@ main .carousel h3 {
 .titre_entreprises {
     background-image: url('images/bandeau_entreprises.png');
 }
+.carousel-item:nth-child(2) h3, .carousel-item:nth-child(3) h3, .carousel-item:nth-child(4) h3, .carousel-item:nth-child(5) h3 {
+    font-size: 50px;
+    position: relative;
+    top: -47px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 /* page-article ****************************************************************************************************************** */
 
