@@ -635,7 +635,7 @@ aside .abonnement img {
     list-style: none;
     margin-bottom: 20px;
     position: relative;
-    text-align: center;
+    padding: 2px 7px;
 }
 .flux-infos .nav-tabs a.active {
     background: #779d48;
@@ -1412,6 +1412,14 @@ aside .abonnement img {
     background-color: #739f53;
 }
 
+@media screen and (min-width: 1024px) {
+    .abonnements ul.nav.nav-tabs {
+    width: 65%;
+    }
+}
+
+
+
 /* Entreprise ***************************************************************************************************************************** */
 
 .entreprise h1 {
@@ -1477,11 +1485,12 @@ aside .abonnement img {
     padding: 15px;
 }
 
-.entreprise .btn {
+.entreprise .btn-parcours {
     box-shadow: none !important;
     background-color: #8eae68;
     border-radius: 0;
     color: white;
+    padding: 5px 15px; 
 }
 
 .entreprise .thierry, .entreprise .michel {
@@ -1492,7 +1501,7 @@ aside .abonnement img {
     margin-bottom: 20px;
 }
 
-.entreprise citation {
+.entreprise blockquote {
     font-size: 25px;
     text-align: center;
     display: block;
@@ -2032,13 +2041,12 @@ footer .navigation_footer {
     margin-bottom: 20px;
 } 
 
-.contact .perso {
-    background-color: #eaeaea;
+.contact_email {
+    background: #f3f3f3;
     text-align: center;
     line-height: 20px;
-    /* border-top-left-radius: 20px; */
-    /* border-top-right-radius: 20px; */
-    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 .page div.form-check.modif {
     margin-top: 12px;
@@ -2058,4 +2066,29 @@ div#successPage.alert.alert-success {
     margin-bottom: 32px;
     border: 1px solid transparent;
     border-radius: 0;
+}
+
+/* Mentions légales */
+
+.mentions-legales h1 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 35px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.mentions-legales h5 {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.mentions-legales h6 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.mentions-legales p {
+    font-size: 15px;
 }

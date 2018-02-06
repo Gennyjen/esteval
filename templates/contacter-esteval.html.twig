@@ -4,90 +4,102 @@
 
     {% include('header.html.twig') %}
 
-    <div class="container contact">
-        <div class="row rounded-top">
-            <div class="col-12 perso mt-3">
-                <h1>Nous Contacter</h1>
-                <h2>Vous souhaitez des informations ou nous envoyer un message? </h2>
+    <main class="container contact">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-lg-8 perso">
+                        <div class="contact_email">
+                            <h1>Nous Contacter</h1>
+                            <h2>Vous souhaitez des informations ou nous envoyer un message? </h2>
 
-                <div class="separator"></div>
+                            <div class="separator"></div>
 
-                <address>Adresse :
-                    <p>
-                    22 rue Lucien Michel </br>
-                    54560 Audun Le Roman
-                    </p>
-                </address>
+                            <address>Adresse :
+                                <p>
+                                22 rue Lucien Michel </br>
+                                54560 Audun Le Roman
+                                </p>
+                            </address>
 
 
-                <div class="separator"></div>
+                            <div class="separator"></div>
 
-            <div>
-        </div>
-        <div class="row"> 
-            <div class="col">  
-                <form class="needs-validation fond p-3" novalidate>
-                    <div class="form-row">
-                        <div class="col-12 col-lg-6 text-left">
-                        <label for="validationCustom01"> Prénom : </label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="Votre prénom" value="" required>
-                        <div class="invalid-feedback">
-                        Merci de bien renseigner votre prénom !
-                    </div>
-                        </div>
-                        <div class="col-12 col-lg-6 mb-3 text-left">
-                        <label for="validationCustom02">Nom : </label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="Votre nom" value="" required>
-                        <div class="valid-feedback">
-                            Merci !
-                        </div>
-                        <div class="invalid-feedback">
-                            Merci de bien renseigner votre nom !
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 mb-3 text-left">
-                        <label for="validationCustom02">Société: </label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="Votre Société" value="">
-                        <div class="valid-feedback">
-                           
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 mb-3 text-left">
-                        <label for="validationCustom02">Votre Email :</label>
-                        <input type="email" class="form-control" id="validationCustom02" placeholder="exemple@email.fr" value="" required>
-                        <div class="valid-feedback">
-                            Merci !
-                        </div>
-                        <div class="invalid-feedback">
-                            Merci de bien renseigner votre email !
-                        </div>
-                    </div>
-                    <div class="col-12 mb-3 text-left">
-                        <label for="validationCustom02">Votre message :</label>
-                        <textarea name ="textarea"  rows="10" cols="40" class="form-control" id="validationCustom02" placeholder="Votre message ici" value="" required></textarea>
-                        <div class="valid-feedback">
-                            Merci !
-                        </div>
-                        <div class="invalid-feedback">
-                            Merci de bien renseigner votre message !
-                        </div>
-                    </div>
+                    
                 
+                            <div class="row"> 
+                                <div class="col">  
+                                    <form class="needs-validation fond p-3" novalidate>
+                                        <div class="form-row">
+                                            <div class="col-12 col-lg-6 text-left">
+                                                <label for="validationCustom01"> Prénom : </label>
+                                                <input type="text" class="form-control" id="validationCustom01" placeholder="Votre prénom" value="" required>
+                                                <div class="invalid-feedback">
+                                                    Merci de bien renseigner votre prénom !
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6 mb-3 text-left">
+                                                <label for="validationCustom02">Nom : </label>
+                                                <input type="text" class="form-control" id="validationCustom02" placeholder="Votre nom" value="" required>
+                                                    <div class="valid-feedback">
+                                                        Merci !
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Merci de bien renseigner votre nom !
+                                                    </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6 mb-3 text-left">
+                                                <label for="validationCustom02">Société: </label>
+                                                <input type="text" class="form-control" id="validationCustom02" placeholder="Votre Société" value="">
+                                                    <div class="valid-feedback">
+                                                
+                                                    </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6 mb-3 text-left">
+                                                <label for="validationCustom02">Votre Email :</label>
+                                                <input type="email" class="form-control" id="validationCustom02" placeholder="exemple@email.fr" value="" required>
+                                                <div class="valid-feedback">
+                                                    Merci !
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Merci de bien renseigner votre email !
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mb-3 text-left">
+                                                <label for="validationCustom02">Votre message :</label>
+                                                <textarea name ="textarea"  rows="10" cols="40" class="form-control" id="validationCustom02" placeholder="Votre message ici" value="" required></textarea>
+                                                <div class="valid-feedback">
+                                                    Merci !
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Merci de bien renseigner votre message !
+                                                </div>
+                                            </div>
+                                    
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="invalid-feedback">
+                                                Merci de bien vouloir saisir correctement tous les champs !
+                                            </div>
+                                            <button class="btn btn-contact" type="submit">Envoyer</button>
+                                        </div>
+
+                                    </form>
+                                </div>    
+                            </div>
+                        </div>
+                    <div>    
                 </div>
-                    <div class="form-group">
-                        <div class="invalid-feedback">
-                            Merci de bien vouloir saisir correctement tous les champs !
-                        </div>
-                        </div>
-                        <button class="btn btn-contact" type="submit">Envoyer</button>
-                    </div>
+            </div> 
 
-                </form>
-            </div>    
-        </div>
-    </div> 
 
-            <script>
+             {% include('sidebar.html.twig') %}
+
+        </div>  
+       
+    </main>
+
+    <script>
             // Example starter JavaScript for disabling form submissions if there are invalid fields
             (function() {
             'use strict';
@@ -106,13 +118,7 @@
                 });
             }, false);
             })();
-            </script>
-                
-                </div>
-            </div>
-        </div>
-    </div>
-
+    </script>
 
     {% include('footer.html.twig') %}
 
