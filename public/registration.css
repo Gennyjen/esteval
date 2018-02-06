@@ -30,8 +30,16 @@ input[type=radio] + label:before {
 #comptes_utilisateurs_isCompany {
     border:none;
 }
-#comptes_utilisateurs_isCompany label:nth-child(4):before {
-    content: 'Je suis un Professionnel';
+#user_isCompany label[for="user_isCompany_1"]:before {
+    content: "Je suis un Professionnel";
+}
+div#user_isCompany label {
+    font-size: 0;
+    width: 50%;
+}
+form[name="user"] .input-group-text, form[name="user"] #user_isCompany {
+    margin: 0;
+    padding: 0;
 }
 
 #comptes_utilisateurs_isCompany label {
@@ -60,3 +68,24 @@ label{
     cursor:pointer;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #779d48;
+    border-color: #83c72f;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #99cc66;
+    border-color: #83c72f;
+}
+
+.form-control{
+    border :none;
+}
+
+/* cgu */
+
+#footer {
+    font-size: 12px;
+}

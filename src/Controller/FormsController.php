@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 class FormsController extends Controller {
 
     /**
-     * @Route("/success", name="success")
+     * @Route("/registration", name="registration")
      * @param Request $request
      * @param ValidatorInterface $validator
      * @return Response
@@ -49,7 +49,7 @@ class FormsController extends Controller {
              }
 
         }
-        return $this->render('success.html.twig', array('form' => $form->createView()));
+        return $this->render('registration.html.twig', array('form' => $form->createView()));
 
         }
 
