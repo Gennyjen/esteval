@@ -119,11 +119,13 @@ class UserType extends AbstractType
                         'id' => 'ongletEntreprise',
                         'class' => 'form-control',
                     ]])
+
                 ->add('chooseNewsletter', 	CheckboxType::class, [
                     'attr' => [
                         'class' => 'form-check-input',
                         'id' => 'newsletter',
                     ]])
+
                 ->add('save',		SubmitType::class, [
                     'attr' => [
                         'id' => 'submit',
