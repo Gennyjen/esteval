@@ -37,6 +37,18 @@
         private $texteRaw;
 
         /**
+         * @ORM\Column(type="string")
+         */
+        private $images;
+
+        /**
+         * @ORM\Column(type="integer")
+         * @ORM\ManyToOne(targetEntity="\App\Entity\Rubriques")
+         * @ORM\JoinColumn(nullable=false)
+         */
+        private $idRubrique;
+
+        /**
          * @return mixed
          */
         public function getId()
@@ -115,6 +127,44 @@
         {
             $this->texteRaw = $texteRaw;
         }
+
+        /**
+         * @return mixed
+         */
+        public function getImages()
+        {
+            return $this->images;
+        }
+
+        /**
+         * @param mixed $images
+         */
+        public function setImages($images): void
+        {
+            $this->images = $images;
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getIdRubrique()
+        {
+            return $this->idRubrique;
+        }
+
+        /**
+         * @param mixed $idRubrique
+         */
+        public function setIdRubrique($idRubrique): void
+        {
+            $this->idRubrique = $idRubrique;
+        }
+
+
+
+
+
+
 
 
     }
