@@ -17,14 +17,6 @@ class RouteController extends Controller
 
 
     /**
-     * @Route("/registration", name="registration2")
-     */
-    public function registration()
-    {
-        return $this->render('registration.html.twig');
-    }
-
-    /**
      * @Route("/abonnements", name="abonnements")
      */
     public function abonnements()
@@ -296,6 +288,7 @@ class RouteController extends Controller
         return $this->render('professionnel/gestion-institutionnelle.html.twig');
 
     }
+
     /**
      * @Route("/success", name="success")
      */

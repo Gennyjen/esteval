@@ -1,1 +1,28 @@
-security: ~
+security:
+    providers:
+        db_provider:
+            entity:
+                class: App\Entity\User
+                property: username
+    encoders:
+        App\Entity\User:
+            algorithm:           bcrypt
+    firewalls:
+        main:
+            anonymous: ~
+            provider: db_provider
+            form_login:
+                login_path: login
+                check_path: index
+                default_target_path: index
+            logout:
+                path: logout
+                target: index
+                invalidate_session: true
+    access_control:
+                - { path: ^/backoffice, roles: ROLE_ADMIN }
+
+    role_hierarchy:
+                    ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+                    ROLE_ADMIN: [ROLE_USER, ROLE_EDITOR]
+                    ROLE_EDITOR: [ROLE_USER]

@@ -41,7 +41,7 @@
                             <a class="nav-link" href="/librairie">e-magasines & livres blancs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/connexion">Connexion / Inscription</a>
+                            <a class="nav-link" id="connexion" href="/connexion">Connexion / Inscription</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/abonnements">Abonnement</a>
@@ -87,7 +87,7 @@
                     <br> & livres blancs
                 </div>
             </a>
-            <a class="connectLink d-none d-sm-none d-md-none d-xl-flex" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <a class="connectLink d-none d-sm-none d-md-none d-xl-flex" data-toggle="modal" data-target=".bd-example-modal-lg" data-remote="login">
                 <div class="connect">
                     <i class="fa fa-user" aria-hidden="true"></i>
                     Connexion
@@ -124,3 +124,4 @@
 </header>
 
 {% endblock %}
+

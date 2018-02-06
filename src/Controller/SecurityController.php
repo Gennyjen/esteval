@@ -2,38 +2,39 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-
+use Symfony\Component\HttpFoundation\Request;
+use App\Form\LoginType;
 
 class SecurityController extends Controller
 {
+    /**
+     * @Route("/login", name="login")
+     * @param Request $request
+     * @param AuthenticationUtils $authUtils
+     * @return Response
+     */
+    public function formConnectUser(Request $request, AuthenticationUtils $authUtils) {
 
-    public function registerUser(UserPasswordEncoderInterface $encoder, AuthenticationUtils $authUtils)
-    {
-        $user = new User();
 
-        $pass->setPassword($password);
-
-        $passHash = $encoder->encodePassword($user, $pass); // password_hash
         $error = $authUtils->getLastAuthenticationError();
 
-        $user->setPassword($passHash);
-        $user->setUsername('admin');
-        $user->setEmail('admin@example.com');
-        $user->setRoles(['ROLE_USER']);
+        $lastUsername = $authUtils->getLastUsername();
 
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($user); // INSERT INTO app_user
-        $em->flush();
+        $form = $this->createForm(LoginType::class);
+        $form->handleRequest($request);
 
-        return $this->render('registration.html.twig', array(
-            'pass'  => $passHash,
-            'error' => $error,
-        ));
+        if($form->isSubmitted() && $form->isValid()) {
+            return $this->redirectToRoute("index");
+        } else {
+            return $this->render('login.html.twig', array(
+                'last_username' => $lastUsername,
+                'error'         => $error,
+                'form'          => $form->createView()
+            ));
+        }
     }
 }
