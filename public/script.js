@@ -1,6 +1,30 @@
 
 $(function() {
 
+
+    function createpagination(page, totalPage, id) {
+        // Pagination
+        var paginationHtml = '';
+
+
+        if ( page == 1 && totalPage == 1 ) {
+            $('#previous').hide();
+            $('#next').hide();
+        }
+        if ( page == 1 && totalPage > 1 ) {
+            $('#previous').hide();
+            $('#next').show().attr('href', 'ajax/' + id + '?page=' + (page + 1) + '');;
+        }
+        if ( page > 1 ) {
+            $('#previous').show().attr('href', 'ajax/' + id + '?page=' + (page - 1) + '');;
+            $('#next').show().attr('href', 'ajax/' + id + '?page=' + (page + 1) + '');;
+        }
+        if ( page > 1 && page == totalPage ) {
+            $('#previous').show().attr('href', 'ajax/' + id + '?page=' + (page - 1) + '');;
+            $('#next').hide();
+        }
+
+    }
     function displayMags(id, page) {
 
         $.ajax({
@@ -32,7 +56,6 @@ $(function() {
             $.each(data.data, function(index, value){
                 titleMagasines = value.titre;
                 var date = new Date(value.moisParution.date);
-                console.log('Date 1 :' + date);
                 html += '<div class="col-12 col-lg-4">\n' +
                     '<h6>'+ value.titre +'</h6>\n' +
                     '                            <a href="#">\n' +
@@ -50,42 +73,40 @@ $(function() {
             });
             $('#magasine-liste').html(html);
 
+            createpagination(page, data.pagination.pageTotal, id);
 
-            // Pagination
-            var paginationHtml = '';
-
-            if ( page == 1 && data.pagination.pageTotal > 1 ) {
-                paginationHtml +=
-                    '<a id="next" href="ajax/' + id + '?page=' + (page + 1) + '">Suivant</a>';
-            }
-            if ( page > 1 && page < data.pagination.pageTotal ) {
-
-                paginationHtml +=
-                    '<a id="previous" href="ajax/' + id + '?page=' + (page - 1) + '">Précédent</a>\n' +
-                    '<a id="next" href="ajax/' + id + '?page=' + (page + 1) + '">Suivant</a>';
-            }
-            if ( page > 1 && page == data.pagination.pageTotal ) {
-
-                paginationHtml +=
-                    '<a id="previous" href="ajax/' + id + '?page=' + (page - 1) + '">Précédent</a>';
-            }
-
-            $('#pagination').html(paginationHtml);
-            $('#next').click(function(e) {
+            $('#next').on('click', function(e) {
                 e.preventDefault();
-                ++page;
-
                 $.ajax({
                     url: $(this).attr('href'),
                     method: 'GET',
                     success: function(magasines) {
 
-
+                        createpagination(page + 1, data.pagination.pageTotal, id);
 
 
                         for($i = 1; $i < 4; $i++) {
                             var date = new Date(magasines.data[($i - 1)].moisParution.date);
-                            console.log('Date 2 :' + date);
+
+                            $('#magasine-liste > div:nth-child('+ $i +') .numero').html('n°' + magasines.data[($i - 1)].numero);
+                            $('#magasine-liste > div:nth-child('+ $i +') .couverture').attr('src', magasines.data[($i - 1)].couverture);
+                            $('#magasine-liste > div:nth-child('+ $i +') .mois-annee').html(monthList[date.getMonth()] + ' ' + date.getFullYear());
+                        }
+                    }
+                })
+            });
+            $('#previous').on('click', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: $(this).attr('href'),
+                    method: 'GET',
+                    success: function(magasines) {
+
+                        createpagination(page + 1, data.pagination.pageTotal, id);
+
+
+                        for($i = 1; $i < 4; $i++) {
+                            var date = new Date(magasines.data[($i - 1)].moisParution.date);
 
                             $('#magasine-liste > div:nth-child('+ $i +') .numero').html('n°' + magasines.data[($i - 1)].numero);
                             $('#magasine-liste > div:nth-child('+ $i +') .couverture').attr('src', magasines.data[($i - 1)].couverture);
@@ -97,6 +118,7 @@ $(function() {
 
 
 
+            // Afichage du titre dans librairie
             if ( $('#select_magasines').val() != '0' ) {
                 $('.titre-derniers-numeros h4').html(titleMagasines);
             } else {
@@ -107,18 +129,13 @@ $(function() {
             alert('Une erreur est survenue. Code erreur :' + data);
         });
 
-    }
+    };
 
 
     // Script pour afficher la barre de recherche
     $(".search").hide();
     $(".fa-search").click(function(){
-
-        $(".search").hide();
-
-        $(".fa-search").on('click', function(){
             $(".search").fadeToggle("slow");
-        });
     });
 
     // Code ajax Librairie pour afficher les magasines au change du 'select'

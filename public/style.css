@@ -294,6 +294,10 @@ main.container {
 }
 
 /* Articles */
+.carousel-item {
+    height: 310px;
+    overflow: hidden;
+}
 
 main .text_article {
     position: absolute;
@@ -320,6 +324,8 @@ main article p {
     padding-top: 7px;
     padding-bottom: 7px; 
     line-height: 15px;
+    height: 53px;
+    overflow: hidden;
 }
 
 main article button {
@@ -334,6 +340,16 @@ main .raw_nowrap:after {
     content: "...";
 }
 
+.rubrique_index[data-type="Analyses de marchés"], .rubrique_index[data-type="Patrimoine"], .rubrique_index[data-type="Acteurs du secteur financier"], .rubrique_index[data-type="Produits de placement"], .rubrique_index[data-type="Immobilier"], .rubrique_index[data-type="EP - Gestion de patrimoine"], .rubrique_index[data-type="EP - Investisseurs professionnels"], .rubrique_index[data-type="A la une - Patrimoine & Finance"] {
+     background: #8eae68 !important;
+ }
+.rubrique_index[data-type="Entreprises & initiatives"],
+.rubrique_index[data-type="EP - Financement de l'entreprise"],
+.rubrique_index[data-type="Lorraine"],
+.rubrique_index[data-type="Luxembourg"],
+.rubrique_index[data-type="A la une - Entreprises & Initiatives"] {
+    background: #2c9696 !important;
+}
 
 
 .row.articles {
@@ -351,7 +367,7 @@ main .raw_nowrap:after {
     height: 200px;
     overflow: hidden;
 }
-.articles .rubrique_index {
+.rubrique_index {
     background: #c5000b;
     color: white;
     display: inline-block;
@@ -361,6 +377,12 @@ main .raw_nowrap:after {
     padding: 0 10px;
     font-size: 11px;
     border-radius: 0 5px 5px 0;
+}
+.titre .rubrique_index {
+    position: initial;
+    top: initial;
+    border-radius: 2px;
+    margin-bottom: 15px;
 }
 .articles .content_image img {
     max-width: 100%;
@@ -398,6 +420,36 @@ main .raw_nowrap:after {
 
 main .carousel h3 {
     text-shadow: 1px 1px #000000;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    main .carousel h3 {
+        font-size: 25px;
+    }
+}
+
+.patrimoine_rubrique {
+    background: #8eae68;
+}
+.entreprises_rubrique {
+    background: #2c9696;
+}
+
+.titre_categorie {
+    width: 100%;
+    height: 225px;
+    position: relative;
+    background-position: center center;
+}
+.titre_patrimoine {
+    background-image: url('images/bandeau_patrimoine.png');
+}
+.titre_culture {
+    background-image: url('images/bandeau_culture.png');
+}
+.titre_entreprises {
+    background-image: url('images/bandeau_entreprises.png');
 }
 
 /* page-article ****************************************************************************************************************** */
@@ -491,6 +543,47 @@ main .magasine {
     margin-bottom: 25px;
 }
 
+#pagination {
+    justify-content: space-between;
+    position: relative;
+    height: 27px;
+    margin: 0;
+}
+
+
+#pagination a {
+    background: #779d48;
+    border: none;
+    font-size: 13px;
+    padding: 4px 10px;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#pagination a#previous {
+    background: #616060;
+}
+#pagination a#previous {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+a#previous:before {
+    content: "\f104";
+    font-family: fontawesome;
+    margin-right: 10px;
+}
+#pagination a#next {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+a#next:after {
+    content: "\f105";
+    font-family: fontawesome;
+    margin-left: 10px;
+}
+
 /* Articles similaires */
 
 main .titre-article h3 {
@@ -580,6 +673,9 @@ aside .abonnement img {
 .sidebar {
     background: #f3f3f3;
     padding: 10px;
+}
+form.newsletter .form-group {
+    margin: 0;
 }
 .abonnement {
     position: relative;
