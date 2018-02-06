@@ -10,7 +10,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Table(name="app_users")
+ * @ORM\Table(name="users")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User
@@ -30,6 +30,7 @@ class User
      * )
      */
     private $lastname;
+
     /**
      * @ORM\Column(type="string", length=28)
      * @Assert\Length(
@@ -38,6 +39,7 @@ class User
      * )
      */
     private $firstname;
+
     /**
      * @ORM\Column(type="text", length=30)
      * @Assert\Length(
@@ -48,6 +50,7 @@ class User
      * @Assert\Email(checkMX=true, message="Aucun serveur mail n'a été trouvé pour ce domaine")
      */
     private $email;
+
     /**
      * @ORM\Column(type="integer", length=28)
      * @Assert\Length(
@@ -56,6 +59,7 @@ class User
      * )
      */
     private $phone;
+
     /**
      * @ORM\Column(type="string", length=60)
      * @Assert\Length(
@@ -64,6 +68,7 @@ class User
      * )
      */
     private $address;
+
     /**
      * @ORM\Column(type="integer", length=20)
      * @Assert\Length(
@@ -72,6 +77,7 @@ class User
      * )
      */
     private $zip;
+
     /**
      * @ORM\Column(type="string", length=26)
      * @Assert\Length(
@@ -80,6 +86,7 @@ class User
      * )
      */
     private $city;
+
     /**
      * @ORM\Column(type="string", length=26)
      * @Assert\Length(
@@ -88,6 +95,7 @@ class User
      * )
      */
     private $country;
+
     /**
      * @ORM\Column(type="text", length=40)
      * @Assert\Length(
@@ -98,6 +106,7 @@ class User
      * )
      */
     private $password;
+
     /**
      * @ORM\Column(type="text", length=38)
      * @Assert\Length(
@@ -106,6 +115,7 @@ class User
      * )
      */
     private $fonction;
+
     /**
      * @ORM\Column(type="text", length=38)
      * @Assert\Length(
@@ -114,6 +124,7 @@ class User
      * )
      */
     private $company;
+
     /**
      * @ORM\Column(type="text", length=68)
      * @Assert\Length(
@@ -122,23 +133,37 @@ class User
      * )
      */
     private $tva;
+
     /**
      * @ORM\Column(type="boolean")
      */
     private $isCompany;
+
     /**
      * @ORM\Column(type="boolean")
      */
     private $chooseNewsletter;
+
     /**
      * @ORM\Column(type="array")
      */
     private $roles;
 
     /**
+     * @ORM\Column(name="is_active", type="boolean")
+     */
+    private $isActive;
+
+    /**
      * @ORM\Column(type="string", length=25, unique=true)
      */
     private $username;
+
+    /**
+     * @ORM\Column(name="rdvfin", type="datetime")
+     */
+    private $dateCreated;
+
 
 
     /**
@@ -413,9 +438,44 @@ class User
         $this->username = $username;
     }
 
+
+    /**
+     * @return mixed
+     */
+    public function getIsActive()
+    {
+        return $this->isActive;
+    }
+
+    /**
+     * @param mixed $isActive
+     */
+    public function setIsActive($isActive): void
+    {
+        $this->isActive = $isActive;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDateCreated()
+    {
+        return $this->dateCreated;
+    }
+
+    /**
+     * @param mixed $dateCreated
+     */
+    public function setDateCreated($dateCreated): void
+    {
+        $this->dateCreated = $dateCreated;
+    }
+
     public function eraseCredentials()
     {
     }
+
+
     public function getSalt()
     {
         return null;

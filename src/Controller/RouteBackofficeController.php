@@ -16,6 +16,7 @@
             return $this->render('/backoffice/dashboard.html.twig');
         }
 
+
         /**
          * @Route("/backoffice/article", name="article")
          */
