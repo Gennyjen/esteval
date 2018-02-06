@@ -28,42 +28,36 @@ class UserType extends AbstractType
                         'id' => 'inputLastname',
                         'placeholder' => 'Nom',
                         'class' => 'form-control ',
-                        'required' => true,
                         ]])
                 ->add('firstname', 	TextType::class, [
                     'attr' => [
                         'id' => 'inputFirstname',
                         'placeholder' => 'Prénom',
                         'class' => 'form-control ',
-                        'required' => true,
                     ]])
                 ->add('email', 		EmailType::class, [
                     'attr' => [
                         'id' => 'inputEmail',
                         'placeholder' => 'adresse@mail.com',
                         'class' => 'form-control',
-                        'required' => true,
                     ]])
                 ->add('address', 		TextType::class, [
                     'attr' => [
                         'id' => 'inpuAddress',
                         'placeholder' => 'Adresse *',
                         'class' => 'form-control',
-                        'required' => true,
                     ]])
                 ->add('city', 	TextType::class, [
                     'attr' => [
                         'id' => 'inputCity',
                         'placeholder' => 'Ville *',
                         'class' => 'form-control ',
-                        'required' => true,
                     ]])
                 ->add('country', 	TextType::class, [
                     'attr' => [
                         'id' => 'inputCountry',
                         'placeholder' => 'Pays',
                         'class' => 'form-control ',
-                        'required' => true,
 
                     ]])
                 ->add('zip', 	TextType::class, [
@@ -71,7 +65,6 @@ class UserType extends AbstractType
                         'id' => 'inputZip',
                         'placeholder' => 'Code Postal *',
                         'class' => 'form-control ',
-                        'required' => true,
 
                     ]])
                 ->add('phone', 	TextType::class, [
@@ -79,7 +72,6 @@ class UserType extends AbstractType
                         'id' => 'inputPhone',
                         'placeholder' => 'Téléphone',
                         'class' => 'form-control ',
-                        'required' => true,
 
                     ]])
                 ->add('password', 	PasswordType::class, [
@@ -87,7 +79,6 @@ class UserType extends AbstractType
                         'id' => 'inputPassword',
                         'placeholder' => '*******',
                         'class' => 'form-control',
-                        'required' => true,
 
                         ]])
                 ->add('company', 	TextType::class, [
