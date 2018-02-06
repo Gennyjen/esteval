@@ -385,7 +385,7 @@ main .raw_nowrap:after {
     margin-bottom: 15px;
 }
 .articles .content_image img {
-    max-width: 100%;
+    width: 100%;
     min-height: 100%;
 }
 
@@ -606,15 +606,16 @@ main .titre-article h3 {
 }
 
 
-main .articles-similaires {
+.page-article .articles-similaires {
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     left: 0;
     background: #1f1f1fa3;
     width: 100%;
     padding: 10px 0;
     color: white;
     text-align: center;
+    font-size: 11px;
 }
 
 main .section-articles-similaires {
